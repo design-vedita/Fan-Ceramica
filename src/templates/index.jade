@@ -1,0 +1,23 @@
+include includes/head
+include includes/header
+include includes/footer
+include includes/scripts
+include includes/mixins
+doctype html
+
+html(lang="en")
+    head
+        +head()
+    body
+        include blocks/svg.html
+
+        // Шапка сайта
+        +header()
+        //
+
+        main
+
+
+        footer
+            +footer()
+        +scripts()

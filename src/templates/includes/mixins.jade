@@ -1,0 +1,26 @@
+mixin svg(name)
+   svg(class="#{name}")
+      use(xlink:href="##{name}")
+
+mixin menu(menu)
+   ul.main-menu
+      each item in menu
+         li
+            a(href="javascript:void(0)")  #{item.name}
+            if (item.submenu)
+               +svg('menu-arrow')
+               ul.submenu
+                  each subitem in item.submenu
+                     li
+                        a(href="javascript:void(0)") #{subitem}
+                        if(item.submenu2)
+                        +svg('menu-arrow')
+                        ul.submenu2
+                           each item3 in item.submenu2
+                              li
+                                 a(href="javascript:void(0)") #{item3}
+                                 if(item.submenu3)
+                                 ul.submenu3
+                                    each item4 in item.submenu3
+                                       li
+                                          a(href="javascript:void(0)") #{item4}
