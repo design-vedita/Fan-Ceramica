@@ -1,1 +1,1 @@
-!function(){"use strict";$(function(){})}();
+!function(){"use strict";$(function(){$(".js-slider").slick()})}();
