@@ -7,8 +7,9 @@ mixin menu(menu)
       each item in menu
          li
             a(href="javascript:void(0)")  #{item.name}
+               if (item.submenu)
+                  +svg('menu-arrow')
             if (item.submenu)
-               +svg('menu-arrow')
                ul.submenu
                   each subitem in item.submenu
                      li

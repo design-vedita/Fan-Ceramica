@@ -1,0 +1,76 @@
+mixin new()
+   .new
+      .container
+         .row
+            .col-md-12
+               p.title-category  Новинки
+               .tabs
+                  .tabs__link
+                     ul
+                        li:   a(href="javascript:void(0)" data-tab="one").active.js-tab-link  Плитка
+                        li:   a(href="javascript:void(0)" data-tab="two").js-tab-link  Обои
+                  .tabs__content
+                     .tabs__content__block(data-tab="one").js-tab-block.visible--tab
+                        .row
+                           .col-md-3
+                              .item-card
+                                 .item-card__img
+                                    a(href="javascript:void(0)"):  img(src="../img/item-img.jpg")
+                                 .item-card__text
+                                    p.title: a(href="javascript:void(0)")  Империал
+                                    p.manufacturer Испания. Atlantic Tiles
+                                    p.type   Керамогранит
+                                    p.price от
+                                       span
+                                          |  2 300
+                                       | р.м
+                                       sup 2
+                           .col-md-3
+                              .item-card
+                                 .item-card__img
+                                    img(src="../img/item-img.jpg")
+                                 .item-card__text
+                                    p.title: a(href="javascript:void(0)")  Империал
+                                    p.manufacturer Испания. Atlantic Tiles
+                                    p.type   Керамогранит
+                                    p.price от
+                                       span
+                                          |  2 300
+                                       |  р.м
+                                       sup   2
+                           .col-md-3
+                              .item-card
+                                 .item-card__img
+                                    img(src="../img/item-img.jpg")
+                                 .item-card__text
+                                    p.title: a(href="javascript:void(0)")  Империал
+                                    p.manufacturer Испания. Atlantic Tiles
+                                    p.type   Керамогранит
+                                    p.price от
+                                       span
+                                          |  2 300
+                                       | р.м
+                                       sup   2
+                           .col-md-3
+                              .item-card
+                                 .item-card__img
+                                    img(src="../img/item-img.jpg")
+                                 .item-card__text
+                                    p.title: a(href="javascript:void(0)")  Империал
+                                    p.manufacturer Испания. Atlantic Tiles
+                                    p.type   Керамогранит
+                                    p.price от
+                                       span
+                                          |  2 300
+                                       | р.м
+                                       sup   2
+                     .tabs__content__block(data-tab="two").js-tab-block
+                        .row
+                           .col-md-3
+                              p  5
+                           .col-md-3
+                              p  6
+                           .col-md-3
+                              p  7
+                           .col-md-3
+                              p  8

@@ -27,7 +27,7 @@ var path = {
         html: 'src/templates/*.html',
         js: 'src/js/script.js',
         style: 'src/css/style.less',
-        img: 'src/img/*.{png,jpg,svg}',
+        img: 'src/img/*.{png,jpg,svg,gif}',
         sprite: 'src/img/ico/*.*',
         fonts: 'src/fonts/**/*.*',
         jade: 'src/templates/*.jade',
