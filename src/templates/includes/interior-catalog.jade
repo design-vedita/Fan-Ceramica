@@ -1,0 +1,26 @@
+mixin interior-catalog()
+   .interior-catalog
+      .container
+         .row
+            .col-md-12
+               p.title-category  Каталог интерьеров
+               .tabs
+                  .tabs__link
+                     ul
+                        li:   a(href="javascript:void(0)" data-tab="one").active.js-tab-link  Плитка
+                        li:   a(href="javascript:void(0)" data-tab="two").js-tab-link  Обои
+                  .tabs__content
+                     .tabs__content__block(data-tab="one").js-tab-block.visible--tab
+                        .interio-arrow.js-interio-arrow
+                        .tile-interior.js-interior
+                           .tile-interior__item
+                              img(src="../img/bath.jpg")
+                           .tile-interior__item
+                              img(src="../img/bath.jpg")
+                           .tile-interior__item
+                              img(src="../img/bath.jpg")
+                           .tile-interior__item
+                              img(src="../img/bath.jpg")
+                           .tile-interior__item
+                              img(src="../img/bath.jpg")
+                     .tabs__content__block(data-tab="ецщ").js-tab-block

@@ -1,0 +1,22 @@
+.title-category(@width: 232px;@padding-b: 10px;) {
+
+	p.title-category {
+		position: relative;
+		padding-bottom: @padding-b;
+		margin-bottom: 21px;
+		font: 24px/24px @regular;
+		color: @utpTitle;
+		text-transform: uppercase;
+
+		&::before {
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			display: block;
+			width: @width;
+			height: 1px;
+			background-color: @categoryTitleLine;
+			content: '';
+		}
+	}
+}
