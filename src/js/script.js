@@ -18,7 +18,7 @@
             nextArrow: '<button type="button" class="slick-next-style"></button>'
         });
 
-        // Слайдер производители
+        // Слайдер производители плитка
 
         $('.js-tile').slick({
             infinite: true,
@@ -29,6 +29,7 @@
         });
 
 
+        //  слайдер производители обои
 
         $('.js-wallpaper').slick({
             infinite: true,
@@ -38,13 +39,60 @@
             nextArrow: '<button type="button" class="slick-next-wall"></button>'
         });
 
-        $('.js-interior').slick({
+        // слайдер каталог дизайн-проектов плитка
+
+        $('.js-tdesign').slick({
+            appendArrows: $('.js-tdesign-arrow'),
+            infinite: true,
+            slidesToShow: 4,
+            slidesToScroll: 4,
+            prevArrow: '<button type="button" class="slick-prev-design"></button>',
+            nextArrow: '<button type="button" class="slick-next-design"></button>'
+        });
+
+        // слайдер каталог дизайн-проектов обои
+
+        $('.js-wdesign').slick({
+            appendArrows: $('.js-wdesign-arrow'),
+            infinite: true,
+            slidesToShow: 4,
+            slidesToScroll: 4,
+            prevArrow: '<button type="button" class="slick-prev-wdesign"></button>',
+            nextArrow: '<button type="button" class="slick-next-wdesign"></button>'
+        });
+
+        // слайдер интерьеров плитка
+
+        $('.js-interior-tale').slick({
+            appendArrows: $('.js-intale-arrow'),
             infinite: true,
             slidesToShow: 4,
             slidesToScroll: 4,
             prevArrow: '<button type="button" class="slick-prev-interior"></button>',
             nextArrow: '<button type="button" class="slick-next-interior"></button>'
         });
+
+        // слайдер интерьеров обои
+
+        $('.js-interior-wall').slick({
+            appendArrows: $('.js-walltale-arrow'),
+            infinite: true,
+            slidesToShow: 4,
+            slidesToScroll: 4,
+            prevArrow: '<button type="button" class="slick-prev-wallinterior"></button>',
+            nextArrow: '<button type="button" class="slick-next-wallinterior"></button>'
+        });
+
+        // слайдер отзывов
+
+        $('.js-reviews-slider').slick({
+            infinite: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            prevArrow: '<button type="button" class="slick-prev-review"></button>',
+            nextArrow: '<button type="button" class="slick-next-review"></button>'
+        });
+
 
         // open tabs
 
@@ -96,6 +144,34 @@
             effect : "fadeIn"
         });
 
+        // lazy load на табы
+
+        $('.js-tab-link').click(function() {
+
+            var $parents = $(this).parents('.tabs'),
+                attr = $(this).attr('data-tab'),
+                $images = $parents.find('img.js-lazy-tab'),
+                $tabblocks = $parents.find('.js-tab-block');
+
+                // ставим активному блоку класс, чтобы при последующих кликах
+                // не перезагружать изображения
+
+                if(!$tabblocks.hasClass('lazy-visible')) {
+                    $($images).lazyload({
+                        effect : "fadeIn"
+                    });
+                }
+
+                $($tabblocks).each(function(){
+
+                    if($(this).attr('data-tab') == attr) {
+                        $(this).addClass('lazy-visible');
+                    }
+                });
+
+
+        });
+
         // Inputmask
 
         var selector = document.getElementById('phone-quest');
@@ -104,5 +180,6 @@
         el.mask(selector);
 
     });
+
 
 }());
