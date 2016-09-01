@@ -28,6 +28,10 @@ button:focus {
 
 header {
 
+	&.inner {
+		border-bottom:1px @headerBottom solid;
+	}
+
 	.header {
 
 		&-top {
@@ -1634,6 +1638,36 @@ main {
 
 			span.bold {
 				color: @spanBold;
+			}
+		}
+	}
+
+	.breadcrumbs {
+		margin-top: 22px;
+
+		ul {
+
+			li {
+				display: inline-block;
+				font-size: 12px/24px @semibold;
+				color: @linkBread;
+
+				svg {
+
+					&.house {
+						width: 11px;
+						height: 10px;
+						fill: @homeCrumb;
+					}
+				}
+
+				a {
+					color: @linkBread;
+				}
+
+				span {
+					color: @yellow;
+				}
 			}
 		}
 	}

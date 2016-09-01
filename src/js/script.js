@@ -176,8 +176,11 @@
 
         var selector = document.getElementById('phone-quest');
 
-        var el = new Inputmask("+7 (999) - 99 - 99", {'placeholder': '.'});
-        el.mask(selector);
+        if(selector) {
+            var el = new Inputmask("+7 (999) - 99 - 99", {'placeholder': '.'});
+            el.mask(selector);
+        }
+
 
     });
 
