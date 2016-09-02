@@ -584,7 +584,7 @@ main {
 
 												&:hover {
 													background-color: @greenDark;
-													color: @greenText;
+													color: @green-text;
 												}
 										}
 								}
@@ -823,6 +823,44 @@ main {
 		&__img {
 			position: relative;
 
+			.recommended-banner {
+				position: absolute;
+				z-index: 2;
+				left: 9px;
+				top: 19px;
+
+				&.new {
+					margin-top: 0;
+
+					p {
+						background-color: @ui-slider-handle;
+					}
+				}
+
+				&.hit {
+
+					p {
+						background-color: @yellow;
+					}
+				}
+
+				&.recom  {
+
+					p {
+						background-color: @pink;
+					}
+				}
+
+				p {
+					margin-bottom: 0;
+					padding: 0 16px;
+					font: 12px/17px @semibold;
+					color: @white;
+					text-transform: uppercase;
+					border-radius: 20px;
+				}
+			}
+
 			a {
 				position: absolute;
 				z-index: 3;
@@ -867,6 +905,10 @@ main {
 			}
 
 			&:hover {
+
+				.recommended-banner {
+					display: none;
+				}
 
 				& a {
 					opacity: 1;
@@ -1058,7 +1100,7 @@ main {
 							width: 100%;
 							height: 48px;
 							font: 18px @bold;
-							color: @greenText;
+							color: @green-text;
 							text-align: center;
 							text-transform: uppercase;
 							border: none;
@@ -1614,36 +1656,11 @@ main {
 	.index-text {
 		margin-top: 55px;
 
-		&__description {
-			-moz-column-count: 2;
-			-webkit-column-count: 2;
-			column-count: 2;
-			-moz-column-gap: 3em;
-			-webkit-column-gap: 3em;
-			column-gap: 3em;
-
-			.logo {
-				width: 231px;
-			}
-
-			h1 {
-				font: 18px/24px @semibold;
-				color: @h1;
-			}
-
-			p {
-				font: 14px/24px @semibold;
-				color: @p;
-			}
-
-			span.bold {
-				color: @spanBold;
-			}
-		}
+		.text-pages();
 	}
 
 	.breadcrumbs {
-		margin-top: 22px;
+		margin-top: 16px;
 
 		ul {
 
@@ -1663,14 +1680,17 @@ main {
 
 				a {
 					color: @linkBread;
+					font-size: 12px;
 				}
 
 				span {
 					color: @yellow;
+					font-size: 12px;
 				}
 			}
 		}
 	}
+
 }
 
 footer {

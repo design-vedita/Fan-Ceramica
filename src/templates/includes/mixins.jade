@@ -2,6 +2,14 @@ mixin svg(name)
    svg(class="#{name}")
       use(xlink:href="##{name}")
 
+mixin checkbox(list)
+   each item in list
+      each name, index in item.view
+         label(for="#{item.type}-#{index}")    #{name}
+         input(type="checkbox" name="#{item.type}-#{index}" id="#{item.type}-#{index}").js-checkbox
+         br
+
+
 mixin menu(menu)
    ul.main-menu
       each item in menu

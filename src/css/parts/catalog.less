@@ -1,0 +1,297 @@
+h1 {
+	position: relative;
+	margin-top: 4px;
+	margin-bottom: 0;
+	padding-bottom: 12px;
+	font: 24px/24px @regular;
+	color: @utpTitle;
+	text-transform: uppercase;
+
+	&::before {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		display: block;
+		width: 233px;
+		height: 1px;
+		background-color: @categoryTitleLine;
+		content: '';
+	}
+}
+
+.catalog {
+	margin-top: 40px;
+
+	#filter {
+
+		fieldset {
+			position: relative;
+			padding-left: 14px;
+			padding-right: 23px;
+			padding-bottom: 23px;
+			padding-top: 14px;
+			margin-bottom: 21px;
+			border: 1px @fieldset solid;
+
+			& > label {
+				font: 14px/24px @semibold;
+				color: @fildset-label;
+			}
+
+			&.offers-field,
+			&.price-field {
+
+				.data-fieldset {
+					margin-bottom: 0;
+				}
+			}
+		}
+
+		.data-fieldset {
+			margin-top: 6px;
+			margin-bottom: 10px;
+
+
+			label {
+				font: 14px/24px @regular;
+				color: @fildset-label;
+				text-align: left;
+			}
+
+			input {
+				padding-left: 7px;
+				height: 33px;
+				border: 1px @input-border solid;
+				box-sizing: border-box;
+				font: 14px/24px @regular;
+				color: @fildset-label;
+				background-color: @input-bg;
+			}
+		}
+
+		.price-field {
+
+			input[type="text"] {
+				display: inline-block;
+				width: 77%;
+			}
+		}
+
+		.arrow {
+			position: absolute;
+			right: 20px;
+			top: 23px;
+			z-index: 3;
+			width: 6px;
+			height: 10px;
+			transform: rotate(90deg);
+			cursor: pointer;
+			fill: @arrow-filter;
+
+			&.open--data {
+				right: 30px;
+				transform: rotate(-90deg);
+			}
+
+			svg {
+				width: inherit;
+				height: inherit;
+			}
+		}
+
+		#slider-range {
+			margin-top: 35px;
+		}
+
+		.data-slider {
+			margin-top: 6px;
+		}
+
+		.slider-label {
+			position: relative;
+			margin-top: 10px;
+
+			span {
+				position: absolute;
+				font: 9px/24px @regular;
+				color: @ui-slider-label;
+
+				&:first-child {
+					left: 0;
+				}
+
+				&:last-child {
+					right: 0;
+				}
+			}
+		}
+
+		.ui-slider {
+			width: 100%;
+			height: 4px;
+			background-color: @ui-slider;
+
+			&-handle {
+				top: -.35em;
+				display: block;
+				width: 15px;
+				height: 15px;
+				box-sizing: border-box;
+				border: 2px @ui-slider-handle solid;
+				background-color: @white;
+				border-radius: 50%;
+				cursor: pointer;
+			}
+
+			&-range {
+				background-color: @ui-slider-handle;
+			}
+		}
+
+		.ui-checkboxradio {
+
+			&-icon {
+				width: 14px;
+				height: 14px;
+				border: 1px @checkbox-border solid;
+				border-radius: 2px;
+				box-shadow: none;
+
+					&-space {
+						padding-right: 5px;
+					}
+			}
+
+			&-label {
+				padding: 0;
+				margin-bottom: 2px;
+
+				&.ui-state-active {
+
+					.ui-checkboxradio-icon {
+						background-color: @ui-slider-handle;
+						border-color: @ui-slider-handle;
+						background-image: url(../img/check.svg);
+						background-size: 10px 8px;
+						background-position: center;
+						background-repeat: no-repeat;
+					}
+				}
+			}
+		}
+
+		.input-block {
+
+			input {
+
+				&[type=submit] {
+					width: 92px;
+					height: 35px;
+					font: 11px @bold;
+					color: @green-text;
+					box-sizing: border-box;
+					text-transform: uppercase;
+					background-color: @green;
+					border: none;
+					cursor: pointer;
+					border-radius: 2px;
+				}
+
+				&[type=reset] {
+					margin-left: 20px;
+					width: 92px;
+					height: 35px;
+					font: 11px @bold;
+					color: @green;
+					box-sizing: border-box;
+					text-transform: uppercase;
+					background-color: transparent;
+					border: 2px @green solid;
+					cursor: pointer;
+					border-radius: 2px;
+				}
+			}
+		}
+	}
+
+	&__list {
+
+		.item-card {
+			margin-bottom: 35px;
+		}
+	}
+
+	.pagination {
+		margin-top: 10px;
+		width: 100%;
+		font-size: 0;
+		text-align: center;
+
+		li {
+			margin-right: 10px;
+			display: inline-block;
+			vertical-align: middle;
+			width: 26px;
+			height: 26px;
+			text-align: center;
+			border-radius: 50%;
+			transition: background 300ms linear;
+
+			&:first-child,
+			&:last-child {
+				width: auto;
+				height: auto;
+				border-radius: 0;
+				background-color: transparent;
+
+				&.active,
+				&:hover {
+					background-color: transparent;
+				}
+
+				a {
+					padding: 0;
+					font: 12px/24px @semibold;
+					text-transform: uppercase;
+					color: @pagi-li;
+
+					&:hover {
+						color: @pagi-li;
+					}
+				}
+			}
+
+			&.active,
+			&:hover {
+				background-color: @green;
+
+				a {
+					color: @white;
+				}
+			}
+
+			a {
+				padding: 0;
+				float: none;
+				display: block;
+				width: 100%;
+				height: 100%;
+				font: 14px/24px @semibold;
+				color: @fildset-label;
+				border: none;
+				background-color: transparent;
+
+				&:hover {
+					background-color: transparent;
+					cursor: pointer;
+					border-color: transparent;
+				}
+			}
+		}
+	}
+
+	&-text {
+
+		.text-pages();
+	}
+}

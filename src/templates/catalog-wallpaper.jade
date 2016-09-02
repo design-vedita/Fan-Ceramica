@@ -2,6 +2,8 @@ include includes/head
 include includes/header
 include includes/breadcrumbs
 include includes/title
+include includes/catalog
+include includes/catalog-text
 include includes/footer
 include includes/scripts
 include includes/mixins
@@ -23,6 +25,10 @@ html(lang="en")
             +breadcrumbs()
 
             +title('Обои')
+
+            +catalog()
+
+            +catalog-text()
 
 
         footer

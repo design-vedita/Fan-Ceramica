@@ -181,6 +181,49 @@
             el.mask(selector);
         }
 
+        $( "#slider-range" ).slider({
+            range: true,
+            min: 0,
+            max: 100000,
+            values: [ 10000, 45500 ],
+            slide: function( event, ui ) {
+                $('.js-from').val(ui.values[ 0 ]);
+                $('.js-to').val(ui.values[ 1 ]);
+            }
+        });
+
+        $('.js-from').val($( "#slider-range" ).slider( "values", 0 ));
+
+        $('.js-to').val($( "#slider-range" ).slider( "values", 1 ));
+
+        $('.js-checkbox').checkboxradio();
+
+        function viewParams() {
+            var arrows = document.getElementsByClassName('js-arrow-filter');
+
+                for (var i = 0; i < arrows.length; i++) {
+
+                    arrows[i].onclick = function() {
+
+                        this.classList.toggle('open--data');
+
+                        var $parent = $(this).parents('fieldset'),
+                            $block_data = $($parent).find('.js-data');
+
+                            $block_data.toggleClass('no--visible');
+
+                            if($block_data.hasClass('no--visible')) {
+                                $block_data.fadeOut('100');
+                            } else {
+                                $block_data.fadeIn('100');
+                            }
+
+                    }
+                }
+
+        }
+
+        viewParams();
 
     });
 
