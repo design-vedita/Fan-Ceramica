@@ -26,6 +26,10 @@ button:focus {
 	text-decoration: none;
 }
 
+.clear {
+	clear: both;
+}
+
 header {
 
 	&.inner {
@@ -829,36 +833,7 @@ main {
 				left: 9px;
 				top: 19px;
 
-				&.new {
-					margin-top: 0;
-
-					p {
-						background-color: @ui-slider-handle;
-					}
-				}
-
-				&.hit {
-
-					p {
-						background-color: @yellow;
-					}
-				}
-
-				&.recom  {
-
-					p {
-						background-color: @pink;
-					}
-				}
-
-				p {
-					margin-bottom: 0;
-					padding: 0 16px;
-					font: 12px/17px @semibold;
-					color: @white;
-					text-transform: uppercase;
-					border-radius: 20px;
-				}
+				.recommend-banner();
 			}
 
 			a {

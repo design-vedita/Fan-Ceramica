@@ -21,6 +21,13 @@
 	}
 }
 
+.category-title() {
+	margin-bottom: 34px;
+	font: 18px/24px @semibold;
+	color: @h1;
+	text-transform: uppercase;
+}
+
 .text-pages() {
 	&__description {
 		-moz-column-count: 2;
@@ -55,5 +62,38 @@
 		span.bold {
 			color: @spanBold;
 		}
+	}
+}
+
+.recommend-banner() {
+	&.new {
+		margin-top: 0;
+
+		p {
+			background-color: @ui-slider-handle;
+		}
+	}
+
+	&.hit {
+
+		p {
+			background-color: @yellow;
+		}
+	}
+
+	&.recom  {
+
+		p {
+			background-color: @pink;
+		}
+	}
+
+	p {
+		margin-bottom: 0;
+		padding: 0 16px;
+		font: 12px/17px @semibold;
+		color: @white;
+		text-transform: uppercase;
+		border-radius: 20px;
 	}
 }

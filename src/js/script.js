@@ -3,6 +3,13 @@
 
     $(function(){
 
+        // fancybox
+
+        $(".fancybox").fancybox({
+            openEffect	: 'none',
+            closeEffect	: 'none'
+        });
+
         // Слайдер в шапке
         $('.js-slider').slick({
             appendArrows: $('.js-arrows'),

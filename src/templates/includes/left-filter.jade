@@ -1,0 +1,87 @@
+- var recommended = [{view: ['Хит','Советуем','Новинка'], type: 'recommended'}];
+- var land = [{view: ['Италия','Россия','Китай'], type: 'land'}];
+- var manufacturer = [{view: ['Brother','Canon','Epson','Hewlett-packard','Kyocera Lexmark','Oki','Minolta','Ricoh','Samsung','Sharp'], type: 'manufacturer'}];
+- var size = [{view: ['40 см','110 см'], type: 'size'}];
+- var material = [{view: ['Флизилиновые','Виниловые','Бумажные','Фотообои','Потолочные','Под покраску','Виниловые обои на бумаге','Виниловые обои на флизелине','Текстильные обои'], type: 'material'}];
+- var type_room = [{view: ['Коридор','Кухня','Спальня','Детская','Гостиная','Офис','Кабинет'], type: 'type_room'}];
+- var color = [{view: ['Красный','Синий','Зеленый','Коричневый','Бежевый','Персиковый'], type: 'color'}];
+- var pattern = [{view: ['Цветок','Клетка','Полоска','Орнамент','Акварель','Геометрия','Однотонные','Природа','Под кирпич','Под дерево','Прованс','Домаск'], type: 'pattern'}];
+- var decor = [{view: ['Фотообои','Панно','Бордюры'], type: 'decor'}];
+
+mixin left-filter()
+   form#filter
+      fieldset.price-field
+         label Цена
+         .arrow.js-arrow-filter
+            +svg('prev')
+         .data-fieldset.js-data
+            .row
+               .col-md-6
+                  label От
+                  input(type="text").js-from
+               .col-md-6
+                  label До
+                  input(type="text").js-to
+            .row
+               .col-md-12
+                  .slider-label
+                     span    250 p.
+                     span    5800 р.
+                  #slider-range
+      fieldset.offers-field
+         label Наши предложения
+         .arrow.js-arrow-filter
+            +svg('prev')
+         .data-fieldset.js-data
+            +checkbox(recommended)
+      fieldset.land-field
+         label   Страна
+         .arrow.js-arrow-filter
+            +svg('prev')
+         .data-fieldset.js-data
+            +checkbox(land)
+      fieldset.manufacturer-field
+         label   Производители
+         .arrow.js-arrow-filter
+            +svg('prev')
+         .data-fieldset.js-data
+            +checkbox(manufacturer)
+      fieldset.size-field
+         label   Размер
+         .arrow.js-arrow-filter
+            +svg('prev')
+         .data-fieldset.js-data
+            +checkbox(size)
+      fieldset.material-field
+         label   Материал
+         .arrow.js-arrow-filter
+            +svg('prev')
+         .data-fieldset.js-data
+            +checkbox(material)
+      fieldset.type-room-field
+         label   Тип помещения
+         .arrow.js-arrow-filter
+            +svg('prev')
+         .data-fieldset.js-data
+            +checkbox(type_room)
+      fieldset.color-field
+         label   По цвету
+         .arrow.js-arrow-filter
+            +svg('prev')
+         .data-fieldset.js-data
+            +checkbox(color)
+      fieldset.color-field
+         label   По узору
+         .arrow.js-arrow-filter
+            +svg('prev')
+         .data-fieldset.js-data
+            +checkbox(pattern)
+      fieldset.color-field
+         label   Декоры для стен
+         .arrow.js-arrow-filter
+            +svg('prev')
+         .data-fieldset.js-data
+            +checkbox(decor)
+      .input-block
+         input(type="submit" value="Показать")
+         input(type="reset" value="Сбросить")

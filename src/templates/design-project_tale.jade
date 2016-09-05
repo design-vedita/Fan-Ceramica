@@ -1,0 +1,36 @@
+include includes/head
+include includes/header
+include includes/breadcrumbs
+include includes/title
+include includes/catalog-design
+include includes/catalog-text
+include includes/footer
+include includes/scripts
+include includes/mixins
+doctype html
+
+
+html(lang="en")
+   head
+      +head()
+   body
+      include blocks/svg.html
+
+      // Шапка сайта
+      +header('inner')
+      //
+
+      main
+
+         +breadcrumbs()
+
+         +title('Каталог дизайн проектов (плитка)')
+
+         +catalog-design()
+
+         +catalog-text()
+         
+
+      footer
+         +footer()
+      +scripts()
