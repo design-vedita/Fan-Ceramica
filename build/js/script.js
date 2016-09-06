@@ -1,1 +1,325 @@
-!function(){"use strict";$(function(){function t(){for(var t=document.getElementsByClassName("js-tab-link"),s=0;s<t.length;s++)t[s].onclick=function(){for(var t=$(this).parents(".tabs__link"),s=$(t).find(".js-tab-link"),e=0;e<s.length;e++)s[e].classList.remove("active");var n=this.getAttribute("data-tab");this.classList.add("active");for(var l=$(this).parents(".tabs"),o=$(l).find(".js-tab-block"),i=0;i<o.length;i++)o[i].classList.remove("visible--tab");for(var r=0;r<o.length;r++){var a=o[r].getAttribute("data-tab");a==n&&o[r].classList.add("visible--tab")}}}function s(){for(var t=document.getElementsByClassName("js-arrow-filter"),s=0;s<t.length;s++)t[s].onclick=function(){this.classList.toggle("open--data");var t=$(this).parents("fieldset"),s=$(t).find(".js-data");s.toggleClass("no--visible"),s.hasClass("no--visible")?s.fadeOut("100"):s.fadeIn("100")}}$(".fancybox").fancybox({openEffect:"none",closeEffect:"none"}),$(".js-slider").slick({appendArrows:$(".js-arrows"),prevArrow:'<button type="button" class="slick-prev"></button>',nextArrow:'<button type="button" class="slick-next"></button>'}),$(".js-style-slider").slick({appendArrows:$(".js-arrow-style"),prevArrow:'<button type="button" class="slick-prev-style"></button>',nextArrow:'<button type="button" class="slick-next-style"></button>'}),$(".js-tile").slick({infinite:!0,slidesToShow:5,slidesToScroll:5,prevArrow:'<button type="button" class="slick-prev-tile"></button>',nextArrow:'<button type="button" class="slick-next-tile"></button>'}),$(".js-wallpaper").slick({infinite:!0,slidesToShow:5,slidesToScroll:5,prevArrow:'<button type="button" class="slick-prev-wall"></button>',nextArrow:'<button type="button" class="slick-next-wall"></button>'}),$(".js-tdesign").slick({appendArrows:$(".js-tdesign-arrow"),infinite:!0,slidesToShow:4,slidesToScroll:4,prevArrow:'<button type="button" class="slick-prev-design"></button>',nextArrow:'<button type="button" class="slick-next-design"></button>'}),$(".js-wdesign").slick({appendArrows:$(".js-wdesign-arrow"),infinite:!0,slidesToShow:4,slidesToScroll:4,prevArrow:'<button type="button" class="slick-prev-wdesign"></button>',nextArrow:'<button type="button" class="slick-next-wdesign"></button>'}),$(".js-interior-tale").slick({appendArrows:$(".js-intale-arrow"),infinite:!0,slidesToShow:4,slidesToScroll:4,prevArrow:'<button type="button" class="slick-prev-interior"></button>',nextArrow:'<button type="button" class="slick-next-interior"></button>'}),$(".js-interior-wall").slick({appendArrows:$(".js-walltale-arrow"),infinite:!0,slidesToShow:4,slidesToScroll:4,prevArrow:'<button type="button" class="slick-prev-wallinterior"></button>',nextArrow:'<button type="button" class="slick-next-wallinterior"></button>'}),$(".js-reviews-slider").slick({infinite:!0,slidesToShow:1,slidesToScroll:1,prevArrow:'<button type="button" class="slick-prev-review"></button>',nextArrow:'<button type="button" class="slick-next-review"></button>'}),t(),$("img.js-lazy, div.js-lazy").lazyload({effect:"fadeIn"}),$(".js-tab-link").click(function(){var t=$(this).parents(".tabs"),s=$(this).attr("data-tab"),e=t.find("img.js-lazy-tab"),n=t.find(".js-tab-block");n.hasClass("lazy-visible")||$(e).lazyload({effect:"fadeIn"}),$(n).each(function(){$(this).attr("data-tab")==s&&$(this).addClass("lazy-visible")})});var e=document.getElementById("phone-quest");if(e){var n=new Inputmask("+7 (999) - 99 - 99",{placeholder:"."});n.mask(e)}$("#slider-range").slider({range:!0,min:0,max:1e5,values:[1e4,45500],slide:function(t,s){$(".js-from").val(s.values[0]),$(".js-to").val(s.values[1])}}),$(".js-from").val($("#slider-range").slider("values",0)),$(".js-to").val($("#slider-range").slider("values",1)),$(".js-checkbox").checkboxradio(),s()})}();
+(function () {
+    "use strict";
+
+    $(function(){
+
+        // fancybox
+
+        $(".fancybox").fancybox({
+            openEffect	: 'none',
+            closeEffect	: 'none'
+        });
+
+        // ������� � �����
+        $('.js-slider-collection').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            fade: true,
+            asNavFor: '.js-collection-nav'
+        });
+
+        $('.js-collection-nav').slick({
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            asNavFor: '.js-slider-collection',
+            arrows: true,
+            focusOnSelect: true,
+            prevArrow: '<button type="button" class="slick-prev"></button>',
+            nextArrow: '<button type="button" class="slick-next"></button>'
+        });
+
+        // ������� �������� ���������
+        $('.js-slider').slick({
+            appendArrows: $('.js-arrows'),
+            prevArrow: '<button type="button" class="slick-prev"></button>',
+            nextArrow: '<button type="button" class="slick-next"></button>'
+        });
+
+        // ������� ������������
+
+        $('.js-style-slider').slick({
+            appendArrows: $('.js-arrow-style'),
+            prevArrow: '<button type="button" class="slick-prev-style"></button>',
+            nextArrow: '<button type="button" class="slick-next-style"></button>'
+        });
+
+        // ������� ������������� ������
+
+        $('.js-tile').slick({
+            infinite: true,
+            slidesToShow: 5,
+            slidesToScroll: 5,
+            prevArrow: '<button type="button" class="slick-prev-tile"></button>',
+            nextArrow: '<button type="button" class="slick-next-tile"></button>'
+        });
+
+
+        //  ������� ������������� ����
+
+        $('.js-wallpaper').slick({
+            infinite: true,
+            slidesToShow: 5,
+            slidesToScroll: 5,
+            prevArrow: '<button type="button" class="slick-prev-wall"></button>',
+            nextArrow: '<button type="button" class="slick-next-wall"></button>'
+        });
+
+        // ������� ������� ������-�������� ������
+
+        $('.js-tdesign').slick({
+            appendArrows: $('.js-tdesign-arrow'),
+            infinite: true,
+            slidesToShow: 4,
+            slidesToScroll: 4,
+            prevArrow: '<button type="button" class="slick-prev-design"></button>',
+            nextArrow: '<button type="button" class="slick-next-design"></button>'
+        });
+
+        // ������� ������� ������-�������� ����
+
+        $('.js-wdesign').slick({
+            appendArrows: $('.js-wdesign-arrow'),
+            infinite: true,
+            slidesToShow: 4,
+            slidesToScroll: 4,
+            prevArrow: '<button type="button" class="slick-prev-wdesign"></button>',
+            nextArrow: '<button type="button" class="slick-next-wdesign"></button>'
+        });
+
+        // ������� ���������� ������
+
+        $('.js-interior-tale').slick({
+            appendArrows: $('.js-intale-arrow'),
+            infinite: true,
+            slidesToShow: 4,
+            slidesToScroll: 4,
+            prevArrow: '<button type="button" class="slick-prev-interior"></button>',
+            nextArrow: '<button type="button" class="slick-next-interior"></button>'
+        });
+
+        // ������� ���������� ����
+
+        $('.js-interior-wall').slick({
+            appendArrows: $('.js-walltale-arrow'),
+            infinite: true,
+            slidesToShow: 4,
+            slidesToScroll: 4,
+            prevArrow: '<button type="button" class="slick-prev-wallinterior"></button>',
+            nextArrow: '<button type="button" class="slick-next-wallinterior"></button>'
+        });
+
+        // ������� �������
+
+        $('.js-reviews-slider').slick({
+            infinite: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            prevArrow: '<button type="button" class="slick-prev-review"></button>',
+            nextArrow: '<button type="button" class="slick-next-review"></button>'
+        });
+
+
+        // open tabs
+
+        function tabs() {
+
+            var links = document.getElementsByClassName('js-tab-link');
+
+                for (var i = 0; i < links.length; i++) {
+
+                    links[i].onclick = function() {
+
+                        var parentLinks = $(this).parents('.tabs__link'),
+                            thisLink = $(parentLinks).find('.js-tab-link');
+
+
+                        for(var k = 0; k < thisLink.length; k++) {
+                            thisLink[k].classList.remove('active');
+                        }
+
+                        var attrLink = this.getAttribute('data-tab');
+                            this.classList.add('active');
+
+
+                            var parent = $(this).parents('.tabs'),
+                                blocks = $(parent).find('.js-tab-block');
+
+
+                            for (var n = 0; n < blocks.length; n++) {
+                                blocks[n].classList.remove('visible--tab')
+                            }
+
+                            for (var j = 0; j < blocks.length; j++) {
+
+                                var attrBlock = blocks[j].getAttribute('data-tab');
+
+                                if (attrBlock == attrLink) {
+                                    blocks[j].classList.add('visible--tab');
+                                }
+                            }
+                    }
+                }
+        }
+
+        tabs();
+
+        // lazy load
+
+        $("img.js-lazy, div.js-lazy").lazyload({
+            effect : "fadeIn"
+        });
+
+        // lazy load �� ����
+
+        $('.js-tab-link').click(function() {
+
+            var $parents = $(this).parents('.tabs'),
+                attr = $(this).attr('data-tab'),
+                $images = $parents.find('img.js-lazy-tab'),
+                $tabblocks = $parents.find('.js-tab-block');
+
+                // ������ ��������� ����� �����, ����� ��� ����������� ������
+                // �� ������������� �����������
+
+                if(!$tabblocks.hasClass('lazy-visible')) {
+                    $($images).lazyload({
+                        effect : "fadeIn"
+                    });
+                }
+
+                $($tabblocks).each(function(){
+
+                    if($(this).attr('data-tab') == attr) {
+                        $(this).addClass('lazy-visible');
+                    }
+                });
+
+
+        });
+
+        // Inputmask
+
+        var selector = document.getElementById('phone-quest');
+
+        if(selector) {
+            var el = new Inputmask("+7 (999) - 99 - 99", {'placeholder': '.'});
+            el.mask(selector);
+        }
+
+        $( "#slider-range" ).slider({
+            range: true,
+            min: 0,
+            max: 100000,
+            values: [ 10000, 45500 ],
+            slide: function( event, ui ) {
+                $('.js-from').val(ui.values[ 0 ]);
+                $('.js-to').val(ui.values[ 1 ]);
+            }
+        });
+
+        $('.js-from').val($( "#slider-range" ).slider( "values", 0 ));
+
+        $('.js-to').val($( "#slider-range" ).slider( "values", 1 ));
+
+        $('.js-checkbox').checkboxradio();
+
+        function viewParams() {
+            var arrows = document.getElementsByClassName('js-arrow-filter');
+
+                for (var i = 0; i < arrows.length; i++) {
+
+                    arrows[i].onclick = function() {
+
+                        this.classList.toggle('open--data');
+
+                        var $parent = $(this).parents('fieldset'),
+                            $block_data = $($parent).find('.js-data');
+
+                            $block_data.toggleClass('no--visible');
+
+                            var timer = setTimeout(function(){
+                                $parent.toggleClass('close--field');
+                            }, 300);
+
+
+                            if($block_data.hasClass('no--visible')) {
+                                $block_data.fadeOut('100');
+                            } else {
+                                $block_data.fadeIn('100');
+                            }
+
+                    }
+                }
+
+        }
+
+        viewParams();
+
+        function openSearch() {
+            var searchLink = document.getElementsByClassName('js-open-search')[0],
+                searchBlock = document.getElementsByClassName('js-search-form')[0];
+
+                searchLink.onclick = function() {
+                    this.classList.toggle('open--search')
+                    searchBlock.classList.toggle('visible--search');
+                }
+        }
+
+        openSearch();
+
+        function collectionTab() {
+            var links = document.getElementsByClassName('js-coll'),
+                blocks = document.getElementsByClassName('js-content');
+
+                var i, j, n, k;
+
+                for (i = 0; i < links.length; i++) {
+
+                    links[i].onclick = function(){
+
+                        for (k = 0; k < links.length; k++) {
+                            links[k].classList.remove('open--tab');
+                        }
+
+                        this.classList.add('open--tab');
+
+                        var param = this.getAttribute('data-tab');
+
+                        for (n = 0; n < blocks.length; n++) {
+                            blocks[n].classList.remove('open--tab');
+                        }
+
+                        for (j = 0; j < blocks.length; j++) {
+
+                            if( blocks[j].classList.contains(param) ) {
+                                blocks[j].classList.add('open--tab');
+                            }
+
+                            if (param == 'tab-des' || param == 'tab-int') {
+
+                                if(blocks[j].classList.contains(param)) {
+                                    var images = blocks[j].querySelectorAll('img');
+
+                                    if(!blocks[j].classList.contains('lazy-visible')) {
+                                        $(images).lazyload({
+                                            effect : "fadeIn"
+                                        });
+                                    }
+                                    
+                                    blocks[j].classList.add('lazy-visible');
+                                }
+
+
+                            }
+                        }
+
+                    }
+                }
+        }
+
+        collectionTab();
+    });
+
+
+}());

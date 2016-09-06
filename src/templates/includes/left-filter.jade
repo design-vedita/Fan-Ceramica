@@ -11,9 +11,9 @@
 mixin left-filter()
    form#filter
       fieldset.price-field
-         label Цена
-         .arrow.js-arrow-filter
-            +svg('prev')
+         label.js-arrow-filter Цена
+            .arrow
+               +svg('prev')
          .data-fieldset.js-data
             .row
                .col-md-6
@@ -29,57 +29,57 @@ mixin left-filter()
                      span    5800 р.
                   #slider-range
       fieldset.offers-field
-         label Наши предложения
-         .arrow.js-arrow-filter
-            +svg('prev')
+         label.js-arrow-filter Наши предложения
+            .arrow
+               +svg('prev')
          .data-fieldset.js-data
             +checkbox(recommended)
       fieldset.land-field
-         label   Страна
-         .arrow.js-arrow-filter
-            +svg('prev')
+         label.js-arrow-filter   Страна
+            .arrow
+               +svg('prev')
          .data-fieldset.js-data
             +checkbox(land)
       fieldset.manufacturer-field
-         label   Производители
-         .arrow.js-arrow-filter
-            +svg('prev')
+         label.js-arrow-filter   Производители
+            .arrow
+               +svg('prev')
          .data-fieldset.js-data
             +checkbox(manufacturer)
       fieldset.size-field
-         label   Размер
-         .arrow.js-arrow-filter
-            +svg('prev')
+         label.js-arrow-filter   Размер
+            .arrow
+               +svg('prev')
          .data-fieldset.js-data
             +checkbox(size)
       fieldset.material-field
-         label   Материал
-         .arrow.js-arrow-filter
-            +svg('prev')
+         label.js-arrow-filter   Материал
+            .arrow
+               +svg('prev')
          .data-fieldset.js-data
             +checkbox(material)
       fieldset.type-room-field
-         label   Тип помещения
-         .arrow.js-arrow-filter
-            +svg('prev')
+         label.js-arrow-filter   Тип помещения
+            .arrow
+               +svg('prev')
          .data-fieldset.js-data
             +checkbox(type_room)
       fieldset.color-field
-         label   По цвету
-         .arrow.js-arrow-filter
-            +svg('prev')
+         label.js-arrow-filter   По цвету
+            .arrow
+               +svg('prev')
          .data-fieldset.js-data
             +checkbox(color)
       fieldset.color-field
-         label   По узору
-         .arrow.js-arrow-filter
-            +svg('prev')
+         label.js-arrow-filter   По узору
+            .arrow
+               +svg('prev')
          .data-fieldset.js-data
             +checkbox(pattern)
       fieldset.color-field
-         label   Декоры для стен
-         .arrow.js-arrow-filter
-            +svg('prev')
+         label.js-arrow-filter   Декоры для стен
+            .arrow
+               +svg('prev')
          .data-fieldset.js-data
             +checkbox(decor)
       .input-block

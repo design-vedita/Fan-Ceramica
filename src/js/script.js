@@ -11,6 +11,25 @@
         });
 
         // Слайдер в шапке
+        $('.js-slider-collection').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            fade: true,
+            asNavFor: '.js-collection-nav'
+        });
+
+        $('.js-collection-nav').slick({
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            asNavFor: '.js-slider-collection',
+            arrows: true,
+            focusOnSelect: true,
+            prevArrow: '<button type="button" class="slick-prev"></button>',
+            nextArrow: '<button type="button" class="slick-next"></button>'
+        });
+
+        // Слайдер страница коллекций
         $('.js-slider').slick({
             appendArrows: $('.js-arrows'),
             prevArrow: '<button type="button" class="slick-prev"></button>',
@@ -219,6 +238,11 @@
 
                             $block_data.toggleClass('no--visible');
 
+                            var timer = setTimeout(function(){
+                                $parent.toggleClass('close--field');
+                            }, 300);
+
+
                             if($block_data.hasClass('no--visible')) {
                                 $block_data.fadeOut('100');
                             } else {
@@ -232,6 +256,69 @@
 
         viewParams();
 
+        function openSearch() {
+            var searchLink = document.getElementsByClassName('js-open-search')[0],
+                searchBlock = document.getElementsByClassName('js-search-form')[0];
+
+                searchLink.onclick = function() {
+                    this.classList.toggle('open--search')
+                    searchBlock.classList.toggle('visible--search');
+                }
+        }
+
+        openSearch();
+
+        function collectionTab() {
+            var links = document.getElementsByClassName('js-coll'),
+                blocks = document.getElementsByClassName('js-content');
+
+                var i, j, n, k;
+
+                for (i = 0; i < links.length; i++) {
+
+                    links[i].onclick = function(){
+
+                        for (k = 0; k < links.length; k++) {
+                            links[k].classList.remove('open--tab');
+                        }
+
+                        this.classList.add('open--tab');
+
+                        var param = this.getAttribute('data-tab');
+
+                        for (n = 0; n < blocks.length; n++) {
+                            blocks[n].classList.remove('open--tab');
+                        }
+
+                        for (j = 0; j < blocks.length; j++) {
+
+                            if( blocks[j].classList.contains(param) ) {
+                                blocks[j].classList.add('open--tab');
+                            }
+
+                            if (param == 'tab-des' || param == 'tab-int') {
+
+                                if(blocks[j].classList.contains(param)) {
+                                    var images = blocks[j].querySelectorAll('img');
+
+                                    if(!blocks[j].classList.contains('lazy-visible')) {
+                                        $(images).lazyload({
+                                            effect : "fadeIn"
+                                        });
+                                    }
+
+                                    blocks[j].classList.add('lazy-visible');
+                                }
+
+
+                            }
+                        }
+
+                    }
+                }
+        }
+
+        collectionTab();
     });
 
 

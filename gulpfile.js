@@ -120,7 +120,7 @@ gulp.task('js:build', function () {
     gulp.src(path.src.js)
         .pipe(plumber())
         .pipe(rigger())
-        .pipe(uglify())
+      //  .pipe(uglify())
         .pipe(gulp.dest(path.build.js));
 });
 
@@ -130,9 +130,9 @@ gulp.task('css:build', function () {
         .pipe(autoprefixer())
         .pipe(less({
             paths: ['src/css/'],
-            compress: true
+         //   compress: true
         }))
-        .pipe(cssmin())
+       // .pipe(cssmin())
         .pipe(gulp.dest(path.build.css));
 });
 

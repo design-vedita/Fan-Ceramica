@@ -1,0 +1,196 @@
+mixin map-t()
+   .map
+      .container
+         .row
+            .col-md-3.map__img
+               a(href="../img/tile-map.png").fancybox
+                  img(src="../img/tile-map.png")
+            .col-md-4.col-md-offset-1.map__params
+               p.title  Декор Империал
+               .recommend-banner.new
+                  p  Новинка
+               p.stock В наличии
+               p.param  Артикул:
+                  span  135852-D
+               p.param  Страна:
+                  span  Испания
+               .map__params__manufacturer
+                  p.param.image  Производитель:
+                     span  Ceracasa. Ltd
+                  img(src="../img/tile1.jpg")
+               p.param  Размер плитки:
+                  span  20х40 см
+               p.param  Поверхность:
+                  span  Глянцевая
+               p.param  Материал:
+                  span  Керамогранит
+               p.param  Количество м
+                  sup 2
+                  = ' '
+                  | в коробке:
+                  span  1,2
+               p.param  Количество штук в коробке:
+                  span  8
+               p.param  Вес:
+                  span  3,2 кг.
+               .map__params__introtext
+                  p  Отделочная керамика широко используется для оформления жилых, производственных, коммерческих интерьеров. Преимуществами создаваемых с ее помощью покрытий являются
+            .col-md-4.map__buy
+               .map__buy__border
+                  form
+                     .form-description
+                        p.price  2 300
+                           span  рулон
+                        p.price-action Цена по акции
+                        p.old-price 4 750 рулон
+                     .map__buy__border__count
+                        button.minus   -
+                        input(type="text" value="1")
+                        button.plus +
+                     .map__buy__border__button
+                        input(type="submit" value="Купить")#buy-map
+                        label(for="buy-map")
+                     br.clear
+                     p.web-money Оплата возможна по безналичному расчёту:
+                     img(src="../img/visa-map.png").web
+                     img(src="../img/master-map.png").web
+                     p.money  Или наличными по адресу:
+                     p.address   392004  г. Москва ул. Академика Королёва, 16
+               .map__buy__calculate
+                  p  С помощью нашего калькулятора, Вы можете рассчитать необходимое количество рулонов для Вашей комнаты
+                  a(href="javascript:void(0)")  Калькулятор плитки
+         .el-collection
+            p.category-title  Другие элементы коллекции
+            .row
+               .col-md-3
+                  .item-goods
+                     .item-goods__img
+                        img(data-original="../img/el-tile.jpg").js-lazy
+                     .item-goods__text
+                        p.item-title: a(href="javascript:void(0)")  Настенная
+                        p.collection   Империал
+                        .sizes
+                           +svg('size')
+                           p  Размер плитки:
+                              span  20x40 см
+                        .button
+                           p.price  2 300
+                              span  р.м
+                                 sup   2
+                           a(href="javascript:void(0)")  Подробнее
+               .col-md-3
+                  .item-goods
+                     .item-goods__img
+                        img(data-original="../img/decor-tile.png").js-lazy
+                     .item-goods__text
+                        p.item-title: a(href="javascript:void(0)")  Декор
+                        p.collection   Империал
+                        .sizes
+                           +svg('size')
+                           p  Размер плитки:
+                              span  20x40 см
+                        .button
+                           p.price  2 300
+                              span  р.м
+                                 sup   2
+                           a(href="javascript:void(0)")  Подробнее
+               .col-md-3
+                  .item-goods
+                     .item-goods__img
+                        img(data-original="../img/decor-bord.png").js-lazy
+                     .item-goods__text
+                        p.item-title: a(href="javascript:void(0)")  Бордюр
+                        p.collection   Империал
+                        .sizes
+                           +svg('size')
+                           p  Размер плитки:
+                              span  20x40 см
+                        .button
+                           p.price  2 300
+                              span  р.м
+                                 sup   2
+                           a(href="javascript:void(0)")  Подробнее
+               .col-md-3
+                  .item-goods
+                     .item-goods__img
+                        img(data-original="../img/napol-tile.png").js-lazy
+                     .item-goods__text
+                        p.item-title: a(href="javascript:void(0)")  Напольная
+                        p.collection   Империал
+                        .sizes
+                           +svg('size')
+                           p  Размер плитки:
+                              span  20x40 см
+                        .button
+                           p.price  2 300
+                              span  р.м
+                                 sup   2
+                           a(href="javascript:void(0)")  Подробнее
+               .col-md-3
+                  .item-goods
+                     .item-goods__img
+                        img(data-original="../img/el-tile.jpg").js-lazy
+                     .item-goods__text
+                        p.item-title: a(href="javascript:void(0)")  Настенная
+                        p.collection   Империал
+                        .sizes
+                           +svg('size')
+                           p  Размер плитки:
+                              span  20x40 см
+                        .button
+                           p.price  2 300
+                              span  р.м
+                                 sup   2
+                           a(href="javascript:void(0)")  Подробнее
+               .col-md-3
+                  .item-goods
+                     .item-goods__img
+                        img(data-original="../img/decor-tile.png").js-lazy
+                     .item-goods__text
+                        p.item-title: a(href="javascript:void(0)")  Декор
+                        p.collection   Империал
+                        .sizes
+                           +svg('size')
+                           p  Размер плитки:
+                              span  20x40 см
+                        .button
+                           p.price  2 300
+                              span  р.м
+                                 sup   2
+                           a(href="javascript:void(0)")  Подробнее
+               .col-md-3
+                  .item-goods
+                     .item-goods__img
+                        img(data-original="../img/decor-bord.png").js-lazy
+                     .item-goods__text
+                        p.item-title: a(href="javascript:void(0)")  Бордюр
+                        p.collection   Империал
+                        .sizes
+                           +svg('size')
+                           p  Размер плитки:
+                              span  20x40 см
+                        .button
+                           p.price  2 300
+                              span  р.м
+                                 sup   2
+                           a(href="javascript:void(0)")  Подробнее
+               .col-md-3
+                  .item-goods
+                     .item-goods__img
+                        img(data-original="../img/napol-tile.png").js-lazy
+                     .item-goods__text
+                        p.item-title: a(href="javascript:void(0)")  Напольная
+                        p.collection   Империал
+                        .sizes
+                           +svg('size')
+                           p  Размер плитки:
+                              span  20x40 см
+                        .button
+                           p.price  2 300
+                              span  р.м
+                                 sup   2
+                           a(href="javascript:void(0)")  Подробнее
+
+
+
+

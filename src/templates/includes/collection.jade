@@ -1,0 +1,61 @@
+include collection-tab
+
+mixin collection()
+   .collection
+      .container
+         .row
+            .col-md-6
+               .slider-collection.js-slider-collection
+                  .slider-collection__item
+                     a(href="../img/collection-tile.jpg" rel="gal1").fancybox
+                        img(src="../img/collection-tile.jpg")
+                  .slider-collection__item
+                     a(href="../img/collection-tile-gray.jpg" rel="gal1").fancybox
+                        img(src="../img/collection-tile-gray.jpg")
+                  .slider-collection__item
+                     a(href="../img/collection-tile.jpg" rel="gal1").fancybox
+                        img(src="../img/collection-tile.jpg")
+                  .slider-collection__item
+                     a(href="../img/collection-tile-gray.jpg" rel="gal1").fancybox
+                        img(src="../img/collection-tile-gray.jpg")
+                  .slider-collection__item
+                     a(href="../img/collection-tile.jpg" rel="gal1").fancybox
+                        img(src="../img/collection-tile.jpg")
+               .collection-nav.js-collection-nav
+                  .collection-nav__item
+                     img(src="../img/collection-tile-mini.jpg")
+                  .collection-nav__item
+                     img(src="../img/collection-tile-gray-mini.jpg")
+                  .collection-nav__item
+                     img(src="../img/collection-tile-mini.jpg")
+                  .collection-nav__item
+                     img(src="../img/collection-tile-gray-mini.jpg")
+                  .collection-nav__item
+                     img(src="../img/collection-tile-mini.jpg")
+            .col-md-6
+               .recommend-banner.new
+                  p  Новинка
+               p.param  Страна:
+                  span  Испания
+               .collection__manufacturer
+                  p.param.image  Производитель:
+                     span  Ceracasa. Ltd
+                  img(src="../img/tile1.jpg")
+               p.param  Материал:
+                  span  Керамогранит
+               p.collection-title   В коллекцию входят:
+               ul.collection-list
+                  li  Плитка напольная
+                  li  Бордюр
+                  li  Плитка настенная
+                  li  Декор
+                  li  Панно
+                  li  Мозаика
+         .row
+            .col-md-12
+               .collection__text
+                  p.title-text   SEO. Коллекция империал в интернет-магазине «Фан керамика»
+                  p  Отделочная керамика широко используется для оформления жилых, производственных, коммерческих интерьеров. Преимуществами создаваемых с ее помощью покрытий являются внешняя привлекательность и долговечность.  Отделочная керамика широко используется для оформления жилых, производственных, коммерческих интерьеров. Преимуществами создаваемых с ее помощью покрытий являются внешняя привлекательность и долговечность.
+         .row
+            .col-md-12
+               +collection-tab()

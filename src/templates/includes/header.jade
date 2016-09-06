@@ -20,44 +20,48 @@ mixin header(type)
                      a(href="javascript:void(0)").registration  Зарегистрироваться
       .header-bottom
          .container
-            .row
-               .col-md-3
-                  .logo
-                     img(src="../img/logo.png")
-               .col-md-9.job-time
-                  .row
-                     .col-md-4
-                        +svg('phone')
-                        p
-                           span.title  Оптовая торговля
-                           span.subtitle  8-495-669-05-37, 8-495-669-05-38
-                           span.link
-                              a(href="javascript:void(0)")  Перейти на сайт  riffanal.ru
-                     .col-md-3.line-hr
-                        +svg('phone')
-                        p
-                           span.title  Розничная торговля
-                           span.subtitle  +7 (495) 644-24-37
-                     .col-md-2.line-hr
-                        +svg('time')
-                        p
-                           span.title  Будни
-                           span.subtitle  с 10 до 19 ч.
-                     .col-md-2
-                        p
-                           span.title  Выходные
-                           span.subtitle  с 10 до 17 ч.
-                     .col-md-1
-                        .header-bottom__cart
-                           a(href="javascript:void(0)")
-                              +svg('cart')
-                              p.count
-                                 span  3
-               .col-md-11
-                  +menu(mainmenu)
-               .col-md-1
-                  .header-bottom__search
-                     +svg('search')
+            .position-block
+               .search-form.js-search-form
+                  form
+                     input(type="text" placeholder="Поиск по сайту")
+               .row
+                  .col-md-3
+                     .logo
+                        img(src="../img/logo.png")
+                  .col-md-9.job-time
+                     .row
+                        .col-md-4
+                           +svg('phone')
+                           p
+                              span.title  Оптовая торговля
+                              span.subtitle  8-495-669-05-37, 8-495-669-05-38
+                              span.link
+                                 a(href="javascript:void(0)")  Перейти на сайт  riffanal.ru
+                        .col-md-3.line-hr
+                           +svg('phone')
+                           p
+                              span.title  Розничная торговля
+                              span.subtitle  +7 (495) 644-24-37
+                        .col-md-2.line-hr
+                           +svg('time')
+                           p
+                              span.title  Будни
+                              span.subtitle  с 10 до 19 ч.
+                        .col-md-2
+                           p
+                              span.title  Выходные
+                              span.subtitle  с 10 до 17 ч.
+                        .col-md-1
+                           .header-bottom__cart
+                              a(href="javascript:void(0)")
+                                 +svg('cart')
+                                 p.count
+                                    span  3
+                  .col-md-11
+                     +menu(mainmenu)
+                  .col-md-1
+                     .header-bottom__search.js-open-search
+                        +svg('search')
 
 
 

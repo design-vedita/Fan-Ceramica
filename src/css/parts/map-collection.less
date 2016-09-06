@@ -1,0 +1,278 @@
+.collection {
+	margin-top: 20px;
+
+	.slider-collection {
+
+		&__item {
+
+			img {
+				width: 100%;
+				height: auto;
+			}
+		}
+	}
+
+	.collection-nav {
+		position: relative;
+		margin-top: 17px;
+		padding-right: 30px;
+		padding-left: 30px;
+
+		button {
+			position: absolute;
+			top: calc(~'50% - 10px');
+			width: 12px;
+			height: 20px;
+			background-image: url(../img/next-collection.svg);
+			background-size: cover;
+			background-position: center;
+			background-color: transparent;
+			border: none;
+
+			&.slick-prev {
+				left: 0;
+				transform: rotate(180deg);
+			}
+
+			&.slick-next {
+				right: 0;
+			}
+		}
+
+		img {
+			cursor: pointer;
+		}
+
+		&__item {
+
+			img {
+				margin: 0 auto;
+			}
+		}
+	}
+
+	.recommend-banner {
+		margin-bottom: 23px;
+		display: inline-block;
+
+
+		.recommend-banner();
+	}
+
+	p {
+		margin-bottom: 5px;
+
+		&.param {
+
+			.param-style(5px);
+		}
+
+		&.collection-title {
+			margin-top: 12px;
+			font: 14px/24px @bold;
+			color: @yellow;
+			text-transform: uppercase;
+		}
+	}
+
+	ul {
+		margin-bottom: 3px;
+
+		&.collection-list {
+
+			li {
+				list-style-type: none;
+				font: 14px/26px @regular;
+				color: @fildset-label;
+			}
+		}
+	}
+
+	&__manufacturer {
+
+		p {
+			display: inline-block;
+		}
+
+		img {
+			margin-left: 4%;
+			display: inline-block;
+			height: 38px;
+		}
+	}
+
+	&__text {
+		margin-top: 66px;
+
+		p {
+			font: 14px/24px @semibold;
+			color: @p;
+
+			&.title-text {
+				margin-bottom: 18px;
+				font: 18px/24px @semibold;
+				color: @h1;
+				text-transform: uppercase;
+			}
+
+		}
+	}
+
+	&__tab {
+		margin-top: 33px;
+
+		&__links {
+			padding-bottom: 11px;
+			border-bottom: 1px @collection-tab solid;
+
+			a {
+				padding-bottom: 7px;
+				font: 24px/24px @regular;
+				text-transform: uppercase;
+				color: @utpTitle;
+				border-bottom: 3px transparent solid;
+				transition-property: border, color;
+				transition-duration: 300ms;
+				transition-timing-function: linear;
+
+				&:not(:last-child) {
+					margin-right: 3.5%;
+				}
+
+				&.open--tab {
+					border-bottom-color: @lightyellow;
+					color: @lightyellow;
+				}
+
+				&:hover {
+					border-bottom-color: @lightyellow;
+					color: @lightyellow;
+				}
+
+			}
+		}
+
+		&__content {
+			margin-top: 24px;
+
+			&__item {
+				display: none;
+
+				&.open--tab {
+					display: block;
+				}
+
+				.collection-item {
+
+					&__type {
+						margin-bottom: 25px;
+
+						p.title {
+							padding-left: 10px;
+							font: 14px/26px @bold;
+							color: @black;
+							text-transform: uppercase;
+							background-color: @collection-title;
+						}
+
+						&__goods {
+							margin-top: 22px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.item-goods {
+
+	img {
+		width: 100%;
+		height: auto;
+	}
+
+	&__text {
+		padding: 12px 22px 0 8px;
+
+		p {
+			margin-bottom: 0;
+
+			&.item-title {
+				font: 20px/24px @regular;
+				text-transform: uppercase;
+
+				a {
+					color: @slideTitle;
+				}
+			}
+
+			&.collection {
+				margin-top: 0;
+				font: 14px/24px @semibold;
+				color: @collection-p;
+			}
+		}
+
+		.sizes {
+			margin-top: 6px;
+			padding-bottom: 12px;
+			border-bottom: 1px @linehr solid;
+
+			svg {
+				display: inline-block;
+				width: 13px;
+				height: 13px;
+				fill: @yellow;
+			}
+
+			p {
+				margin-left: 2%;
+				display: inline-block;
+				font: 14px/24px @regular;
+				color: @fildset-label;
+
+				span {
+					line-height: 26px;
+					color: @titleManuf;
+				}
+			}
+		}
+
+		.button {
+			margin-top: 8px;
+			padding-bottom: 20px;
+
+			p.price {
+				float: left;
+				font: 24px @bold;
+				color: @price;
+
+				 span {
+					 font: 16px @regular;
+				 }
+			}
+
+			a {
+				margin-top: 6px;
+				float: right;
+				display: block;
+				width: 118px;
+				height: 24px;
+				box-sizing: border-box;
+				font: 15px @semibold;
+				color: @more;
+				text-align: center;
+				background-color: @green;
+				border-radius: 20px;
+			}
+
+			&::after {
+				display: block;
+				width: 100%;
+				clear: both;
+				content: '';
+			}
+		}
+	}
+}

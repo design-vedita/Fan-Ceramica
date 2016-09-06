@@ -36,6 +36,59 @@ header {
 		border-bottom:1px @headerBottom solid;
 	}
 
+	.position-block {
+		position: relative;
+
+		.search-form {
+			position: absolute;
+			z-index: 2;
+			right: 0;
+			bottom: -54px;
+			padding: 5px;
+			box-sizing: border-box;
+			max-width: 451px;
+			width: 100%;
+			height: 51px;
+			background-color: @yellow;
+			opacity: 0;
+			visibility: hidden;
+			transition-property: opacity, visibility;
+			transition-duration: 300ms;
+			transition-timing-function: linear;
+
+			&.visible--search {
+				opacity: 1;
+				visibility: visible;
+			}
+
+			&::before {
+				position: absolute;
+				top: -18px;
+				right: 13px;
+				display: block;
+				width: 0;
+				height: 0;
+				border-left: 9px solid transparent;
+				border-right: 9px solid transparent;
+				border-bottom: 18px solid @yellow;
+				content: '';
+			}
+
+			input {
+
+				&[type=text] {
+					padding-left: 8px;
+					width: 100%;
+					box-sizing: border-box;
+					height: 41px;
+					font: 14px/24px @semibold;
+					color: @input-search;
+					border: none;
+				}
+			}
+		}
+	}
+
 	.header {
 
 		&-top {
@@ -55,9 +108,11 @@ header {
 					padding-left: 17px;
 					font: 13px @regular;
 					color: @lightwhite;
+					transition: color 300ms linear;
 
 					&:hover {
 						text-decoration: none;
+						color: @yellow;
 					}
 
 					&.enter {
@@ -178,6 +233,11 @@ header {
 						font: 10px/24px @bold;
 						color: @green;
 						text-transform: uppercase;
+						transition: color 300ms linear;
+
+							&:hover {
+								color: @riff-color;
+							}
 					}
 
 				}
@@ -410,7 +470,7 @@ header {
 			&__search {
 				margin-left: 20px;
 				margin-top: -9px;
-				padding-left: 6px;
+				padding-left: 3px;
 				padding-top: 6px;
 				box-sizing: border-box;
 				width: 46px;
@@ -419,11 +479,29 @@ header {
 				background-color: @searchback;
 				border-radius: 50%;
 				cursor: pointer;
+				transition: background 300ms linear;
+
+					&.open--search {
+						background-color: @yellow;
+
+						svg {
+							fill: @white;
+						}
+					}
+
+					&:hover {
+						background-color: @yellow;
+
+						svg {
+							fill: @white;
+						}
+					}
 
 					svg {
 						width: 21px;
 						height: 21px;
 						fill: @cartico;
+						transition: fill 300ms linear;
 					}
 			}
 		}
@@ -876,6 +954,11 @@ main {
 					transition-duration: 300ms;
 					transition-delay: 0s;
 					transition-timing-function: linear;
+
+					&:hover {
+						background-color: @more-tile;
+						color: @white;
+					}
 				}
 			}
 

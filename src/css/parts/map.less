@@ -57,14 +57,20 @@
 				background-repeat: no-repeat;
 			}
 
-			&.param {
-				margin-bottom: 15px;
-				font: 14px/24px @regular;
-				color: @param;
+			&.stock {
+				margin-bottom: 10px;
+				padding-left: 22px;
+				font: 14px/26px @semibold;
+				color: @ui-slider-handle;
+				background-image: url(../img/stock.svg);
+				background-size: 15px 15px;
+				background-position: 0 49%;
+				background-repeat: no-repeat;
+			}
 
-				span {
-					color: @titleManuf;
-				}
+			&.param {
+
+				.param-style();
 			}
 
 		}
@@ -111,6 +117,11 @@
 				border-radius: 20px;
 				background-color: @lightyellow;
 				color: @white;
+				transition: background 300ms linear;
+
+				&:hover {
+					background-color: @calc-link;
+				}
 			}
 		}
 
@@ -192,6 +203,12 @@
 					font: 18px @semibold;
 					color: @price;
 					background-color: transparent;
+					transition: background 300ms linear, color 300ms linear;
+
+					&:hover {
+						background-color: @green;
+						color: @white;
+					}
 
 					&.minus {
 						border-radius: 20px 0 0 20px;
@@ -236,6 +253,11 @@
 					border-radius: 20px;
 					background-color: @input-submit;
 					border: none;
+					transition: background 300ms linear;
+
+					&:hover {
+						background-color: @red;
+					}
 				}
 
 				label {
@@ -262,13 +284,21 @@
 		}
 	}
 
-	.this-series {
+	.this-series,
+	.el-collection	{
 		margin-top: 47px;
 		padding-top: 41px;
 		border-top: 1px @linehr solid;
 
 		p.category-title {
 			.category-title();
+		}
+	}
+
+	.el-collection {
+
+		.item-goods {
+			margin-bottom: 40px;
 		}
 	}
 

@@ -7,6 +7,10 @@ h1 {
 	color: @utpTitle;
 	text-transform: uppercase;
 
+	span {
+		color: @h1-span;
+	}
+
 	&::before {
 		position: absolute;
 		left: 0;
@@ -34,8 +38,31 @@ h1 {
 			border: 1px @fieldset solid;
 
 			& > label {
+				display: block;
 				font: 14px/24px @semibold;
 				color: @fildset-label;
+				cursor: pointer;
+				transition: color 300ms linear;
+
+					&:hover {
+						color: @green;
+
+						&:not(.open--data) {
+
+							svg {
+								fill: @green;
+							}
+						}
+					}
+
+					&.open--data {
+
+						.arrow {
+							right: 30px;
+							transform: rotate(-90deg);
+						}
+
+					}
 			}
 
 			&.offers-field,
@@ -43,6 +70,18 @@ h1 {
 
 				.data-fieldset {
 					margin-bottom: 0;
+				}
+			}
+
+			&.close--field {
+				background-color: #aac94a;
+
+				label {
+					color: @white;
+				}
+
+				svg {
+					fill: @white;
 				}
 			}
 		}
@@ -56,6 +95,15 @@ h1 {
 				font: 14px/24px @regular;
 				color: @fildset-label;
 				text-align: left;
+				transition: color 300ms linear;
+
+					&.ui-checkboxradio-checked {
+						color: @active-checkbox;
+					}
+
+					&:hover {
+						color: @green;
+					}
 			}
 
 			input {
@@ -88,14 +136,10 @@ h1 {
 			cursor: pointer;
 			fill: @arrow-filter;
 
-			&.open--data {
-				right: 30px;
-				transform: rotate(-90deg);
-			}
-
 			svg {
 				width: inherit;
 				height: inherit;
+				transition: fill 300ms linear;
 			}
 		}
 
@@ -195,6 +239,11 @@ h1 {
 					border: none;
 					cursor: pointer;
 					border-radius: 2px;
+					transition: color 300ms linear;
+
+						&:hover {
+							color: @white;
+						}
 				}
 
 				&[type=reset] {
@@ -209,6 +258,12 @@ h1 {
 					border: 2px @green solid;
 					cursor: pointer;
 					border-radius: 2px;
+					transition: background 300ms linear, color 300ms linear;
+
+					&:hover {
+						background-color: @green;
+						color: @white;
+					}
 				}
 			}
 		}

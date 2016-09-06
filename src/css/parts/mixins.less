@@ -28,6 +28,16 @@
 	text-transform: uppercase;
 }
 
+.param-style(@margin_b: 15px) {
+	margin-bottom: @margin_b;
+	font: 14px/24px @regular;
+	color: @param;
+
+	span {
+		color: @titleManuf;
+	}
+}
+
 .text-pages() {
 	&__description {
 		-moz-column-count: 2;
