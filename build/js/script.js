@@ -261,9 +261,23 @@
                 searchBlock = document.getElementsByClassName('js-search-form')[0];
 
                 searchLink.onclick = function() {
-                    this.classList.toggle('open--search')
+                    this.classList.toggle('open--search');
                     searchBlock.classList.toggle('visible--search');
-                }
+                };
+
+                // ���� �� �� �������� ������ ��� ������ ������ �������� ������ ������
+                $(document).on('click', function(e) {
+
+                    if($(e.target).closest(searchBlock).length) return;
+
+                    if (!$(e.target).closest(".js-open-search").length) {
+                        $('.js-search-form').removeClass('visible--search');
+                    }
+
+                    e.stopPropagation();
+
+                });
+
         }
 
         openSearch();
@@ -306,7 +320,7 @@
                                             effect : "fadeIn"
                                         });
                                     }
-                                    
+
                                     blocks[j].classList.add('lazy-visible');
                                 }
 
@@ -319,6 +333,7 @@
         }
 
         collectionTab();
+
     });
 
 

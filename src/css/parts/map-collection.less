@@ -162,6 +162,30 @@
 					display: block;
 				}
 
+				.item-card {
+					margin-bottom: 50px;
+					box-shadow: none;
+
+					&__img {
+						box-shadow: 0 0 13px 0 fade(@dark, 24%);
+
+						img {
+							height: 193px;
+						}
+					}
+
+					&__text {
+						padding-right: 0;
+						padding-left: 0;
+
+						p {
+							&.manufacturer {
+								margin-top: 0;
+							}
+						}
+					}
+				}
+
 				.collection-item {
 
 					&__type {
