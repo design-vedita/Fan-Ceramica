@@ -1,0 +1,119 @@
+.calculate {
+	margin-top: 35px;
+
+	svg {
+		margin-left: 10px;
+		fill: @titleLink;
+
+		&.size-room,
+		&.doors {
+			width: 56px;
+			height: 56px;
+		}
+
+		&.windows {
+			width: 50px;
+			height: 50px;
+		}
+	}
+
+	label {
+		margin-left: 15px;
+		font: 14px/24px @regular;
+		color: @param;
+	}
+
+	input {
+
+		&[type=text] {
+			margin-bottom: 15px;
+			padding-left: 15px;
+			width: 100%;
+			max-width: 165px;
+			height: 29px;
+			font: 14px/26px @semibold;
+			color: @titleManuf;
+			border-radius: 20px;
+			box-sizing: border-box;
+			border: 1px @calc-input solid;
+		}
+
+		&[type=submit] {
+			margin-top: 56px;
+			width: 160px;
+			height: 29px;
+			font: 16px @semibold;
+			color: @white;
+			background-color: @lightyellow;
+			border: none;
+			border-radius: 20px;
+		}
+	}
+
+	.submit-block {
+		text-align: center;
+	}
+
+	.add-inputs {
+		margin-top: 17px;
+
+		a {
+			font: 15px @semibold;
+			color: @ui-slider-handle;
+		}
+	}
+
+	.form-block {
+		position: relative;
+		padding-left: 7px;
+
+		&::after {
+			position: absolute;
+			top: 0;
+			right: 25px;
+			display: block;
+			width: 1px;
+			height: 100%;
+			background-color: @linehr;
+			content: '';
+
+		}
+
+		p {
+			&.title {
+				margin-top: 20px;
+				margin-bottom: 5px;
+				padding-right: 30px;
+				font: 18px @bold;
+				color: @ui-slider-handle;
+			}
+		}
+
+	}
+
+	form {
+		padding-bottom: 57px;
+		border-bottom: 1px @linehr solid;
+	}
+
+	.result-calc {
+		margin-top: 41px;
+
+		p {
+			font: 18px @bold;
+			color: @result-calc;
+
+			span {
+				color: @black;
+			}
+		}
+	}
+
+	&__catalog {
+		margin-top: 55px;
+
+		 p.category-title {
+			.category-title();
+		}
+	}
+}

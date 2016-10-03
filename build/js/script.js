@@ -334,6 +334,41 @@
 
         collectionTab();
 
+        function heightBlocks(el) {
+            var blocks = document.getElementsByClassName(el),
+                anchor = document.getElementsByClassName('anchor'),
+                max = 0,
+                maxIndex = 0;
+
+            var i, j, k;
+
+            if(!!anchor) {
+                for (i = 0; i < blocks.length; i++) {
+
+                    if (max < blocks[i].offsetHeight ) {
+                        maxIndex = i;
+                        max = blocks[maxIndex].offsetHeight;
+                    }
+
+                }
+
+                if(maxIndex)
+                    blocks[maxIndex].classList.add('anchor');
+
+
+                for (j = 0; j < blocks.length; j++) {
+                    if(!blocks[j].classList.contains('anchor')) {
+                        blocks[j].style.height = max + 'px';
+                    }
+                }
+            }
+        }
+
+        heightBlocks('js-form');
+
+        window.onresize = function(){
+            heightBlocks('js-form');
+        }
     });
 
 

@@ -1,0 +1,300 @@
+mixin calculate(type)
+   div(class="#{type}").calculate
+      - if (type == 'wall')
+         .container
+            form
+               .row
+                  .col-md-3
+                     +svg('size-room')
+                     .form-block.js-form
+                        p.title  Обои
+                        label Ширина рулона (см)
+                        br
+                        input(type="text" placeholder="110 см")
+                        br
+
+                        label Длина рулона (м)
+                        br
+                        input(type="text" placeholder="10 м")
+                        br
+
+                        label Раппорт (см)
+                        br
+                        input(type="text" placeholder="64 см")
+                  .col-md-3
+                     +svg('size-room')
+                     .form-block.js-form
+                        p.title  Размер комнаты
+                        label Периметр (м)
+                        br
+                        input(type="text" placeholder="53.2 м")
+                        br
+
+                        label Высота (м)
+                        br
+                        input(type="text" placeholder="2.3 м")
+
+                  .col-md-3
+                     +svg('doors')
+                     .form-block.js-form
+                        p.title  Размер двери
+                        label Ширина (м)
+                        br
+                        input(type="text" placeholder="7.3 м")
+                        br
+
+                        label Высота (м)
+                        br
+                        input(type="text" placeholder="2.4 м")
+                        br
+
+                        p.title  Размер двери 2
+                        label Ширина (м)
+                        br
+                        input(type="text" placeholder="7.3 м")
+                        br
+
+                        label Высота (м)
+                        br
+                        input(type="text" placeholder="2.4 м")
+                        br
+
+                  .col-md-3
+                     +svg('windows')
+                     .form-block.js-form
+                        p.title  Размер окна
+                        .add-inputs
+                           a(href="javascript:void(0)").js-add  + Добавить окно
+
+                  .col-md-12
+                     .submit-block
+                        input(type="submit" value="Рассчитать")
+         .result-calc
+            .container
+               .row
+                  .col-md-12
+                     p  Итого Вам нужно:
+                        = ' '
+                        span.js-result 10 рулонов. 4 пачки клея
+         .calculate__catalog
+            .container
+               .row
+                  .col-md-12
+                     p.category-title  Каталог обоев
+                  .col-md-3
+                     .item-card
+                        .item-card__img
+                           a(href="javascript:void(0)"): span  Подробнее
+                           img(data-original="../img/item-wallpaper.jpg").js-lazy
+                        .item-card__text
+                           p.title: a(href="javascript:void(0)")  Империал
+                           p.manufacturer Испания. Atlantic Tiles
+                           p.type   Флизилиновые, 110 см
+                           p.price
+                              span
+                                 |  2 300
+                              = ' '
+                              | р./рулон
+                  .col-md-3
+                     .item-card
+                        .item-card__img
+                           .recommended-banner.recom
+                              p   Рекомендуем
+                           a(href="javascript:void(0)"): span  Подробнее
+                           img(data-original="../img/item-wallpaper.jpg").js-lazy
+                        .item-card__text
+                           p.title: a(href="javascript:void(0)")  Империал
+                           p.manufacturer Испания. Atlantic Tiles
+                           p.type   Флизилиновые, 110 см
+                           p.price
+                              span
+                                 |  2 300
+                              = ' '
+                              | р./рулон
+                  .col-md-3
+                     .item-card
+                        .item-card__img
+                           .recommended-banner.hit
+                              p   Хит
+                           a(href="javascript:void(0)"): span  Подробнее
+                           img(data-original="../img/item-wallpaper.jpg").js-lazy
+                        .item-card__text
+                           p.title: a(href="javascript:void(0)")  Империал
+                           p.manufacturer Испания. Atlantic Tiles
+                           p.type   Флизилиновые, 110 см
+                           p.price
+                              span
+                                 |  2 300
+                              = ' '
+                              | р./рулон
+                  .col-md-3
+                     .item-card
+                        .item-card__img
+                           .recommended-banner.new
+                              p   Новинка
+                           a(href="javascript:void(0)"): span  Подробнее
+                           img(data-original="../img/item-wallpaper.jpg").js-lazy
+                        .item-card__text
+                           p.title: a(href="javascript:void(0)")  Империал
+                           p.manufacturer Испания. Atlantic Tiles
+                           p.type   Флизилиновые, 110 см
+                           p.price
+                              span
+                                 |  2 300
+                              = ' '
+                              | р./рулон
+
+      - else
+         .container
+            form
+               .row
+                  .col-md-3
+                     +svg('size-room')
+                     .form-block.js-form
+                        p.title  Размер плитки для стен
+                        label Ширина (см)
+                        br
+                        input(type="text" placeholder="110 см")
+                        br
+
+                        label Высота (см)
+                        br
+                        input(type="text" placeholder="10 м")
+
+                        p.title  Размер плитки для пола
+                        label Ширина (см)
+                        br
+                        input(type="text" placeholder="110 см")
+                        br
+
+                        label Высота (см)
+                        br
+                        input(type="text" placeholder="10 м")
+                        br
+
+                  .col-md-3
+                     +svg('size-room')
+                     .form-block.js-form
+                        p.title  Размер комнаты
+                        label Периметр (м)
+                        br
+                        input(type="text" placeholder="53.2 м")
+                        br
+
+                        label Высота (м)
+                        br
+                        input(type="text" placeholder="2.3 м")
+
+                  .col-md-3
+                     +svg('doors')
+                     .form-block.js-form
+                        p.title  Размер двери
+                        label Ширина (м)
+                        br
+                        input(type="text" placeholder="7.3 м")
+                        br
+
+                        label Высота (м)
+                        br
+                        input(type="text" placeholder="2.4 м")
+                        br
+
+                        p.title  Размер двери 2
+                        label Ширина (м)
+                        br
+                        input(type="text" placeholder="7.3 м")
+                        br
+
+                        label Высота (м)
+                        br
+                        input(type="text" placeholder="2.4 м")
+                        br
+
+                  .col-md-3
+                     +svg('windows')
+                     .form-block.js-form
+                        p.title  Размер окна
+                        .add-inputs
+                           a(href="javascript:void(0)").js-add  + Добавить окно
+
+                  .col-md-12
+                     .submit-block
+                        input(type="submit" value="Рассчитать")
+         .result-calc
+            .container
+               .row
+                  .col-md-12
+                     p  Итого Вам нужно:
+                        = ' '
+                        span.js-result 254 шт. для стен.  12 шт. для пола.  2 мешка клея (по 25 кг)
+         .calculate__catalog
+            .container
+               .row
+                  .col-md-12
+                     p.category-title  Каталог плитки
+                  .col-md-3
+                     .item-card
+                        .item-card__img
+                           .recommended-banner.new
+                              p   Новинка
+                           a(href="javascript:void(0)"): span  Подробнее
+                           img(data-original="../img/item-img.jpg").js-lazy
+                        .item-card__text
+                           p.title: a(href="javascript:void(0)")  Империал
+                           p.manufacturer Испания. Atlantic Tiles
+                           p.type   Керомогранит
+                           p.price
+                              span
+                                 |  2 300
+                              = ' '
+                              | р.м
+                              sup   2
+                  .col-md-3
+                     .item-card
+                        .item-card__img
+                           .recommended-banner.hit
+                              p   Хит
+                           a(href="javascript:void(0)"): span  Подробнее
+                           img(data-original="../img/item-img.jpg").js-lazy
+                        .item-card__text
+                           p.title: a(href="javascript:void(0)")  Империал
+                           p.manufacturer Испания. Atlantic Tiles
+                           p.type   Керомогранит
+                           p.price
+                              span
+                                 |  2 300
+                              = ' '
+                              | р.м
+                              sup   2
+                  .col-md-3
+                     .item-card
+                        .item-card__img
+                           .recommended-banner.recom
+                              p   Рекомендуем
+                           a(href="javascript:void(0)"): span  Подробнее
+                           img(data-original="../img/item-img.jpg").js-lazy
+                        .item-card__text
+                           p.title: a(href="javascript:void(0)")  Империал
+                           p.manufacturer Испания. Atlantic Tiles
+                           p.type   Керомогранит
+                           p.price
+                              span
+                                 |  2 300
+                              = ' '
+                              | р.м
+                              sup   2
+                  .col-md-3
+                     .item-card
+                        .item-card__img
+                           a(href="javascript:void(0)"): span  Подробнее
+                           img(data-original="../img/item-img.jpg").js-lazy
+                        .item-card__text
+                           p.title: a(href="javascript:void(0)")  Империал
+                           p.manufacturer Испания. Atlantic Tiles
+                           p.type   Керомогранит
+                           p.price
+                              span
+                                 |  2 300
+                              = ' '
+                              | р.м
+                              sup   2

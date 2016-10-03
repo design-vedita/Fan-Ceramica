@@ -1,0 +1,26 @@
+include includes/head
+include includes/header
+include includes/breadcrumbs
+include includes/title
+include includes/manufacturer-list
+include includes/footer
+include includes/scripts
+include includes/mixins
+doctype html
+html(lang="en")
+    head
+        +head('Производители плитки')
+    body
+        include blocks/svg.html
+        // Шапка сайта
+        +header('inner')
+        //
+        main
+            +breadcrumbs()
+            +title('Производители плитки')
+
+            +manufacturer-list()
+     
+        footer
+            +footer()
+        +scripts()

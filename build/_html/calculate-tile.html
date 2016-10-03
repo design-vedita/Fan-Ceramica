@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <title>  Каталог обои</title>
+    <title>  Калькулятор плитки</title>
     <link rel="stylesheet" href="../css/normalize.css"/>
     <link rel="stylesheet" href="../css/libs/bootstrap/bootstrap.min.css"/>
     <link rel="stylesheet" href="../css/libs/slick/slick.css"/>
@@ -194,517 +194,152 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <h1>Обои</h1>
+            <h1>Калькулятор плитки</h1>
           </div>
         </div>
       </div>
-      <div class="catalog">
+      <div class="tile calculate">
         <div class="container">
-          <div class="row">
-            <div class="col-md-3">
-              <form id="filter">
-                <fieldset class="price-field">
-                  <label class="js-arrow-filter">Цена
-                    <div class="arrow">
-                      <svg class="prev">
-                        <use xlink:href="#prev"></use>
-                      </svg>
-                    </div>
-                  </label>
-                  <div class="data-fieldset js-data">
-                    <div class="row">
-                      <div class="col-md-6">
-                        <label>От</label>
-                        <input type="text" class="js-from"/>
-                      </div>
-                      <div class="col-md-6">
-                        <label>До</label>
-                        <input type="text" class="js-to"/>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-md-12">
-                        <div class="slider-label"><span>   250 p.</span><span>   5800 р.</span></div>
-                        <div id="slider-range"></div>
-                      </div>
-                    </div>
-                  </div>
-                </fieldset>
-                <fieldset class="offers-field">
-                  <label class="js-arrow-filter">Наши предложения
-                    <div class="arrow">
-                      <svg class="prev">
-                        <use xlink:href="#prev"></use>
-                      </svg>
-                    </div>
-                  </label>
-                  <div class="data-fieldset js-data">
-                    <label for="recommended-0">   Хит</label>
-                    <input type="checkbox" name="recommended-0" id="recommended-0" class="js-checkbox"/><br/>
-                    <label for="recommended-1">   Советуем</label>
-                    <input type="checkbox" name="recommended-1" id="recommended-1" class="js-checkbox"/><br/>
-                    <label for="recommended-2">   Новинка</label>
-                    <input type="checkbox" name="recommended-2" id="recommended-2" class="js-checkbox"/><br/>
-                  </div>
-                </fieldset>
-                <fieldset class="land-field">
-                  <label class="js-arrow-filter">  Страна
-                    <div class="arrow">
-                      <svg class="prev">
-                        <use xlink:href="#prev"></use>
-                      </svg>
-                    </div>
-                  </label>
-                  <div class="data-fieldset js-data">
-                    <label for="land-0">   Италия</label>
-                    <input type="checkbox" name="land-0" id="land-0" class="js-checkbox"/><br/>
-                    <label for="land-1">   Россия</label>
-                    <input type="checkbox" name="land-1" id="land-1" class="js-checkbox"/><br/>
-                    <label for="land-2">   Китай</label>
-                    <input type="checkbox" name="land-2" id="land-2" class="js-checkbox"/><br/>
-                  </div>
-                </fieldset>
-                <fieldset class="manufacturer-field">
-                  <label class="js-arrow-filter">  Производители
-                    <div class="arrow">
-                      <svg class="prev">
-                        <use xlink:href="#prev"></use>
-                      </svg>
-                    </div>
-                  </label>
-                  <div class="data-fieldset js-data">
-                    <label for="manufacturer-0">   Brother</label>
-                    <input type="checkbox" name="manufacturer-0" id="manufacturer-0" class="js-checkbox"/><br/>
-                    <label for="manufacturer-1">   Canon</label>
-                    <input type="checkbox" name="manufacturer-1" id="manufacturer-1" class="js-checkbox"/><br/>
-                    <label for="manufacturer-2">   Epson</label>
-                    <input type="checkbox" name="manufacturer-2" id="manufacturer-2" class="js-checkbox"/><br/>
-                    <label for="manufacturer-3">   Hewlett-packard</label>
-                    <input type="checkbox" name="manufacturer-3" id="manufacturer-3" class="js-checkbox"/><br/>
-                    <label for="manufacturer-4">   Kyocera Lexmark</label>
-                    <input type="checkbox" name="manufacturer-4" id="manufacturer-4" class="js-checkbox"/><br/>
-                    <label for="manufacturer-5">   Oki</label>
-                    <input type="checkbox" name="manufacturer-5" id="manufacturer-5" class="js-checkbox"/><br/>
-                    <label for="manufacturer-6">   Minolta</label>
-                    <input type="checkbox" name="manufacturer-6" id="manufacturer-6" class="js-checkbox"/><br/>
-                    <label for="manufacturer-7">   Ricoh</label>
-                    <input type="checkbox" name="manufacturer-7" id="manufacturer-7" class="js-checkbox"/><br/>
-                    <label for="manufacturer-8">   Samsung</label>
-                    <input type="checkbox" name="manufacturer-8" id="manufacturer-8" class="js-checkbox"/><br/>
-                    <label for="manufacturer-9">   Sharp</label>
-                    <input type="checkbox" name="manufacturer-9" id="manufacturer-9" class="js-checkbox"/><br/>
-                  </div>
-                </fieldset>
-                <fieldset class="size-field">
-                  <label class="js-arrow-filter">  Размер
-                    <div class="arrow">
-                      <svg class="prev">
-                        <use xlink:href="#prev"></use>
-                      </svg>
-                    </div>
-                  </label>
-                  <div class="data-fieldset js-data">
-                    <label for="size-0">   40 см</label>
-                    <input type="checkbox" name="size-0" id="size-0" class="js-checkbox"/><br/>
-                    <label for="size-1">   110 см</label>
-                    <input type="checkbox" name="size-1" id="size-1" class="js-checkbox"/><br/>
-                  </div>
-                </fieldset>
-                <fieldset class="material-field">
-                  <label class="js-arrow-filter">  Материал
-                    <div class="arrow">
-                      <svg class="prev">
-                        <use xlink:href="#prev"></use>
-                      </svg>
-                    </div>
-                  </label>
-                  <div class="data-fieldset js-data">
-                    <label for="material-0">   Флизилиновые</label>
-                    <input type="checkbox" name="material-0" id="material-0" class="js-checkbox"/><br/>
-                    <label for="material-1">   Виниловые</label>
-                    <input type="checkbox" name="material-1" id="material-1" class="js-checkbox"/><br/>
-                    <label for="material-2">   Бумажные</label>
-                    <input type="checkbox" name="material-2" id="material-2" class="js-checkbox"/><br/>
-                    <label for="material-3">   Фотообои</label>
-                    <input type="checkbox" name="material-3" id="material-3" class="js-checkbox"/><br/>
-                    <label for="material-4">   Потолочные</label>
-                    <input type="checkbox" name="material-4" id="material-4" class="js-checkbox"/><br/>
-                    <label for="material-5">   Под покраску</label>
-                    <input type="checkbox" name="material-5" id="material-5" class="js-checkbox"/><br/>
-                    <label for="material-6">   Виниловые обои на бумаге</label>
-                    <input type="checkbox" name="material-6" id="material-6" class="js-checkbox"/><br/>
-                    <label for="material-7">   Виниловые обои на флизелине</label>
-                    <input type="checkbox" name="material-7" id="material-7" class="js-checkbox"/><br/>
-                    <label for="material-8">   Текстильные обои</label>
-                    <input type="checkbox" name="material-8" id="material-8" class="js-checkbox"/><br/>
-                  </div>
-                </fieldset>
-                <fieldset class="type-room-field">
-                  <label class="js-arrow-filter">  Тип помещения
-                    <div class="arrow">
-                      <svg class="prev">
-                        <use xlink:href="#prev"></use>
-                      </svg>
-                    </div>
-                  </label>
-                  <div class="data-fieldset js-data">
-                    <label for="type_room-0">   Коридор</label>
-                    <input type="checkbox" name="type_room-0" id="type_room-0" class="js-checkbox"/><br/>
-                    <label for="type_room-1">   Кухня</label>
-                    <input type="checkbox" name="type_room-1" id="type_room-1" class="js-checkbox"/><br/>
-                    <label for="type_room-2">   Спальня</label>
-                    <input type="checkbox" name="type_room-2" id="type_room-2" class="js-checkbox"/><br/>
-                    <label for="type_room-3">   Детская</label>
-                    <input type="checkbox" name="type_room-3" id="type_room-3" class="js-checkbox"/><br/>
-                    <label for="type_room-4">   Гостиная</label>
-                    <input type="checkbox" name="type_room-4" id="type_room-4" class="js-checkbox"/><br/>
-                    <label for="type_room-5">   Офис</label>
-                    <input type="checkbox" name="type_room-5" id="type_room-5" class="js-checkbox"/><br/>
-                    <label for="type_room-6">   Кабинет</label>
-                    <input type="checkbox" name="type_room-6" id="type_room-6" class="js-checkbox"/><br/>
-                  </div>
-                </fieldset>
-                <fieldset class="color-field">
-                  <label class="js-arrow-filter">  По цвету
-                    <div class="arrow">
-                      <svg class="prev">
-                        <use xlink:href="#prev"></use>
-                      </svg>
-                    </div>
-                  </label>
-                  <div class="data-fieldset js-data">
-                    <label for="color-0">   Красный</label>
-                    <input type="checkbox" name="color-0" id="color-0" class="js-checkbox"/><br/>
-                    <label for="color-1">   Синий</label>
-                    <input type="checkbox" name="color-1" id="color-1" class="js-checkbox"/><br/>
-                    <label for="color-2">   Зеленый</label>
-                    <input type="checkbox" name="color-2" id="color-2" class="js-checkbox"/><br/>
-                    <label for="color-3">   Коричневый</label>
-                    <input type="checkbox" name="color-3" id="color-3" class="js-checkbox"/><br/>
-                    <label for="color-4">   Бежевый</label>
-                    <input type="checkbox" name="color-4" id="color-4" class="js-checkbox"/><br/>
-                    <label for="color-5">   Персиковый</label>
-                    <input type="checkbox" name="color-5" id="color-5" class="js-checkbox"/><br/>
-                  </div>
-                </fieldset>
-                <fieldset class="color-field">
-                  <label class="js-arrow-filter">  По узору
-                    <div class="arrow">
-                      <svg class="prev">
-                        <use xlink:href="#prev"></use>
-                      </svg>
-                    </div>
-                  </label>
-                  <div class="data-fieldset js-data">
-                    <label for="pattern-0">   Цветок</label>
-                    <input type="checkbox" name="pattern-0" id="pattern-0" class="js-checkbox"/><br/>
-                    <label for="pattern-1">   Клетка</label>
-                    <input type="checkbox" name="pattern-1" id="pattern-1" class="js-checkbox"/><br/>
-                    <label for="pattern-2">   Полоска</label>
-                    <input type="checkbox" name="pattern-2" id="pattern-2" class="js-checkbox"/><br/>
-                    <label for="pattern-3">   Орнамент</label>
-                    <input type="checkbox" name="pattern-3" id="pattern-3" class="js-checkbox"/><br/>
-                    <label for="pattern-4">   Акварель</label>
-                    <input type="checkbox" name="pattern-4" id="pattern-4" class="js-checkbox"/><br/>
-                    <label for="pattern-5">   Геометрия</label>
-                    <input type="checkbox" name="pattern-5" id="pattern-5" class="js-checkbox"/><br/>
-                    <label for="pattern-6">   Однотонные</label>
-                    <input type="checkbox" name="pattern-6" id="pattern-6" class="js-checkbox"/><br/>
-                    <label for="pattern-7">   Природа</label>
-                    <input type="checkbox" name="pattern-7" id="pattern-7" class="js-checkbox"/><br/>
-                    <label for="pattern-8">   Под кирпич</label>
-                    <input type="checkbox" name="pattern-8" id="pattern-8" class="js-checkbox"/><br/>
-                    <label for="pattern-9">   Под дерево</label>
-                    <input type="checkbox" name="pattern-9" id="pattern-9" class="js-checkbox"/><br/>
-                    <label for="pattern-10">   Прованс</label>
-                    <input type="checkbox" name="pattern-10" id="pattern-10" class="js-checkbox"/><br/>
-                    <label for="pattern-11">   Домаск</label>
-                    <input type="checkbox" name="pattern-11" id="pattern-11" class="js-checkbox"/><br/>
-                  </div>
-                </fieldset>
-                <fieldset class="color-field">
-                  <label class="js-arrow-filter">  Декоры для стен
-                    <div class="arrow">
-                      <svg class="prev">
-                        <use xlink:href="#prev"></use>
-                      </svg>
-                    </div>
-                  </label>
-                  <div class="data-fieldset js-data">
-                    <label for="decor-0">   Фотообои</label>
-                    <input type="checkbox" name="decor-0" id="decor-0" class="js-checkbox"/><br/>
-                    <label for="decor-1">   Панно</label>
-                    <input type="checkbox" name="decor-1" id="decor-1" class="js-checkbox"/><br/>
-                    <label for="decor-2">   Бордюры</label>
-                    <input type="checkbox" name="decor-2" id="decor-2" class="js-checkbox"/><br/>
-                  </div>
-                </fieldset>
-                <div class="input-block">
-                  <input type="submit" value="Показать"/>
-                  <input type="reset" value="Сбросить"/>
+          <form>
+            <div class="row">
+              <div class="col-md-3">
+                <svg class="size-room">
+                  <use xlink:href="#size-room"></use>
+                </svg>
+                <div class="form-block js-form">
+                  <p class="title"> Размер плитки для стен</p>
+                  <label>Ширина (см)</label><br/>
+                  <input type="text" placeholder="110 см"/><br/>
+                  <label>Высота (см)</label><br/>
+                  <input type="text" placeholder="10 м"/>
+                  <p class="title"> Размер плитки для пола</p>
+                  <label>Ширина (см)</label><br/>
+                  <input type="text" placeholder="110 см"/><br/>
+                  <label>Высота (см)</label><br/>
+                  <input type="text" placeholder="10 м"/><br/>
                 </div>
-              </form>
+              </div>
+              <div class="col-md-3">
+                <svg class="size-room">
+                  <use xlink:href="#size-room"></use>
+                </svg>
+                <div class="form-block js-form">
+                  <p class="title"> Размер комнаты</p>
+                  <label>Периметр (м)</label><br/>
+                  <input type="text" placeholder="53.2 м"/><br/>
+                  <label>Высота (м)</label><br/>
+                  <input type="text" placeholder="2.3 м"/>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <svg class="doors">
+                  <use xlink:href="#doors"></use>
+                </svg>
+                <div class="form-block js-form">
+                  <p class="title"> Размер двери</p>
+                  <label>Ширина (м)</label><br/>
+                  <input type="text" placeholder="7.3 м"/><br/>
+                  <label>Высота (м)</label><br/>
+                  <input type="text" placeholder="2.4 м"/><br/>
+                  <p class="title"> Размер двери 2</p>
+                  <label>Ширина (м)</label><br/>
+                  <input type="text" placeholder="7.3 м"/><br/>
+                  <label>Высота (м)</label><br/>
+                  <input type="text" placeholder="2.4 м"/><br/>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <svg class="windows">
+                  <use xlink:href="#windows"></use>
+                </svg>
+                <div class="form-block js-form">
+                  <p class="title"> Размер окна</p>
+                  <div class="add-inputs"><a href="javascript:void(0)" class="js-add"> + Добавить окно</a></div>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="submit-block">
+                  <input type="submit" value="Рассчитать"/>
+                </div>
+              </div>
             </div>
-            <div class="col-md-9">
-              <div class="catalog__list">
-                <div class="row">
-                  <div class="col-md-4">
-                    <div class="item-card">
-                      <div class="item-card__img">
-                        <div class="recommended-banner new">
-                          <p>  Новинка</p>
-                        </div><a href="javascript:void(0)"><span> Подробнее</span></a><img data-original="../img/item-wallpaper.jpg" class="js-lazy"/>
-                      </div>
-                      <div class="item-card__text">
-                        <p class="title"><a href="javascript:void(0)"> Империал</a></p>
-                        <p class="manufacturer">Испания. Atlantic Tiles</p>
-                        <p class="type">  Флизилиновые, 110 см</p>
-                        <p class="price"><span> 2 300</span> р./рулон
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="item-card">
-                      <div class="item-card__img">
-                        <div class="recommended-banner hit">
-                          <p>  Хит</p>
-                        </div><a href="javascript:void(0)"><span> Подробнее</span></a><img data-original="../img/item-wallpaper.jpg" class="js-lazy"/>
-                      </div>
-                      <div class="item-card__text">
-                        <p class="title"><a href="javascript:void(0)"> Империал</a></p>
-                        <p class="manufacturer">Испания. Atlantic Tiles</p>
-                        <p class="type">  Флизилиновые, 110 см</p>
-                        <p class="price"><span> 2 300</span> р./рулон
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="item-card">
-                      <div class="item-card__img">
-                        <div class="recommended-banner recom">
-                          <p>  Советуем</p>
-                        </div><a href="javascript:void(0)"><span> Подробнее</span></a><img data-original="../img/item-wallpaper.jpg" class="js-lazy"/>
-                      </div>
-                      <div class="item-card__text">
-                        <p class="title"><a href="javascript:void(0)"> Империал</a></p>
-                        <p class="manufacturer">Испания. Atlantic Tiles</p>
-                        <p class="type">  Флизилиновые, 110 см</p>
-                        <p class="price"><span> 2 300</span> р./рулон
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="item-card">
-                      <div class="item-card__img"><a href="javascript:void(0)"><span> Подробнее</span></a><img data-original="../img/item-wallpaper.jpg" class="js-lazy"/></div>
-                      <div class="item-card__text">
-                        <p class="title"><a href="javascript:void(0)"> Империал</a></p>
-                        <p class="manufacturer">Испания. Atlantic Tiles</p>
-                        <p class="type">  Флизилиновые, 110 см</p>
-                        <p class="price"><span> 2 300</span> р./рулон
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="item-card">
-                      <div class="item-card__img"><a href="javascript:void(0)"><span> Подробнее</span></a><img data-original="../img/item-wallpaper.jpg" class="js-lazy"/></div>
-                      <div class="item-card__text">
-                        <p class="title"><a href="javascript:void(0)"> Империал</a></p>
-                        <p class="manufacturer">Испания. Atlantic Tiles</p>
-                        <p class="type">  Флизилиновые, 110 см</p>
-                        <p class="price"><span> 2 300</span> р./рулон
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="item-card">
-                      <div class="item-card__img"><a href="javascript:void(0)"><span> Подробнее</span></a><img data-original="../img/item-wallpaper.jpg" class="js-lazy"/></div>
-                      <div class="item-card__text">
-                        <p class="title"><a href="javascript:void(0)"> Империал</a></p>
-                        <p class="manufacturer">Испания. Atlantic Tiles</p>
-                        <p class="type">  Флизилиновые, 110 см</p>
-                        <p class="price"><span> 2 300</span> р./рулон
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="item-card">
-                      <div class="item-card__img"><a href="javascript:void(0)"><span> Подробнее</span></a><img data-original="../img/item-wallpaper.jpg" class="js-lazy"/></div>
-                      <div class="item-card__text">
-                        <p class="title"><a href="javascript:void(0)"> Империал</a></p>
-                        <p class="manufacturer">Испания. Atlantic Tiles</p>
-                        <p class="type">  Флизилиновые, 110 см</p>
-                        <p class="price"><span> 2 300</span> р./рулон
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="item-card">
-                      <div class="item-card__img"><a href="javascript:void(0)"><span> Подробнее</span></a><img data-original="../img/item-wallpaper.jpg" class="js-lazy"/></div>
-                      <div class="item-card__text">
-                        <p class="title"><a href="javascript:void(0)"> Империал</a></p>
-                        <p class="manufacturer">Испания. Atlantic Tiles</p>
-                        <p class="type">  Флизилиновые, 110 см</p>
-                        <p class="price"><span> 2 300</span> р./рулон
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="item-card">
-                      <div class="item-card__img"><a href="javascript:void(0)"><span> Подробнее</span></a><img data-original="../img/item-wallpaper.jpg" class="js-lazy"/></div>
-                      <div class="item-card__text">
-                        <p class="title"><a href="javascript:void(0)"> Империал</a></p>
-                        <p class="manufacturer">Испания. Atlantic Tiles</p>
-                        <p class="type">  Флизилиновые, 110 см</p>
-                        <p class="price"><span> 2 300</span> р./рулон
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="item-card">
-                      <div class="item-card__img"><a href="javascript:void(0)"><span> Подробнее</span></a><img data-original="../img/item-wallpaper.jpg" class="js-lazy"/></div>
-                      <div class="item-card__text">
-                        <p class="title"><a href="javascript:void(0)"> Империал</a></p>
-                        <p class="manufacturer">Испания. Atlantic Tiles</p>
-                        <p class="type">  Флизилиновые, 110 см</p>
-                        <p class="price"><span> 2 300</span> р./рулон
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="item-card">
-                      <div class="item-card__img"><a href="javascript:void(0)"><span> Подробнее</span></a><img data-original="../img/item-wallpaper.jpg" class="js-lazy"/></div>
-                      <div class="item-card__text">
-                        <p class="title"><a href="javascript:void(0)"> Империал</a></p>
-                        <p class="manufacturer">Испания. Atlantic Tiles</p>
-                        <p class="type">  Флизилиновые, 110 см</p>
-                        <p class="price"><span> 2 300</span> р./рулон
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="item-card">
-                      <div class="item-card__img"><a href="javascript:void(0)"><span> Подробнее</span></a><img data-original="../img/item-wallpaper.jpg" class="js-lazy"/></div>
-                      <div class="item-card__text">
-                        <p class="title"><a href="javascript:void(0)"> Империал</a></p>
-                        <p class="manufacturer">Испания. Atlantic Tiles</p>
-                        <p class="type">  Флизилиновые, 110 см</p>
-                        <p class="price"><span> 2 300</span> р./рулон
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="item-card">
-                      <div class="item-card__img"><a href="javascript:void(0)"><span> Подробнее</span></a><img data-original="../img/item-wallpaper.jpg" class="js-lazy"/></div>
-                      <div class="item-card__text">
-                        <p class="title"><a href="javascript:void(0)"> Империал</a></p>
-                        <p class="manufacturer">Испания. Atlantic Tiles</p>
-                        <p class="type">  Флизилиновые, 110 см</p>
-                        <p class="price"><span> 2 300</span> р./рулон
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="item-card">
-                      <div class="item-card__img"><a href="javascript:void(0)"><span> Подробнее</span></a><img data-original="../img/item-wallpaper.jpg" class="js-lazy"/></div>
-                      <div class="item-card__text">
-                        <p class="title"><a href="javascript:void(0)"> Империал</a></p>
-                        <p class="manufacturer">Испания. Atlantic Tiles</p>
-                        <p class="type">  Флизилиновые, 110 см</p>
-                        <p class="price"><span> 2 300</span> р./рулон
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="item-card">
-                      <div class="item-card__img"><a href="javascript:void(0)"><span> Подробнее</span></a><img data-original="../img/item-wallpaper.jpg" class="js-lazy"/></div>
-                      <div class="item-card__text">
-                        <p class="title"><a href="javascript:void(0)"> Империал</a></p>
-                        <p class="manufacturer">Испания. Atlantic Tiles</p>
-                        <p class="type">  Флизилиновые, 110 см</p>
-                        <p class="price"><span> 2 300</span> р./рулон
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="item-card">
-                      <div class="item-card__img"><a href="javascript:void(0)"><span> Подробнее</span></a><img data-original="../img/item-wallpaper.jpg" class="js-lazy"/></div>
-                      <div class="item-card__text">
-                        <p class="title"><a href="javascript:void(0)"> Империал</a></p>
-                        <p class="manufacturer">Испания. Atlantic Tiles</p>
-                        <p class="type">  Флизилиновые, 110 см</p>
-                        <p class="price"><span> 2 300</span> р./рулон
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="item-card">
-                      <div class="item-card__img"><a href="javascript:void(0)"><span> Подробнее</span></a><img data-original="../img/item-wallpaper.jpg" class="js-lazy"/></div>
-                      <div class="item-card__text">
-                        <p class="title"><a href="javascript:void(0)"> Империал</a></p>
-                        <p class="manufacturer">Испания. Atlantic Tiles</p>
-                        <p class="type">  Флизилиновые, 110 см</p>
-                        <p class="price"><span> 2 300</span> р./рулон
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div class="item-card">
-                      <div class="item-card__img"><a href="javascript:void(0)"><span> Подробнее</span></a><img data-original="../img/item-wallpaper.jpg" class="js-lazy"/></div>
-                      <div class="item-card__text">
-                        <p class="title"><a href="javascript:void(0)"> Империал</a></p>
-                        <p class="manufacturer">Испания. Atlantic Tiles</p>
-                        <p class="type">  Флизилиновые, 110 см</p>
-                        <p class="price"><span> 2 300</span> р./рулон
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-md-12">
-                    <ul class="pagination">
-                      <li><a href="javascript:void(0)">   Первая</a></li>
-                      <li><a href="javascript:void(0)">   1</a></li>
-                      <li class="active"><a href="javascript:void(0)">   2</a></li>
-                      <li><a href="javascript:void(0)">   3</a></li>
-                      <li><a href="javascript:void(0)">   4</a></li>
-                      <li><a href="javascript:void(0)">   5</a></li>
-                      <li><a href="javascript:void(0)">   Последняя</a></li>
-                    </ul>
-                  </div>
-                </div>
+          </form>
+        </div>
+        <div class="result-calc">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <p> Итого Вам нужно: <span class="js-result">254 шт. для стен.  12 шт. для пола.  2 мешка клея (по 25 кг)</span>
+                </p>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="catalog-text text">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12">
-              <div class="catalog-text__description">
-                <h2>Керамическая плитка в интернет-магазине «Фан керамика»</h2>
-                <p>Отделочная керамика широко используется для оформления жилых, производственных, коммерческих интерьеров. Преимуществами создаваемых с ее помощью покрытий являются внешняя привлекательность и долговечность.  Отделочная керамика широко используется для оформления жилых, производственных, коммерческих интерьеров. Преимуществами создаваемых с ее помощью покрытий</p>
-                <p><span class="bold"> Отделочная керамика</span> широко используется для оформления жилых, производственных, коммерческих интерьеров. Преимуществами создаваемых с ее помощью покрытий являются внешняя привлекательность и долговечность.  Отделочная керамика широко используется для оформления жилых, производственных, коммерческих интерьеров. Преимуществами создаваемых с ее помощью покрытий
-                </p>
-                <p>Отделочная керамика широко используется для оформления жилых, производственных, коммерческих интерьеров. Преимуществами создаваемых с ее помощью покрытий являются внешняя привлекательность и долговечность.  Отделочная керамика широко используется для оформления жилых, производственных, коммерческих интерьеров. Преимуществами создаваемых с ее помощью покрытий</p>
+        <div class="calculate__catalog">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <p class="category-title"> Каталог плитки</p>
+              </div>
+              <div class="col-md-3">
+                <div class="item-card">
+                  <div class="item-card__img">
+                    <div class="recommended-banner new">
+                      <p>  Новинка</p>
+                    </div><a href="javascript:void(0)"><span> Подробнее</span></a><img data-original="../img/item-img.jpg" class="js-lazy"/>
+                  </div>
+                  <div class="item-card__text">
+                    <p class="title"><a href="javascript:void(0)"> Империал</a></p>
+                    <p class="manufacturer">Испания. Atlantic Tiles</p>
+                    <p class="type">  Керомогранит</p>
+                    <p class="price"><span> 2 300</span> р.м<sup>  2</sup>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="item-card">
+                  <div class="item-card__img">
+                    <div class="recommended-banner hit">
+                      <p>  Хит</p>
+                    </div><a href="javascript:void(0)"><span> Подробнее</span></a><img data-original="../img/item-img.jpg" class="js-lazy"/>
+                  </div>
+                  <div class="item-card__text">
+                    <p class="title"><a href="javascript:void(0)"> Империал</a></p>
+                    <p class="manufacturer">Испания. Atlantic Tiles</p>
+                    <p class="type">  Керомогранит</p>
+                    <p class="price"><span> 2 300</span> р.м<sup>  2</sup>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="item-card">
+                  <div class="item-card__img">
+                    <div class="recommended-banner recom">
+                      <p>  Рекомендуем</p>
+                    </div><a href="javascript:void(0)"><span> Подробнее</span></a><img data-original="../img/item-img.jpg" class="js-lazy"/>
+                  </div>
+                  <div class="item-card__text">
+                    <p class="title"><a href="javascript:void(0)"> Империал</a></p>
+                    <p class="manufacturer">Испания. Atlantic Tiles</p>
+                    <p class="type">  Керомогранит</p>
+                    <p class="price"><span> 2 300</span> р.м<sup>  2</sup>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="item-card">
+                  <div class="item-card__img"><a href="javascript:void(0)"><span> Подробнее</span></a><img data-original="../img/item-img.jpg" class="js-lazy"/></div>
+                  <div class="item-card__text">
+                    <p class="title"><a href="javascript:void(0)"> Империал</a></p>
+                    <p class="manufacturer">Испания. Atlantic Tiles</p>
+                    <p class="type">  Керомогранит</p>
+                    <p class="price"><span> 2 300</span> р.м<sup>  2</sup>
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

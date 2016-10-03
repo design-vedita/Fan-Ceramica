@@ -1,0 +1,53 @@
+include pagination
+include catalog-text
+
+mixin manufacturer-list()
+   .manufacturer-list
+      .container
+         .row
+            .col-md-12
+               .manufacturer-list__item
+                  .row
+                     .col-md-2
+                        img(src="../img/tile5.jpg")
+                     .col-md-7
+                        p.manufacturer-title ColiseumGres
+                        p.manufacturer-land  Италия
+                        .manufacturer-list__introtext
+                           p Краткое описание производителя. Мы предоставляем своим покупателям все достоверные сведения о предлагаемом товаре. На нашем сайте Вы можете выбрать необходимые отделочные материалы по названию, размерам, цвету и другим
+                        a(href="javascript:void(0)").link-collection  Перейти в коллекцию
+                        br
+                        a(href="javascript:void(0)").open-pdf
+                          img(src="../img/pdf-ico.png")
+                          |   Открыть PDF каталог
+               .manufacturer-list__item
+                  .row
+                     .col-md-2
+                        img(src="../img/tile1.jpg")
+                     .col-md-7
+                        p.manufacturer-title Opocszno
+                        p.manufacturer-land  Италия
+                        .manufacturer-list__introtext
+                           p Краткое описание производителя. Мы предоставляем своим покупателям все достоверные сведения о предлагаемом товаре. На нашем сайте Вы можете выбрать необходимые отделочные материалы по названию, размерам, цвету и другим
+                        a(href="javascript:void(0)").link-collection  Перейти в коллекцию
+                        br
+                        a(href="javascript:void(0)").open-pdf
+                           img(src="../img/pdf-ico.png")
+                           |   Открыть PDF каталог
+               .manufacturer-list__item
+                  .row
+                     .col-md-2
+                        img(src="../img/tile2.jpg")
+                     .col-md-7
+                        p.manufacturer-title Шахтинская плитка
+                        p.manufacturer-land  Италия
+                        .manufacturer-list__introtext
+                           p Краткое описание производителя. Мы предоставляем своим покупателям все достоверные сведения о предлагаемом товаре. На нашем сайте Вы можете выбрать необходимые отделочные материалы по названию, размерам, цвету и другим
+                        a(href="javascript:void(0)").link-collection  Перейти в коллекцию
+                        br
+                        a(href="javascript:void(0)").open-pdf
+                           img(src="../img/pdf-ico.png")
+                           |   Открыть PDF каталог
+
+               +pagination()
+               +catalog-text()

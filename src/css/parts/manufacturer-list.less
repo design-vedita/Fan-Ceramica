@@ -1,0 +1,90 @@
+.manufacturer-list {
+	margin-top: 26px;
+
+	@media (min-width: 992px) {
+
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+
+	&__item {
+		padding-bottom: 25px;
+
+		&:not(:nth-last-of-type(1)) {
+			border-bottom: 1px @headerBottom solid;
+		}
+
+		&:not(:first-child) {
+			margin-top: 38px;
+		}
+	}
+
+	p {
+		margin-bottom: 0;
+
+		&.manufacturer-title {
+			font: 20px/24px @bold;
+			counter-reset: @utpTitle;
+			text-transform: uppercase;
+		}
+
+		&.manufacturer-land {
+			margin-top: 9px;
+			padding-left: 18px;
+			font: 14px @semibold;
+			color: @titleManuf;
+			background-image: url(../img/point.svg);
+			background-size: 11px 15px;
+			background-repeat: no-repeat;
+			background-position: left center;
+		}
+	}
+
+	&__introtext {
+		margin-top: 10px;
+		margin-bottom: 15px;
+
+		p {
+			font: 15px/24px @regular;
+			color: @introtext;
+		}
+	}
+
+	a {
+
+		&.link-collection {
+			font: 16px/24px @semibold;
+			color: @white;
+			padding: 0 15px;
+			border-radius: 20px;
+			background-color: @yellow;
+			transition: background 300ms linear;
+
+			&:hover {
+				background-color: @calc-link;
+			}
+		}
+
+		&.open-pdf {
+			margin-top: 23px;
+			display: block;
+			font: 16px/24px @semibold;
+			color: @footer;
+
+			img {
+				width: auto;
+			}
+		}
+	}
+
+	.pagination {
+		margin-top: 46px;
+	}
+
+	.text {
+		margin-top: 44px;
+	}
+
+}
