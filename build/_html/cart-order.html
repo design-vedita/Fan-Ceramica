@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <title>  Каталог дизайн проектов и каталог интерьеров</title>
+    <title>  Ваша корзина оформление заказа</title>
     <link rel="stylesheet" href="../css/normalize.css"/>
     <link rel="stylesheet" href="../css/libs/bootstrap/bootstrap.min.css"/>
     <link rel="stylesheet" href="../css/libs/slick/slick.css"/>
@@ -222,223 +222,119 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <h1>Каталог дизайн проектов (плитка)</h1>
+            <h1>Ваша корзина</h1>
           </div>
         </div>
       </div>
-      <div class="catalog-design">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-3">
-              <div class="item-card">
-                <div class="item-card__img"><a href="javascript:void(0)"><span> Подробнее</span></a><img data-original="../img/item-wallpaper.jpg" class="js-lazy"/></div>
-                <div class="item-card__text">
-                  <p class="title"><a href="javascript:void(0)"> Империал</a></p>
-                  <p class="manufacturer">Испания. Atlantic Tiles</p>
+      <div class="cart-order">
+        <form>
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6">
+                <p class="title-order"> Контактная информация</p>
+                <div class="row">
+                  <div class="col-md-6">
+                    <label>Ваше имя</label>
+                    <input type="text"/>
+                  </div>
+                  <div class="col-md-6">
+                    <label>Телефон</label>
+                    <input type="tel"/>
+                  </div>
+                  <div class="col-md-6">
+                    <label>E-mail</label>
+                    <input type="email"/>
+                  </div>
+                  <div class="col-md-6">
+                    <label>Город</label>
+                    <input type="text"/>
+                  </div>
+                  <div class="col-md-12">
+                    <label>Адрес</label>
+                    <input type="text"/>
+                  </div>
+                  <div class="col-md-12">
+                    <label>Комментарий к заказу</label>
+                    <textarea></textarea>
+                  </div>
                 </div>
               </div>
+              <div class="col-md-6">
+                <p class="title-order"> Способ доставки</p>
+                <ul class="delivery-list">
+                  <li>
+                    <input type="radio" name="type-delivery" id="pickup"/>
+                    <label for="pickup">Самовывоз</label>
+                    <p class="delivery-price"> 0 руб.</p>
+                  </li>
+                  <li>
+                    <input type="radio" name="type-delivery" id="curier"/>
+                    <label for="curier">Курьером</label>
+                    <p class="delivery-price"> Бесплатно</p>
+                    <p> От 3000 р. по Москве (до МКАД + 10 км.)</p>
+                  </li>
+                  <li>
+                    <input type="radio" name="type-delivery" id="russia"/>
+                    <label for="russia">По России</label>
+                    <p class="delivery-price"> Стоимость будет рассчитана отдельно</p>
+                  </li>
+                </ul>
+                <div class="payment">
+                  <p class="title-order"> Оплата</p>
+                  <ul class="payment-list">
+                    <li>
+                      <input type="radio" name="payment" id="in-cash"/>
+                      <label for="in-cash">Наличными при доставке</label>
+                    </li>
+                    <li>
+                      <input type="radio" name="payment" id="cards"/>
+                      <label for="cards">Картами Visa/MasterCard</label>
+                    </li>
+                    <li>
+                      <input type="radio" name="payment" id="other"/>
+                      <label for="other">Другие варианты (Яндекс.Деньги, Kiwi, WebMoney)</label>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-12"></div>
             </div>
-            <div class="col-md-3">
-              <div class="item-card">
-                <div class="item-card__img"><a href="javascript:void(0)"><span> Подробнее</span></a><img data-original="../img/item-wallpaper.jpg" class="js-lazy"/></div>
-                <div class="item-card__text">
-                  <p class="title"><a href="javascript:void(0)"> Империал</a></p>
-                  <p class="manufacturer">Испания. Atlantic Tiles</p>
-                </div>
-              </div>
+            <div class="cart-order__data">
+              <p class="title-order"> Ваш заказ</p>
+              <table>
+                <col width="60%"/>
+                <thead>
+                  <tr>
+                    <td>Наименование</td>
+                    <td>Цена</td>
+                    <td>Количество</td>
+                    <td>Сумма</td>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1. Galatia Branch</td>
+                    <td>6000 р.</td>
+                    <td>2 шт.</td>
+                    <td>12 000 р.</td>
+                  </tr>
+                  <tr>
+                    <td>1. Galatia Branch</td>
+                    <td>6000 р.</td>
+                    <td>2 шт.</td>
+                    <td>12 000 р.</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
-            <div class="col-md-3">
-              <div class="item-card">
-                <div class="item-card__img"><a href="javascript:void(0)"><span> Подробнее</span></a><img data-original="../img/item-wallpaper.jpg" class="js-lazy"/></div>
-                <div class="item-card__text">
-                  <p class="title"><a href="javascript:void(0)"> Империал</a></p>
-                  <p class="manufacturer">Испания. Atlantic Tiles</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="item-card">
-                <div class="item-card__img"><a href="javascript:void(0)"><span> Подробнее</span></a><img data-original="../img/item-wallpaper.jpg" class="js-lazy"/></div>
-                <div class="item-card__text">
-                  <p class="title"><a href="javascript:void(0)"> Империал</a></p>
-                  <p class="manufacturer">Испания. Atlantic Tiles</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="item-card">
-                <div class="item-card__img"><a href="javascript:void(0)"><span> Подробнее</span></a><img data-original="../img/item-wallpaper.jpg" class="js-lazy"/></div>
-                <div class="item-card__text">
-                  <p class="title"><a href="javascript:void(0)"> Империал</a></p>
-                  <p class="manufacturer">Испания. Atlantic Tiles</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="item-card">
-                <div class="item-card__img"><a href="javascript:void(0)"><span> Подробнее</span></a><img data-original="../img/item-wallpaper.jpg" class="js-lazy"/></div>
-                <div class="item-card__text">
-                  <p class="title"><a href="javascript:void(0)"> Империал</a></p>
-                  <p class="manufacturer">Испания. Atlantic Tiles</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="item-card">
-                <div class="item-card__img"><a href="javascript:void(0)"><span> Подробнее</span></a><img data-original="../img/item-wallpaper.jpg" class="js-lazy"/></div>
-                <div class="item-card__text">
-                  <p class="title"><a href="javascript:void(0)"> Империал</a></p>
-                  <p class="manufacturer">Испания. Atlantic Tiles</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="item-card">
-                <div class="item-card__img"><a href="javascript:void(0)"><span> Подробнее</span></a><img data-original="../img/item-wallpaper.jpg" class="js-lazy"/></div>
-                <div class="item-card__text">
-                  <p class="title"><a href="javascript:void(0)"> Империал</a></p>
-                  <p class="manufacturer">Испания. Atlantic Tiles</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="item-card">
-                <div class="item-card__img"><a href="javascript:void(0)"><span> Подробнее</span></a><img data-original="../img/item-wallpaper.jpg" class="js-lazy"/></div>
-                <div class="item-card__text">
-                  <p class="title"><a href="javascript:void(0)"> Империал</a></p>
-                  <p class="manufacturer">Испания. Atlantic Tiles</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="item-card">
-                <div class="item-card__img"><a href="javascript:void(0)"><span> Подробнее</span></a><img data-original="../img/item-wallpaper.jpg" class="js-lazy"/></div>
-                <div class="item-card__text">
-                  <p class="title"><a href="javascript:void(0)"> Империал</a></p>
-                  <p class="manufacturer">Испания. Atlantic Tiles</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="item-card">
-                <div class="item-card__img"><a href="javascript:void(0)"><span> Подробнее</span></a><img data-original="../img/item-wallpaper.jpg" class="js-lazy"/></div>
-                <div class="item-card__text">
-                  <p class="title"><a href="javascript:void(0)"> Империал</a></p>
-                  <p class="manufacturer">Испания. Atlantic Tiles</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="item-card">
-                <div class="item-card__img"><a href="javascript:void(0)"><span> Подробнее</span></a><img data-original="../img/item-wallpaper.jpg" class="js-lazy"/></div>
-                <div class="item-card__text">
-                  <p class="title"><a href="javascript:void(0)"> Империал</a></p>
-                  <p class="manufacturer">Испания. Atlantic Tiles</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="item-card">
-                <div class="item-card__img"><a href="javascript:void(0)"><span> Подробнее</span></a><img data-original="../img/item-wallpaper.jpg" class="js-lazy"/></div>
-                <div class="item-card__text">
-                  <p class="title"><a href="javascript:void(0)"> Империал</a></p>
-                  <p class="manufacturer">Испания. Atlantic Tiles</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="item-card">
-                <div class="item-card__img"><a href="javascript:void(0)"><span> Подробнее</span></a><img data-original="../img/item-wallpaper.jpg" class="js-lazy"/></div>
-                <div class="item-card__text">
-                  <p class="title"><a href="javascript:void(0)"> Империал</a></p>
-                  <p class="manufacturer">Испания. Atlantic Tiles</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="item-card">
-                <div class="item-card__img"><a href="javascript:void(0)"><span> Подробнее</span></a><img data-original="../img/item-wallpaper.jpg" class="js-lazy"/></div>
-                <div class="item-card__text">
-                  <p class="title"><a href="javascript:void(0)"> Империал</a></p>
-                  <p class="manufacturer">Испания. Atlantic Tiles</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="item-card">
-                <div class="item-card__img"><a href="javascript:void(0)"><span> Подробнее</span></a><img data-original="../img/item-wallpaper.jpg" class="js-lazy"/></div>
-                <div class="item-card__text">
-                  <p class="title"><a href="javascript:void(0)"> Империал</a></p>
-                  <p class="manufacturer">Испания. Atlantic Tiles</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="item-card">
-                <div class="item-card__img"><a href="javascript:void(0)"><span> Подробнее</span></a><img data-original="../img/item-wallpaper.jpg" class="js-lazy"/></div>
-                <div class="item-card__text">
-                  <p class="title"><a href="javascript:void(0)"> Империал</a></p>
-                  <p class="manufacturer">Испания. Atlantic Tiles</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="item-card">
-                <div class="item-card__img"><a href="javascript:void(0)"><span> Подробнее</span></a><img data-original="../img/item-wallpaper.jpg" class="js-lazy"/></div>
-                <div class="item-card__text">
-                  <p class="title"><a href="javascript:void(0)"> Империал</a></p>
-                  <p class="manufacturer">Испания. Atlantic Tiles</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="item-card">
-                <div class="item-card__img"><a href="javascript:void(0)"><span> Подробнее</span></a><img data-original="../img/item-wallpaper.jpg" class="js-lazy"/></div>
-                <div class="item-card__text">
-                  <p class="title"><a href="javascript:void(0)"> Империал</a></p>
-                  <p class="manufacturer">Испания. Atlantic Tiles</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="item-card">
-                <div class="item-card__img"><a href="javascript:void(0)"><span> Подробнее</span></a><img data-original="../img/item-wallpaper.jpg" class="js-lazy"/></div>
-                <div class="item-card__text">
-                  <p class="title"><a href="javascript:void(0)"> Империал</a></p>
-                  <p class="manufacturer">Испания. Atlantic Tiles</p>
-                </div>
-              </div>
+            <div class="cart-order__final-data">
+              <p class="sale">  Скидка<span>  - 0  руб.</span></p>
+              <p class="result-delivery">Доставка<span> - 750 руб.</span></p>
+              <p class="result">Итого<span> 24 750 руб.</span></p>
+              <input type="submit" value="Оформить" class="checkout"/>
             </div>
           </div>
-          <div class="row">
-            <div class="col-md-12">
-              <ul class="pagination">
-                <li><a href="javascript:void(0)">   Первая</a></li>
-                <li><a href="javascript:void(0)">   1</a></li>
-                <li class="active"><a href="javascript:void(0)">   2</a></li>
-                <li><a href="javascript:void(0)">   3</a></li>
-                <li><a href="javascript:void(0)">   4</a></li>
-                <li><a href="javascript:void(0)">   5</a></li>
-                <li><a href="javascript:void(0)">   Последняя</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="catalog-text text">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12">
-              <div class="catalog-text__description">
-                <h2>Керамическая плитка в интернет-магазине «Фан керамика»</h2>
-                <p>Отделочная керамика широко используется для оформления жилых, производственных, коммерческих интерьеров. Преимуществами создаваемых с ее помощью покрытий являются внешняя привлекательность и долговечность.  Отделочная керамика широко используется для оформления жилых, производственных, коммерческих интерьеров. Преимуществами создаваемых с ее помощью покрытий</p>
-                <p><span class="bold"> Отделочная керамика</span> широко используется для оформления жилых, производственных, коммерческих интерьеров. Преимуществами создаваемых с ее помощью покрытий являются внешняя привлекательность и долговечность.  Отделочная керамика широко используется для оформления жилых, производственных, коммерческих интерьеров. Преимуществами создаваемых с ее помощью покрытий
-                </p>
-                <p>Отделочная керамика широко используется для оформления жилых, производственных, коммерческих интерьеров. Преимуществами создаваемых с ее помощью покрытий являются внешняя привлекательность и долговечность.  Отделочная керамика широко используется для оформления жилых, производственных, коммерческих интерьеров. Преимуществами создаваемых с ее помощью покрытий</p>
-              </div>
-            </div>
-          </div>
-        </div>
+        </form>
       </div>
     </main>
     <footer>

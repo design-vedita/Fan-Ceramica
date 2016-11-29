@@ -1,0 +1,84 @@
+mixin cart-order()
+   .cart-order
+      form
+         .container
+            .row
+               .col-md-6
+                  p.title-order  Контактная информация
+                  .row
+                     .col-md-6
+                        label Ваше имя
+                        input(type="text")
+                     .col-md-6
+                        label Телефон
+                        input(type="tel")
+                     .col-md-6
+                        label E-mail
+                        input(type="email")
+                     .col-md-6
+                        label Город
+                        input(type="text")
+                     .col-md-12
+                        label Адрес
+                        input(type="text")
+                     .col-md-12
+                        label Комментарий к заказу
+                        textarea
+               .col-md-6
+                  p.title-order  Способ доставки
+                  ul.delivery-list
+                     li
+                        input(type="radio" name="type-delivery")#pickup
+                        label(for="pickup") Самовывоз
+                        p.delivery-price  0 руб.
+                     li
+                        input(type="radio" name="type-delivery")#curier
+                        label(for="curier") Курьером
+                        p.delivery-price  Бесплатно
+                        p  От 3000 р. по Москве (до МКАД + 10 км.)
+                     li
+                        input(type="radio" name="type-delivery")#russia
+                        label(for="russia") По России
+                        p.delivery-price  Стоимость будет рассчитана отдельно
+                  .payment
+                     p.title-order  Оплата
+                     ul.payment-list
+                        li
+                           input(type="radio" name="payment")#in-cash
+                           label(for="in-cash") Наличными при доставке
+                        li
+                           input(type="radio" name="payment")#cards
+                           label(for="cards") Картами Visa/MasterCard
+                        li
+                           input(type="radio" name="payment")#other
+                           label(for="other") Другие варианты (Яндекс.Деньги, Kiwi, WebMoney)
+               .col-md-12
+            .cart-order__data
+               p.title-order  Ваш заказ
+               table
+                  col(width="60%")
+                  thead
+                     tr
+                        td Наименование
+                        td Цена
+                        td Количество
+                        td Сумма
+                  tbody
+                     tr
+                        td 1. Galatia Branch
+                        td 6000 р.
+                        td 2 шт.
+                        td 12 000 р.
+                     tr
+                        td 1. Galatia Branch
+                        td 6000 р.
+                        td 2 шт.
+                        td 12 000 р.
+            .cart-order__final-data
+               p.sale   Скидка
+                 span   - 0  руб.
+               p.result-delivery Доставка
+                  span  - 750 руб.
+               p.result Итого
+                  span  24 750 руб.
+               input(type="submit"  value="Оформить").checkout

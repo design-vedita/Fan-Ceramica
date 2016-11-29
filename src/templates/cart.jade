@@ -1,0 +1,27 @@
+include includes/head
+include includes/header
+include includes/breadcrumbs
+include includes/title
+include includes/cart
+include includes/footer
+include includes/scripts
+include includes/mixins
+doctype html
+
+html(lang="en")
+    head
+        +head('Ваша корзина')
+    body
+        include blocks/svg.html
+        // Шапка сайта
+        +header('inner')
+        //
+        main
+            +breadcrumbs()
+            +title('Ваша корзина')
+
+            +cart()
+
+        footer
+            +footer()
+        +scripts()

@@ -1,0 +1,81 @@
+mixin cart()
+   .container
+      .cart
+         form
+            ul.cart__top
+               li Готовые к заказу (2)
+               li: a(href="javascript:void(0)") Очистить
+            table.cart__data
+               col(width="45%")
+               thead
+                  tr
+                     td Наименование
+                     td Цена
+                     td Количество
+                     td Сумма
+                     td &nbsp
+               tbody
+                  tr
+                     td
+                        .cart__data__image(style="background-image: url(../img/wall.jpg)")
+                        .cart__data__description
+                           p.title  Mesina Beige Pav
+                           p.collection  Коллекция:
+                              span  Mesina
+                           p.manufacturer  Производитель:
+                              span  Absolut Keramika
+                           p.size   Размер:
+                              span  30x20 см
+                           p.type   Тип плитки:
+                              span  Плитка для пола
+                     td
+                        p.price  570
+                           span  р/м
+                              sup   2
+                     td
+                        .cart__data__count
+                           button.decrement  -
+                           input(type="text" value=1)
+                           button.increment  +
+                     td
+                        p.full   2300
+                           span  р
+                     td
+                        a(href="javascript:void(0)")
+                           +svg('delete-cart')
+                  tr
+                     td
+                        .cart__data__image(style="background-image: url(../img/wall.jpg)")
+                        .cart__data__description
+                           p.title  Mesina Beige Pav
+                           p.collection  Коллекция:
+                              span  Mesina
+                           p.manufacturer  Производитель:
+                              span  Absolut Keramika
+                           p.size   Размер:
+                              span  30x20 см
+                           p.type   Тип плитки:
+                              span  Плитка для пола
+                     td
+                        p.price  570
+                           span  р/м
+                              sup   2
+                     td
+                        .cart__data__count
+                           button.decrement  -
+                           input(type="text" value=1)
+                           button.increment  +
+                     td
+                        p.full   2300
+                           span  р
+                     td
+                        a(href="javascript:void(0)")
+                           +svg('delete-cart')
+            ul.cart__top.bottom
+               li: p.money Оплата возможна по безналичному расчету:
+                  img(src="../img/visa.png")
+                  img(src="../img/master.png")
+               li:   p.result  Итого
+                  span  12 750 р
+         input(type="submit" value="Оформить").checkout
+

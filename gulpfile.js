@@ -12,7 +12,11 @@ var gulp = require('gulp'),
     svgstore = require('gulp-svgstore'),
     svgmin = require('gulp-svgmin'),
     inject = require('gulp-inject'),
-    jade = require('gulp-jade')
+    jade = require('gulp-jade'),
+    newer = require('gulp-newer'),
+    remember = require('gulp-remember'),
+    paths = require('gulp-path'),
+    svgo = require('gulp-svgo');
    // spritesmith = require('gulp.spritesmith');
 
 var path = {
@@ -27,7 +31,7 @@ var path = {
         html: 'src/templates/*.html',
         js: 'src/js/script.js',
         style: 'src/css/style.less',
-        img: 'src/img/*.{png,jpg,svg,gif}',
+        img: 'src/img/*.{png,jpg,svg,gif,svg}',
         sprite: 'src/img/ico/*.*',
         fonts: 'src/fonts/**/*.*',
         jade: 'src/templates/*.jade',
@@ -109,6 +113,7 @@ gulp.task('webserver', function () {
 
 gulp.task('jade:build', function(){
     gulp.src(path.src.jade)
+        .pipe(newer(path.build.html))
         .pipe(jade({
             pretty: true
         }))
@@ -126,10 +131,11 @@ gulp.task('js:build', function () {
 
 gulp.task('css:build', function () {
     gulp.src(path.src.style)
+        .pipe(newer(path.build.css))
         .pipe(plumber())
         .pipe(autoprefixer())
         .pipe(less({
-            paths: ['src/css/'],
+            paths: ['src/css/']
          //   compress: true
         }))
        // .pipe(cssmin())
@@ -138,6 +144,8 @@ gulp.task('css:build', function () {
 
 gulp.task('image:build', function () {
     gulp.src(path.src.img)
+        .pipe(svgo())
+        .pipe(newer(path.build.img))
         .pipe(gulp.dest(path.build.img));
 });
 
@@ -157,10 +165,14 @@ gulp.task('build', [
 
 gulp.task('watch', function(){
     watch([path.watch.jade], function(event, cb) {
-        gulp.start('jade:build');
+        gulp.start('jade:build').on('unlink', function(filepath) {
+            remember.forget('css:build', paths.resolve(filepath));
+        });
     });
     watch([path.watch.style], function(event, cb) {
-        gulp.start('css:build');
+        gulp.start('css:build').on('unlink', function(filepath) {
+            remember.forget('css:build', paths.resolve(filepath));
+        });
     });
     watch([path.watch.js], function(event, cb) {
         gulp.start('js:build');

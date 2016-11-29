@@ -256,6 +256,7 @@
 
         viewParams();
 
+        // ���������� �����
         function openSearch() {
             var searchLink = document.getElementsByClassName('js-open-search')[0],
                 searchBlock = document.getElementsByClassName('js-search-form')[0];
@@ -282,6 +283,7 @@
 
         openSearch();
 
+        // ���� � ���������
         function collectionTab() {
             var links = document.getElementsByClassName('js-coll'),
                 blocks = document.getElementsByClassName('js-content');
@@ -334,6 +336,7 @@
 
         collectionTab();
 
+
         function heightBlocks(el) {
             var blocks = document.getElementsByClassName(el),
                 anchor = document.getElementsByClassName('anchor'),
@@ -368,6 +371,87 @@
 
         window.onresize = function(){
             heightBlocks('js-form');
+            backTopMenu();
+           // backBottomMenu();
+        };
+
+        backTopMenu();
+     //   backBottomMenu();
+
+        function backTopMenu() {
+            var $back = $('.js-dark-menu-back'),
+                $menu = $('.js-dark-menu'),
+                clientWidth = document.documentElement.clientWidth,
+                $menuHeight = $menu.outerHeight();
+
+            (clientWidth <= 1199) ? $back.css({'height':$menuHeight + 'px'}) : $back.css({'height': ''});
+        }
+
+        var myburger = new Burgers();
+            myburger.topBurger();
+            myburger.bottomBurger();
+            myburger.openBottomMenu();
+
+        function Burgers() {
+            var topB = $('.js-burger-top-menu'),
+                topM = $('.js-dark-menu'),
+                topD = $('.js-dark-menu-back');
+
+            var bottomB = $('.js-burger-bottom-block'),
+                bottomM = $('.js-main-menu'),
+                bottomD = $('.js-dark-menu-back-two');
+
+            var arrows = $('.js-arrow');
+
+            return {
+
+                topBurger: function(){
+
+                    topB.on('click', function(){
+
+                        topM.toggleClass('visible');
+                        topD.toggleClass('visible');
+                    });
+                },
+
+                bottomBurger: function(){
+
+                    bottomB.on('click', function(){
+
+                        bottomM.toggleClass('visible');
+                        bottomD.toggleClass('visible');
+                    });
+
+                },
+
+                openBottomMenu: function() {
+                    arrows.on('click', function(){
+
+                        var $parent  = $(this).context.parentNode.parentNode;
+                            $($parent)
+                                    .toggleClass('active')
+                                    .find(' > ul')
+                                    .toggle();
+
+                    });
+                }
+            }
+        }
+
+        // �������������� textarea
+        var commentArea = document.getElementsByTagName('textarea');
+
+            function autosize() {
+                var el = this;
+                setTimeout(function(){
+                    el.style.cssText = 'height:auto';
+                    el.style.cssText = 'height:' + el.scrollHeight + 'px';
+
+                }, 0);
+            }
+
+        for (var i = 0; i < commentArea.length; i++) {
+            commentArea[i].addEventListener('keydown', autosize);
         }
     });
 

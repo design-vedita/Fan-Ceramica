@@ -1,5 +1,5 @@
 mixin svg(name)
-   svg(class="#{name}")
+   svg(class="#{name} js-arrow")
       use(xlink:href="##{name}")
 
 mixin checkbox(list)
@@ -11,7 +11,7 @@ mixin checkbox(list)
 
 
 mixin menu(menu)
-   ul.main-menu
+   ul.main-menu.js-main-menu
       each item in menu
          li
             a(href="javascript:void(0)")  #{item.name}

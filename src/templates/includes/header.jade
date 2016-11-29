@@ -5,61 +5,92 @@ mixin header(type)
    header(class="#{type}")
       .header-top
          .container
+            .dark-menu-back.js-dark-menu-back
             .row
-               .col-md-7
-                  nav
-                     ul
-                        each item  in topmenu
-                           li
-                              a(href="javascript:void(0)") #{item}
-               .col-md-5.header-top__links
+               .col-md-3.col-sm-3.line-hr.hidden-lg.hidden-xs
+                  +svg('time')
+                  p
+                     span.title  Будни
+                     span.subtitle  с 10 до 19 ч.
+               .col-md-3.col-sm-3.hidden-lg.hidden-xs
+                  p
+                     span.title  Выходные
+                     span.subtitle  с 10 до 17 ч.
+               .col-md-6.header-top__links.col-lg-5.col-lg-push-7.col-xs-12.col-sm-6
                   .header-top__link-3d
                      a(href="javascript:void(0)")  Заказать 3D проект
                   .header-top__registration
                      a(href="javascript:void(0)").enter  Войти
                      a(href="javascript:void(0)").registration  Зарегистрироваться
+                  .header-top__cart.hidden-lg
+                     a(href="javascript:void(0)")
+                        +svg('cart')
+                        p.count
+                           span  3
+                  .header-top__wrap-menu.hidden-lg
+                     .header-top__phone-mobile.visible-xs
+                        +svg('phone')
+                        span  +7 (495) 644-24-37
+                     .header-top__burger-top-menu.js-burger-top-menu
+                        span
+                        span
+                        span
+               .col-md-12.col-md-pull-0.col-lg-7.col-lg-pull-5.col-xs-12
+                  .dark-menu.js-dark-menu
+                     nav
+                        each item  in topmenu
+                           li
+                              a(href="javascript:void(0)") #{item}
+                     a(href="javascript:void(0)").hidden-lg  Заказать 3D проект
       .header-bottom
+         .dark-menu-back-two.js-dark-menu-back-two
          .container
             .position-block
                .search-form.js-search-form
                   form
                      input(type="text" placeholder="Поиск по сайту")
                .row
-                  .col-md-3
+                  .col-md-3.col-sm-3.col-xs-12
                      .logo
                         img(src="../img/logo.png")
-                  .col-md-9.job-time
+                  .col-md-9.col-sm-9.job-time
                      .row
-                        .col-md-4
+                        .col-lg-4.col-md-6.col-sm-6.hidden-xs
                            +svg('phone')
                            p
                               span.title  Оптовая торговля
                               span.subtitle  8-495-669-05-37, 8-495-669-05-38
                               span.link
                                  a(href="javascript:void(0)")  Перейти на сайт  riffanal.ru
-                        .col-md-3.line-hr
+                        .col-lg-3.col-md-6.col-sm-6.line-hr.hidden-xs
                            +svg('phone')
                            p
                               span.title  Розничная торговля
                               span.subtitle  +7 (495) 644-24-37
-                        .col-md-2.line-hr
+                        .col-md-2.col-xs-6.visible-lg.line-hr.visible-xs
                            +svg('time')
                            p
                               span.title  Будни
                               span.subtitle  с 10 до 19 ч.
-                        .col-md-2
+                        .col-md-2.col-xs-6.visible-lg.visible-xs
                            p
                               span.title  Выходные
                               span.subtitle  с 10 до 17 ч.
-                        .col-md-1
+                        .col-md-1.visible-lg
                            .header-bottom__cart
                               a(href="javascript:void(0)")
                                  +svg('cart')
                                  p.count
                                     span  3
-                  .col-md-11
+                  .col-lg-11.col-md-12.col-sm-12
+                     .burger-bottom-block.js-burger-bottom-block
+                        p  Меню сайта
+                        .burger-bottom-menu
+                           span
+                           span
+                           span
                      +menu(mainmenu)
-                  .col-md-1
+                  .col-lg-1.col-md-12.col-sm-12
                      .header-bottom__search.js-open-search
                         +svg('search')
 
