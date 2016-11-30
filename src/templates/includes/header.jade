@@ -46,9 +46,6 @@ mixin header(type)
          .dark-menu-back-two.js-dark-menu-back-two
          .container
             .position-block
-               .search-form.js-search-form
-                  form
-                     input(type="text" placeholder="Поиск по сайту")
                .row
                   .col-md-3.col-sm-3.col-xs-12
                      .logo
@@ -90,9 +87,13 @@ mixin header(type)
                            span
                            span
                      +menu(mainmenu)
-                  .col-lg-1.col-md-12.col-sm-12
+                  .col-lg-1.visible-lg
                      .header-bottom__search.js-open-search
                         +svg('search')
+               .search-form.js-search-form
+                  form
+                     input(type="text" placeholder="Поиск по сайту")
+                     input(type="submit" value="")
 
 
 

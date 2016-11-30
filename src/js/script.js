@@ -73,7 +73,15 @@
             slidesToShow: 4,
             slidesToScroll: 4,
             prevArrow: '<button type="button" class="slick-prev-design"></button>',
-            nextArrow: '<button type="button" class="slick-next-design"></button>'
+            nextArrow: '<button type="button" class="slick-next-design"></button>',
+            responsive: [
+                {
+                    breakpoint: 1199,
+                    settings: {
+                        slidesToShow: 3
+                    }
+                }
+            ]
         });
 
         // слайдер каталог дизайн-проектов обои
@@ -84,7 +92,15 @@
             slidesToShow: 4,
             slidesToScroll: 4,
             prevArrow: '<button type="button" class="slick-prev-wdesign"></button>',
-            nextArrow: '<button type="button" class="slick-next-wdesign"></button>'
+            nextArrow: '<button type="button" class="slick-next-wdesign"></button>',
+            responsive: [
+                {
+                    breakpoint: 1199,
+                    settings: {
+                        slidesToShow: 3
+                    }
+                }
+            ]
         });
 
         // слайдер интерьеров плитка
@@ -95,7 +111,15 @@
             slidesToShow: 4,
             slidesToScroll: 4,
             prevArrow: '<button type="button" class="slick-prev-interior"></button>',
-            nextArrow: '<button type="button" class="slick-next-interior"></button>'
+            nextArrow: '<button type="button" class="slick-next-interior"></button>',
+            responsive: [
+                {
+                    breakpoint: 1199,
+                    settings: {
+                        slidesToShow: 3
+                    }
+                }
+            ]
         });
 
         // слайдер интерьеров обои
@@ -106,7 +130,15 @@
             slidesToShow: 4,
             slidesToScroll: 4,
             prevArrow: '<button type="button" class="slick-prev-wallinterior"></button>',
-            nextArrow: '<button type="button" class="slick-next-wallinterior"></button>'
+            nextArrow: '<button type="button" class="slick-next-wallinterior"></button>',
+            responsive: [
+                {
+                    breakpoint: 1199,
+                    settings: {
+                        slidesToShow: 3
+                    }
+                }
+            ]
         });
 
         // слайдер отзывов
@@ -393,13 +425,14 @@
             myburger.openBottomMenu();
 
         function Burgers() {
-            var topB = $('.js-burger-top-menu'),
-                topM = $('.js-dark-menu'),
-                topD = $('.js-dark-menu-back');
+            var $topB = $('.js-burger-top-menu'),
+                $topM = $('.js-dark-menu'),
+                $topD = $('.js-dark-menu-back');
 
-            var bottomB = $('.js-burger-bottom-block'),
-                bottomM = $('.js-main-menu'),
-                bottomD = $('.js-dark-menu-back-two');
+            var $bottomB = $('.js-burger-bottom-block'),
+                $bottomM = $('.js-main-menu'),
+                $bottomD = $('.js-dark-menu-back-two'),
+                $search = $('.js-search-form');
 
             var arrows = $('.js-arrow');
 
@@ -407,19 +440,20 @@
 
                 topBurger: function(){
 
-                    topB.on('click', function(){
+                    $topB.on('click', function(){
 
-                        topM.toggleClass('visible');
-                        topD.toggleClass('visible');
+                        $topM.toggleClass('visible');
+                        $topD.toggleClass('visible');
                     });
                 },
 
                 bottomBurger: function(){
 
-                    bottomB.on('click', function(){
+                    $bottomB.on('click', function(){
 
-                        bottomM.toggleClass('visible');
-                        bottomD.toggleClass('visible');
+                        $bottomM.toggleClass('visible');
+                        $bottomD.toggleClass('visible');
+                        $search.toggleClass('visible');
                     });
 
                 },

@@ -54,6 +54,13 @@
 		h1 {
 			font: 18px/24px @semibold;
 			color: @h1;
+
+			@media (min-width: 768px) and (max-width: 1199px) {
+
+				& {
+					margin-top: 28px;
+				}
+			}
 		}
 
 		h2 {
@@ -71,6 +78,15 @@
 
 		span.bold {
 			color: @spanBold;
+		}
+
+		@media (min-width: 768px) and (max-width: 1199px) {
+
+			& {
+				-moz-column-count: 1;
+				-webkit-column-count: 1;
+				column-count: 1;
+			}
 		}
 	}
 }
