@@ -4,27 +4,31 @@
 mixin footer()
     .container
         .row
-            .col-md-3.logo-footer
-                img(src="../img/logo-footer.png")
-                p.copyright Все права защищены © 2016 г.
-                img(src="../img/visa.png").visa
-                img(src="../img/master.png").master
-            .col-md-2
-                ul.category
-                    each li in footerCatalog
-                        li: a(href="javascript:void(0)")  #{li}
-                a(href="javascript:void(0)").pdf   PDF каталог
-            .col-md-3
-                ul.links
-                    each li in footerLinks
-                        li: a(href="javascript:void(0)")  #{li}
-            .col-md-2.footer-ico
+            .col-xs-12.visible-xs.footer-ico
                 +svg('phone')
                 .footer-ico__text
                     span    Телефон
                     p   8-495-644-24-37
-
-            .col-md-2.footer-ico
+            .col-lg-3.col-md-4.col-sm-4.logo-footer.hidden-xs
+                img(src="../img/logo-footer.png")
+                p.copyright Все права защищены © 2016 г.
+                img(src="../img/visa.png").visa
+                img(src="../img/master.png").master
+            .col-lg-2.col-md-4.col-sm-4.col-xs-12
+                ul.category
+                    each li in footerCatalog
+                        li: a(href="javascript:void(0)")  #{li}
+                a(href="javascript:void(0)").pdf   PDF каталог
+            .col-lg-3.col-md-4.col-sm-4.col-xs-12
+                ul.links
+                    each li in footerLinks
+                        li: a(href="javascript:void(0)")  #{li}
+            .col-lg-2.col-md-3.col-sm-3.footer-ico.hidden-xs
+                +svg('phone')
+                .footer-ico__text
+                    span    Телефон
+                    p   8-495-644-24-37
+            .col-lg-2.col-md-3.col-sm-3.footer-ico.hidden-xs
                 +svg('time')
                 .footer-ico__text
                     span    Время работы
@@ -34,7 +38,7 @@ mixin footer()
                     p
                         span    Выходные
                         | с 10 до 17 ч.
-            .col-md-4.col-md-offset-8.soc-seti
+            .col-lg-4.col-md-3.col-sm-3.col-sm-offset-2.col-md-offset-2.col-lg-offset-8.col-xs-12.soc-seti.col-xs-12
                 p   Присоединяйтесь к нам
 
                 a(href="javascript:void(0)" target="_blank"):   img(src="../img/vk.png")
@@ -43,7 +47,12 @@ mixin footer()
     .developer
         .container
             .row
-                .col-md-4.col-md-offset-8
+                .col-lg-6.col-md-6.col-sm-6.col-xs-12
+                    p.copy   Все права защищены © 2016 г.
+                    .images.visible-xs
+                        img(src="../img/visa.png").visa
+                        img(src="../img/master.png").master
+                .col-lg-4.col-lg-offset-2.col-md-4.col-sm-6.col-md-offset-0.col-sm-offset-0.col-xs-12
                     p   Разработка и продвижение сайтов
                     a(href="http://vedita.ru" target="_blank"):   +svg('vedita-logo')
 

@@ -1539,7 +1539,8 @@ main {
 		&__background {
 			padding: 8px;
 			width: 100%;
-			height: 150px;
+			min-height: 150px;
+			height: 100%;
 			background-image: url(../img/banner.jpg);
 			background-size: cover;
 			background-position: center;
@@ -1751,7 +1752,7 @@ main {
 		background-color: #fff;
 		box-shadow: 0 0 13px 0 fade(@dark, 24%);
 
-		@media (max-width: 991px) {
+		@media (max-width: 1199px) {
 
 			& {
 				margin-bottom: 30px;
@@ -2024,6 +2025,16 @@ main {
 			}
 		}
 
+		@media (max-width: 767px) {
+			& {
+				margin-top: 30px;
+				min-height: 342px;
+				padding-top: 23px;
+				padding-bottom: 0;
+				height: auto;
+			}
+		}
+
 			&__text {
 				padding-top: 36px;
 				padding-bottom: 33px;
@@ -2037,15 +2048,41 @@ main {
 					}
 				}
 
+				@media (max-width: 767px) {
+
+					& {
+						position: relative;
+						background-color: transparent;
+
+						&::before {
+							position: absolute;
+							left: -15px;
+							top: 0;
+							content: '';
+							display: block;
+							width: calc(~'100% + 30px');
+							height: 100%;
+							background-color: fade(@dark, 50%);
+						}
+					}
+				}
+
 					&__descript {
 						padding-left: 100px;
 
-						@media (min-width: 768px) and (max-width: 991px) {
+						@media (max-width: 991px) {
 
 							& {
 								padding-left: 0;
 								margin-bottom: 32px;
 								text-align: center;
+							}
+						}
+
+						@media (max-width: 767px) {
+
+							& {
+								margin-bottom: 20px;
 							}
 						}
 
@@ -2079,6 +2116,13 @@ main {
 							border-radius: 5px;
 							background-color: transparent;
 							color: @white;
+
+							@media (max-width: 767px) {
+
+								& {
+									margin-bottom: 15px;
+								}
+							}
 						}
 
 						&[type=submit] {
@@ -2134,6 +2178,13 @@ main {
 				.slick-slider {
 					min-height: 345px;
 				}
+			}
+		}
+
+		@media (max-width: 767px) {
+
+			& {
+				display: none;
 			}
 		}
 
@@ -2433,11 +2484,26 @@ main {
 			&:hover {
 				background-image: url(../img/prev-carousel-hover.svg);
 			}
+
+			@media (max-width: 767px) {
+
+				& {
+					top: calc(~'50% - 30px');
+				}
+			}
 		}
 
 		.slick-prev-interior,
 		.slick-prev-wallinterior {
 			right: 39px;
+
+			@media (max-width: 767px) {
+
+				& {
+					right: auto;
+					left: 15px;
+				}
+			}
 		}
 
 		.slick-next-interior,
@@ -2449,6 +2515,16 @@ main {
 		.tile-interior {
 			margin-left: -15px;
 			margin-right: -13.5px;
+
+			@media (max-width: 767px) {
+
+				& {
+					margin-left: 0;
+					margin-right: 0;
+					padding-left: 20px;
+					padding-right: 20px;
+				}
+			}
 
 			&__item {
 				position: relative;
@@ -2547,6 +2623,15 @@ main {
 				}
 			}
 
+			@media (max-width: 767px) {
+
+				& {
+					margin-top: 0;
+					padding-left: 0;
+					padding-right: 0;
+				}
+			}
+
 			.slick-prev-review,
 			.slick-next-review {
 				position: absolute;
@@ -2582,7 +2667,7 @@ main {
 				float: left;
 				width: 70px;
 
-				@media (min-width: 768px) and (max-width: 1199px) {
+				@media (max-width: 1199px) {
 
 					& {
 						width: 42px;
@@ -2599,7 +2684,7 @@ main {
 				float: right;
 				width: calc(~'100% - 100px');
 
-				@media (min-width: 768px) and (max-width: 1199px) {
+				@media (max-width: 1199px) {
 
 					& {
 						width: calc(~'100% - 71px');
@@ -2625,7 +2710,7 @@ main {
 						font: 15px/24px @regular;
 						color: @introtext;
 
-						@media (min-width: 768px) and (max-width: 1199px) {
+						@media (max-width: 1199px) {
 
 							& {
 								margin-left: -71px;
@@ -2673,11 +2758,27 @@ main {
 				&:hover {
 					background-image: url(../img/prev-carousel-hover.svg);
 				}
+
+			@media (max-width: 767px) {
+
+				& {
+					z-index: 2;
+					top: calc(~'50% - 30px');
+				}
+			}
 		}
 
 		.slick-prev-design,
 		.slick-prev-wdesign {
 			right: 39px;
+
+			@media (max-width: 767px) {
+
+				& {
+					right: auto;
+					left: 15px;
+				}
+			}
 		}
 
 		.slick-next-design,
@@ -2689,6 +2790,14 @@ main {
 		.tile-design {
 			margin-left: -15px;
 			margin-right: -13.5px;
+
+			@media (max-width: 767px) {
+
+				& {
+					margin-left: 20px;
+					margin-right: 20px;
+				}
+			}
 
 			&__item {
 				position: relative;
@@ -2847,6 +2956,24 @@ footer {
 	padding-top: 27px;
 	background-color: @footer;
 
+	@media (min-width: 768px) and (max-width: 1199px) {
+
+		& {
+			position: relative;
+
+			&::before {
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				content: '';
+				display: block;
+				width: 100%;
+				height: calc(~'100% - 270px');
+				background-color: @footer-dark;
+			}
+		}
+	}
+
 		.logo-footer {
 
 
@@ -2934,6 +3061,14 @@ footer {
 				&:hover {
 					color: @linkThis;
 				}
+
+			@media (max-width: 767px) {
+
+				& {
+					margin-bottom: 20px;
+					margin-top: 15px;
+				}
+			}
 		}
 
 		svg {
@@ -2951,6 +3086,30 @@ footer {
 
 		.footer-ico {
 			font-size: 0;
+
+			@media (min-width: 768px) and (max-width: 1199px) {
+
+				& {
+					margin-top: 31px;
+				}
+			}
+
+			@media (max-width: 767px) {
+
+				& {
+					margin-bottom: 24px;
+
+					&__text {
+						width: calc(~'100% - 37px');
+
+						p {
+							margin-bottom: 0;
+							margin-left: 2%;
+							display: inline-block;
+						}
+					}
+				}
+			}
 
 			&__text {
 				margin-left: 10px;
@@ -2983,6 +3142,21 @@ footer {
 			margin-top: -79px;
 			font-size: 0;
 
+			@media (min-width: 768px) and (max-width: 1199px) {
+
+				& {
+					margin-top: 31px;
+				}
+			}
+
+			@media (max-width: 767px) {
+
+				& {
+					margin-top: 0;
+					margin-bottom: 35px;
+				}
+			}
+
 			p {
 				margin-bottom: 0;
 				padding-left: 10%;
@@ -2991,6 +3165,25 @@ footer {
 				vertical-align: middle;
 				font: 13px/24px @semibold;
 				color: @white;
+
+				@media (min-width: 768px) and (max-width: 1199px) {
+
+					& {
+						padding-left: 0;
+						padding-right: 0;
+						display: block;
+					}
+				}
+
+				@media (max-width: 767px) {
+
+					& {
+						padding-left: 0;
+						padding-right: 0;
+						margin-bottom: 10px;
+						display: block;
+					}
+				}
 			}
 
 			a {
@@ -3010,6 +3203,13 @@ footer {
 			text-align: right;
 			background-color: @developerBg;
 
+				@media (max-width: 767px) {
+
+					& {
+						text-align: left;
+					}
+				}
+
 				p {
 					margin-bottom: 0;
 					margin-right: 3%;
@@ -3017,6 +3217,28 @@ footer {
 					vertical-align: middle;
 					font: 11px/12px @regular;
 					color: @developerP;
+
+					@media (max-width: 1199px) {
+
+						& {
+							width: 50%;
+						}
+					}
+
+					&.copy {
+						display: block;
+						text-align: left;
+						margin-right: 0;
+						font-size: 14px;
+						line-height: 36px;
+
+						@media (max-width: 1199px) {
+
+							& {
+								width: 100%;
+							}
+						}
+					}
 				}
 
 				svg {
@@ -3025,5 +3247,17 @@ footer {
 					width: 105px;
 					height: 28px;
 				}
+
+			.images {
+
+				img {
+					margin-bottom: 25px;
+					display: inline-block;
+
+					&:first-child {
+						margin-right: 4%;
+					}
+				}
+			}
 		}
 }

@@ -16,7 +16,8 @@ var gulp = require('gulp'),
     newer = require('gulp-newer'),
     remember = require('gulp-remember'),
     paths = require('gulp-path'),
-    svgo = require('gulp-svgo');
+    svgo = require('gulp-svgo'),
+    affected = require('gulp-jade-find-affected');
    // spritesmith = require('gulp.spritesmith');
 
 var path = {
@@ -113,7 +114,7 @@ gulp.task('webserver', function () {
 
 gulp.task('jade:build', function(){
     gulp.src(path.src.jade)
-        .pipe(newer(path.build.html))
+        .pipe(affected())
         .pipe(jade({
             pretty: true
         }))

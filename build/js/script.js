@@ -26,7 +26,16 @@
             arrows: true,
             focusOnSelect: true,
             prevArrow: '<button type="button" class="slick-prev"></button>',
-            nextArrow: '<button type="button" class="slick-next"></button>'
+            nextArrow: '<button type="button" class="slick-next"></button>',
+            responsive: [
+                {
+                    breakpoint: 767,
+                    settings: {
+                        slidesToShow: 3,
+                        arrows: false
+                    }
+                }
+            ]
         });
 
         // ������� �������� ���������
@@ -51,7 +60,37 @@
             slidesToShow: 5,
             slidesToScroll: 5,
             prevArrow: '<button type="button" class="slick-prev-tile"></button>',
-            nextArrow: '<button type="button" class="slick-next-tile"></button>'
+            nextArrow: '<button type="button" class="slick-next-tile"></button>',
+            responsive: [
+                {
+                    breakpoint: 1199,
+                    settings: {
+                        slidesToShow: 3.5,
+                        slidesToScroll: 3
+                    }
+                },
+                {
+                    breakpoint: 992,
+                    settings: {
+                        slidesToShow: 2.5,
+                        slidesToScroll: 2
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 1.5,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 460,
+                    settings: {
+                        slidesToShow: 1.1,
+                        slidesToScroll: 1
+                    }
+                }
+            ]
         });
 
 
@@ -62,7 +101,37 @@
             slidesToShow: 5,
             slidesToScroll: 5,
             prevArrow: '<button type="button" class="slick-prev-wall"></button>',
-            nextArrow: '<button type="button" class="slick-next-wall"></button>'
+            nextArrow: '<button type="button" class="slick-next-wall"></button>',
+            responsive: [
+                {
+                    breakpoint: 1199,
+                    settings: {
+                        slidesToShow: 3.5,
+                        slidesToScroll: 3
+                    }
+                },
+                {
+                    breakpoint: 992,
+                    settings: {
+                        slidesToShow: 2.5,
+                        slidesToScroll: 2
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 1.5,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 460,
+                    settings: {
+                        slidesToShow: 1.1,
+                        slidesToScroll: 1
+                    }
+                }
+            ]
         });
 
         // ������� ������� ������-�������� ������
@@ -78,7 +147,29 @@
                 {
                     breakpoint: 1199,
                     settings: {
-                        slidesToShow: 3
+                        slidesToShow: 3,
+                        slidesToScroll: 3
+                    }
+                },
+                {
+                    breakpoint: 992,
+                    settings: {
+                        slidesToShow: 2.5,
+                        slidesToScroll: 2
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 1.5,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 460,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
                     }
                 }
             ]
@@ -99,6 +190,27 @@
                     settings: {
                         slidesToShow: 3
                     }
+                },
+                {
+                    breakpoint: 992,
+                    settings: {
+                        slidesToShow: 2.5,
+                        slidesToScroll: 2
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 1.5,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 460,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
                 }
             ]
         });
@@ -117,6 +229,27 @@
                     breakpoint: 1199,
                     settings: {
                         slidesToShow: 3
+                    }
+                },
+                {
+                    breakpoint: 992,
+                    settings: {
+                        slidesToShow: 2.5,
+                        slidesToScroll: 2
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 1.5,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 460,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
                     }
                 }
             ]
@@ -148,7 +281,15 @@
             slidesToShow: 1,
             slidesToScroll: 1,
             prevArrow: '<button type="button" class="slick-prev-review"></button>',
-            nextArrow: '<button type="button" class="slick-next-review"></button>'
+            nextArrow: '<button type="button" class="slick-next-review"></button>',
+            responsive: [
+                {
+                    breakpoint: 767,
+                    settings: {
+                        arrows: false
+                    }
+                }
+            ]
         });
 
 

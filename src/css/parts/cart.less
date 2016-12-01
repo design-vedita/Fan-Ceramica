@@ -14,6 +14,24 @@
 		background-color: @ui-slider-handle;
 		color: @white;
 		border: none;
+
+		@media (max-width: 767px)  {
+
+			& {
+				float: none;
+			}
+		}
+	}
+
+	@media (max-width: 767px)  {
+
+		& {
+
+			form {
+				text-align: center;
+			}
+
+		}
 	}
 
 	&__top {
@@ -22,6 +40,20 @@
 
 		&.bottom {
 			margin-top: 30px;
+
+			li {
+				@media (max-width: 767px) {
+
+					& {
+						display: block;
+						width: 100% !important;
+
+						p {
+							text-align: center;
+						}
+					}
+				}
+			}
 		}
 
 		.result {
@@ -72,6 +104,30 @@
 						background-color: @dark;
 						color: @white;
 					}
+
+					@media (max-width: 767px) {
+
+						& {
+							padding: 0;
+							border: none;
+
+							&:hover {
+								color: @clear-cart;
+								background-color: transparent;
+							}
+						}
+					}
+				}
+			}
+
+			@media (max-width: 767px) {
+
+				&:first-child {
+					width: 70%;
+				}
+
+				&:last-child {
+					width: 30%;
 				}
 			}
 		}
@@ -91,12 +147,34 @@
 				color: @utpTitle;
 				border-bottom: 1px @table-cart solid;
 			}
+
+			@media (max-width: 767px) {
+
+				& {
+					display: none;
+				}
+			}
 		}
 
 		tbody {
 
 			tr:not(:last-child) td {
 				border-bottom: 1px @table-cart solid;
+
+				@media (max-width: 767px) {
+
+					& {
+						border-bottom: none;
+					}
+
+				}
+			}
+
+			@media (max-width: 767px) {
+
+				tr:not(:last-child) td:last-child {
+					border-bottom: 1px @table-cart solid;
+				}
 			}
 
 			td {
@@ -109,6 +187,16 @@
 				&:not(:first-child) {
 					text-align: center;
 				}
+
+				@media (max-width: 767px) {
+
+					& {
+						display: block;
+						width: 100%;
+						text-align: center;
+
+					}
+				}
 			}
 		}
 
@@ -120,12 +208,43 @@
 			background-size: cover;
 			background-position: center;
 			background-repeat: no-repeat;
+
+			@media (min-width: 768px) and (max-width: 991px){
+
+				& {
+					width: 100%;
+				}
+			}
+
+			@media (max-width: 767px) {
+
+				& {
+					display: block;
+					margin: 20px auto 25px;
+				}
+			}
 		}
 
 		&__description {
 			margin-left: 1.2%;
 			display: inline-block;
 			vertical-align: top;
+
+			@media (min-width: 768px) and (max-width: 991px){
+
+				& {
+					margin-left: 0;
+					width: 100%;
+				}
+			}
+
+			@media (max-width: 767px) {
+
+				& {
+					display: block;
+					margin-left: 0;
+				}
+			}
 
 			p {
 				margin-bottom: 0;
@@ -170,6 +289,13 @@
 
 			span {
 				font: 18px @regular;
+			}
+
+			@media (max-width: 767px) {
+
+				& {
+					margin-bottom: 0;
+				}
 			}
 		}
 
@@ -228,6 +354,7 @@
 				box-sizing: border-box;
 			}
 		}
+
 	}
 
 	&-order {
