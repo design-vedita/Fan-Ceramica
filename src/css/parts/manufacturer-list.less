@@ -101,9 +101,17 @@
 		margin-bottom: 50px;
 		padding-bottom: 37px;
 		border-bottom: 1px @headerBottom solid;
+
 	}
 
 	.item {
+
+		@media (max-width: 460px) {
+
+			& {
+				width: 100% !important;
+			}
+		}
 
 		img {
 			width: 100%;

@@ -299,40 +299,40 @@
 
             var links = document.getElementsByClassName('js-tab-link');
 
-                for (var i = 0; i < links.length; i++) {
+            for (var i = 0; i < links.length; i++) {
 
-                    links[i].onclick = function() {
+                links[i].onclick = function() {
 
-                        var parentLinks = $(this).parents('.tabs__link'),
-                            thisLink = $(parentLinks).find('.js-tab-link');
+                    var parentLinks = $(this).parents('.tabs__link'),
+                        thisLink = $(parentLinks).find('.js-tab-link');
 
 
-                        for(var k = 0; k < thisLink.length; k++) {
-                            thisLink[k].classList.remove('active');
+                    for(var k = 0; k < thisLink.length; k++) {
+                        thisLink[k].classList.remove('active');
+                    }
+
+                    var attrLink = this.getAttribute('data-tab');
+                    this.classList.add('active');
+
+
+                    var parent = $(this).parents('.tabs'),
+                        blocks = $(parent).find('.js-tab-block');
+
+
+                    for (var n = 0; n < blocks.length; n++) {
+                        blocks[n].classList.remove('visible--tab')
+                    }
+
+                    for (var j = 0; j < blocks.length; j++) {
+
+                        var attrBlock = blocks[j].getAttribute('data-tab');
+
+                        if (attrBlock == attrLink) {
+                            blocks[j].classList.add('visible--tab');
                         }
-
-                        var attrLink = this.getAttribute('data-tab');
-                            this.classList.add('active');
-
-
-                            var parent = $(this).parents('.tabs'),
-                                blocks = $(parent).find('.js-tab-block');
-
-
-                            for (var n = 0; n < blocks.length; n++) {
-                                blocks[n].classList.remove('visible--tab')
-                            }
-
-                            for (var j = 0; j < blocks.length; j++) {
-
-                                var attrBlock = blocks[j].getAttribute('data-tab');
-
-                                if (attrBlock == attrLink) {
-                                    blocks[j].classList.add('visible--tab');
-                                }
-                            }
                     }
                 }
+            }
         }
 
         tabs();
@@ -352,21 +352,21 @@
                 $images = $parents.find('img.js-lazy-tab'),
                 $tabblocks = $parents.find('.js-tab-block');
 
-                // ставим активному блоку класс, чтобы при последующих кликах
-                // не перезагружать изображени€
+            // ставим активному блоку класс, чтобы при последующих кликах
+            // не перезагружать изображени€
 
-                if(!$tabblocks.hasClass('lazy-visible')) {
-                    $($images).lazyload({
-                        effect : "fadeIn"
-                    });
-                }
-
-                $($tabblocks).each(function(){
-
-                    if($(this).attr('data-tab') == attr) {
-                        $(this).addClass('lazy-visible');
-                    }
+            if(!$tabblocks.hasClass('lazy-visible')) {
+                $($images).lazyload({
+                    effect : "fadeIn"
                 });
+            }
+
+            $($tabblocks).each(function(){
+
+                if($(this).attr('data-tab') == attr) {
+                    $(this).addClass('lazy-visible');
+                }
+            });
 
 
         });
@@ -400,30 +400,30 @@
         function viewParams() {
             var arrows = document.getElementsByClassName('js-arrow-filter');
 
-                for (var i = 0; i < arrows.length; i++) {
+            for (var i = 0; i < arrows.length; i++) {
 
-                    arrows[i].onclick = function() {
+                arrows[i].onclick = function() {
 
-                        this.classList.toggle('open--data');
+                    this.classList.toggle('open--data');
 
-                        var $parent = $(this).parents('fieldset'),
-                            $block_data = $($parent).find('.js-data');
+                    var $parent = $(this).parents('fieldset'),
+                        $block_data = $($parent).find('.js-data');
 
-                            $block_data.toggleClass('no--visible');
+                    $block_data.toggleClass('no--visible');
 
-                            var timer = setTimeout(function(){
-                                $parent.toggleClass('close--field');
-                            }, 300);
+                    var timer = setTimeout(function(){
+                        $parent.toggleClass('close--field');
+                    }, 300);
 
 
-                            if($block_data.hasClass('no--visible')) {
-                                $block_data.fadeOut('100');
-                            } else {
-                                $block_data.fadeIn('100');
-                            }
-
+                    if($block_data.hasClass('no--visible')) {
+                        $block_data.fadeOut('100');
+                    } else {
+                        $block_data.fadeIn('100');
                     }
+
                 }
+            }
 
         }
 
@@ -434,23 +434,23 @@
             var searchLink = document.getElementsByClassName('js-open-search')[0],
                 searchBlock = document.getElementsByClassName('js-search-form')[0];
 
-                searchLink.onclick = function() {
-                    this.classList.toggle('open--search');
-                    searchBlock.classList.toggle('visible--search');
-                };
+            searchLink.onclick = function() {
+                this.classList.toggle('open--search');
+                searchBlock.classList.toggle('visible--search');
+            };
 
-                // клик не по элементу поиска или иконки поиска скрывает строку поиска
-                $(document).on('click', function(e) {
+            // клик не по элементу поиска или иконки поиска скрывает строку поиска
+            $(document).on('click', function(e) {
 
-                    if($(e.target).closest(searchBlock).length) return;
+                if($(e.target).closest(searchBlock).length) return;
 
-                    if (!$(e.target).closest(".js-open-search").length) {
-                        $('.js-search-form').removeClass('visible--search');
-                    }
+                if (!$(e.target).closest(".js-open-search").length) {
+                    $('.js-search-form').removeClass('visible--search');
+                }
 
-                    e.stopPropagation();
+                e.stopPropagation();
 
-                });
+            });
 
         }
 
@@ -461,50 +461,50 @@
             var links = document.getElementsByClassName('js-coll'),
                 blocks = document.getElementsByClassName('js-content');
 
-                var i, j, n, k;
+            var i, j, n, k;
 
-                for (i = 0; i < links.length; i++) {
+            for (i = 0; i < links.length; i++) {
 
-                    links[i].onclick = function(){
+                links[i].onclick = function(){
 
-                        for (k = 0; k < links.length; k++) {
-                            links[k].classList.remove('open--tab');
+                    for (k = 0; k < links.length; k++) {
+                        links[k].classList.remove('open--tab');
+                    }
+
+                    this.classList.add('open--tab');
+
+                    var param = this.getAttribute('data-tab');
+
+                    for (n = 0; n < blocks.length; n++) {
+                        blocks[n].classList.remove('open--tab');
+                    }
+
+                    for (j = 0; j < blocks.length; j++) {
+
+                        if( blocks[j].classList.contains(param) ) {
+                            blocks[j].classList.add('open--tab');
                         }
 
-                        this.classList.add('open--tab');
+                        if (param == 'tab-des' || param == 'tab-int') {
 
-                        var param = this.getAttribute('data-tab');
+                            if(blocks[j].classList.contains(param)) {
+                                var images = blocks[j].querySelectorAll('img');
 
-                        for (n = 0; n < blocks.length; n++) {
-                            blocks[n].classList.remove('open--tab');
-                        }
-
-                        for (j = 0; j < blocks.length; j++) {
-
-                            if( blocks[j].classList.contains(param) ) {
-                                blocks[j].classList.add('open--tab');
-                            }
-
-                            if (param == 'tab-des' || param == 'tab-int') {
-
-                                if(blocks[j].classList.contains(param)) {
-                                    var images = blocks[j].querySelectorAll('img');
-
-                                    if(!blocks[j].classList.contains('lazy-visible')) {
-                                        $(images).lazyload({
-                                            effect : "fadeIn"
-                                        });
-                                    }
-
-                                    blocks[j].classList.add('lazy-visible');
+                                if(!blocks[j].classList.contains('lazy-visible')) {
+                                    $(images).lazyload({
+                                        effect : "fadeIn"
+                                    });
                                 }
 
-
+                                blocks[j].classList.add('lazy-visible');
                             }
-                        }
 
+
+                        }
                     }
+
                 }
+            }
         }
 
         collectionTab();
@@ -545,11 +545,12 @@
         window.onresize = function(){
             heightBlocks('js-form');
             backTopMenu();
-           // backBottomMenu();
+            viewFilter();
+            // backBottomMenu();
         };
 
         backTopMenu();
-     //   backBottomMenu();
+        //   backBottomMenu();
 
         function backTopMenu() {
             var $back = $('.js-dark-menu-back'),
@@ -561,9 +562,9 @@
         }
 
         var myburger = new Burgers();
-            myburger.topBurger();
-            myburger.bottomBurger();
-            myburger.openBottomMenu();
+        myburger.topBurger();
+        myburger.bottomBurger();
+        myburger.openBottomMenu();
 
         function Burgers() {
             var $topB = $('.js-burger-top-menu'),
@@ -603,10 +604,10 @@
                     arrows.on('click', function(){
 
                         var $parent  = $(this).context.parentNode.parentNode;
-                            $($parent)
-                                    .toggleClass('active')
-                                    .find(' > ul')
-                                    .toggle();
+                        $($parent)
+                            .toggleClass('active')
+                            .find(' > ul')
+                            .toggle();
 
                     });
                 }
@@ -616,18 +617,32 @@
         // јвторасширение textarea
         var commentArea = document.getElementsByTagName('textarea');
 
-            function autosize() {
-                var el = this;
-                setTimeout(function(){
-                    el.style.cssText = 'height:auto';
-                    el.style.cssText = 'height:' + el.scrollHeight + 'px';
+        function autosize() {
+            var el = this;
+            setTimeout(function(){
+                el.style.cssText = 'height:auto';
+                el.style.cssText = 'height:' + el.scrollHeight + 'px';
 
-                }, 0);
-            }
+            }, 0);
+        }
 
         for (var i = 0; i < commentArea.length; i++) {
             commentArea[i].addEventListener('keydown', autosize);
         }
+
+        // «акрытие фильтра на планшетах и телефонах
+
+        function viewFilter() {
+            var $filter = $('#filter'),
+                $fieldset = $filter.find('fieldset'),
+                $dataBlock = $fieldset.find('.js-data'),
+                clientWidth = document.documentElement.clientWidth;
+
+            (clientWidth <= 1199) ?  $fieldset.addClass('close--field') : $fieldset.removeClass('close--field');
+            (clientWidth <= 1199) ?  $dataBlock.addClass('no--visible').fadeOut() : $dataBlock.removeClass('no--visible').fadeIn();
+        }
+
+        viewFilter();
     });
 
 

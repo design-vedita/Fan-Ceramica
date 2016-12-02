@@ -6,26 +6,26 @@ mixin cart-order()
                .col-md-6
                   p.title-order  Контактная информация
                   .row
-                     .col-md-6
+                     .col-md-6.col-sm-6
                         label Ваше имя
                         input(type="text")
-                     .col-md-6
+                     .col-md-6.col-sm-6
                         label Телефон
                         input(type="tel")
-                     .col-md-6
+                     .col-md-6.col-sm-6
                         label E-mail
                         input(type="email")
-                     .col-md-6
+                     .col-md-6.col-sm-6
                         label Город
                         input(type="text")
-                     .col-md-12
+                     .col-md-12.col-sm-12
                         label Адрес
                         input(type="text")
-                     .col-md-12
+                     .col-md-12.col-sm-12
                         label Комментарий к заказу
                         textarea
                .col-md-6
-                  p.title-order  Способ доставки
+                  p.title-order.order-delivery  Способ доставки
                   ul.delivery-list
                      li
                         input(type="radio" name="type-delivery")#pickup

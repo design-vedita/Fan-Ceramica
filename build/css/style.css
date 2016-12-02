@@ -588,7 +588,7 @@ header .header-bottom .dark-menu-back-two {
 }
 @media (max-width: 767px) {
   header .header-bottom .dark-menu-back-two {
-    height: calc(100% - 257px);
+    height: calc(100% - 263px);
   }
   header .header-bottom .dark-menu-back-two.visible {
     display: block;
@@ -1799,7 +1799,8 @@ main .question__text__descript span {
 main .question__text input {
   margin-top: 5px;
 }
-main .question__text input[type=phone] {
+main .question__text input[type=phone],
+main .question__text input[type=text] {
   padding-left: 20px;
   width: 100%;
   height: 48px;
@@ -1811,7 +1812,8 @@ main .question__text input[type=phone] {
   color: #fff;
 }
 @media (max-width: 767px) {
-  main .question__text input[type=phone] {
+  main .question__text input[type=phone],
+  main .question__text input[type=text] {
     margin-bottom: 15px;
   }
 }
@@ -2862,6 +2864,11 @@ h1::before {
 .catalog {
   margin-top: 40px;
 }
+@media (max-width: 991px) {
+  .catalog #filter {
+    margin-bottom: 24px;
+  }
+}
 .catalog #filter fieldset {
   position: relative;
   padding-left: 14px;
@@ -2870,6 +2877,11 @@ h1::before {
   padding-top: 14px;
   margin-bottom: 21px;
   border: 1px #e6e6e6 solid;
+}
+@media (max-width: 991px) {
+  .catalog #filter fieldset {
+    padding-top: 7px;
+  }
 }
 .catalog #filter fieldset > label {
   display: block;
@@ -2900,6 +2912,11 @@ h1::before {
 }
 .catalog #filter fieldset.close--field svg {
   fill: #fff;
+}
+@media (max-width: 991px) {
+  .catalog #filter fieldset.close--field {
+    padding-bottom: 0;
+  }
 }
 .catalog #filter .data-fieldset {
   margin-top: 6px;
@@ -2940,6 +2957,11 @@ h1::before {
   transform: rotate(90deg);
   cursor: pointer;
   fill: #777676;
+}
+@media (max-width: 991px) {
+  .catalog #filter .arrow {
+    top: 16px;
+  }
 }
 .catalog #filter .arrow svg {
   width: inherit;
@@ -3108,6 +3130,12 @@ h1::before {
   height: auto;
   border-radius: 0;
   background-color: transparent;
+}
+@media (max-width: 991px) {
+  .pagination li:first-child,
+  .pagination li:last-child {
+    display: none;
+  }
 }
 .pagination li:first-child.active,
 .pagination li:last-child.active,
@@ -3843,6 +3871,11 @@ h1::before {
   padding-bottom: 37px;
   border-bottom: 1px #dbdcdc solid;
 }
+@media (max-width: 460px) {
+  .manufacturer-lists .item {
+    width: 100% !important;
+  }
+}
 .manufacturer-lists .item img {
   width: 100%;
   height: auto;
@@ -4228,6 +4261,11 @@ h1::before {
   color: #2a2d34;
   text-transform: uppercase;
 }
+@media (max-width: 991px) {
+  .cart-order .title-order.order-delivery {
+    margin-top: 60px;
+  }
+}
 .cart-order label {
   display: block;
   font: 14px/24px 'opensans-regular', 'sans-serif';
@@ -4310,6 +4348,11 @@ h1::before {
   right: 0;
   top: 3px;
 }
+@media (max-width: 991px) {
+  .cart-order .payment {
+    margin-top: 35px;
+  }
+}
 .cart-order .payment li {
   padding-bottom: 11px;
   margin-bottom: 10px;
@@ -4325,6 +4368,12 @@ h1::before {
   padding-top: 35px;
   margin-top: 17px;
   border-top: 1px #e1e1e1 solid;
+}
+@media (max-width: 991px) {
+  .cart-order__data {
+    padding-top: 10px;
+    border-top: none;
+  }
 }
 .cart-order__data .title-order {
   margin-bottom: 14px;
