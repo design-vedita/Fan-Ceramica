@@ -340,9 +340,9 @@
         // lazy load
 
         $("img.js-lazy, div.js-lazy").lazyload({
-            effect : "fadeIn"
+            effect : "fadeIn",
+            threshold : 200
         });
-
         // lazy load на табы
 
         $('.js-tab-link').click(function() {
@@ -510,33 +510,97 @@
         collectionTab();
 
 
+        function heightText() {
+
+            var blocks = document.getElementsByClassName('js-text'),
+                anchor = document.getElementsByClassName('js-anchor'),
+                clientWidth = document.documentElement.clientWidth;
+
+            var max = 0,
+                maxIndex = '';
+
+            var i, k, j, n;
+
+            if (clientWidth > 767) {
+
+                if (blocks) {
+
+                    for (n = 0; n < anchor.length; n++) {
+                        anchor[n].classList.remove('js-anchor');
+                    }
+
+                    for (i = 0; i < blocks.length; i++) {
+
+                        blocks[i].style.height = ''; //очищаем высоту у всех блоков, чтобы на ресайзе выставлять высоту
+
+                        if( max < blocks[i].offsetHeight ) {
+
+                            max = blocks[i].offsetHeight;
+                            maxIndex = i;
+                            blocks[maxIndex].classList.add('js-anchor')
+                        }
+                    }
+
+                    for (j = 0; j < blocks.length; j++ ) {
+
+                        if( !blocks[j].classList.contains('js-anchor') ) {
+                            blocks[j].style.height = max + 'px';
+                        }
+                    }
+                }
+
+            } else {
+                for (k = 0; k < blocks.length; k++) {
+
+                    blocks[k].classList.remove('js-anchor');
+                    blocks[k].style.height = '';
+
+                }
+            }
+        }
+
+        heightText();
+
         function heightBlocks(el) {
             var blocks = document.getElementsByClassName(el),
                 anchor = document.getElementsByClassName('anchor'),
                 max = 0,
-                maxIndex = 0;
+                maxIndex = 0,
+                clientWidth = document.documentElement.clientWidth;
 
             var i, j, k;
 
-            if(!!anchor) {
-                for (i = 0; i < blocks.length; i++) {
+            if(anchor) {
 
-                    if (max < blocks[i].offsetHeight ) {
-                        maxIndex = i;
-                        max = blocks[maxIndex].offsetHeight;
+                if (clientWidth >= 768) {
+
+                    for (i = 0; i < blocks.length; i++) {
+
+                        if (max < blocks[i].offsetHeight ) {
+                            maxIndex = i;
+                            max = blocks[maxIndex].offsetHeight;
+                        }
+
+                    }
+
+                    if(maxIndex)
+                        blocks[maxIndex].classList.add('anchor');
+
+
+                    for (j = 0; j < blocks.length; j++) {
+                        if(!blocks[j].classList.contains('anchor')) {
+                            blocks[j].style.height = max + 'px';
+                        }
+                    }
+                } else {
+
+                    for (k = 0; k < blocks.length; k++) {
+                        blocks[k].classList.remove('anchor');
+                        blocks[k].style.height = ' ';
                     }
 
                 }
 
-                if(maxIndex)
-                    blocks[maxIndex].classList.add('anchor');
-
-
-                for (j = 0; j < blocks.length; j++) {
-                    if(!blocks[j].classList.contains('anchor')) {
-                        blocks[j].style.height = max + 'px';
-                    }
-                }
             }
         }
 
@@ -546,11 +610,10 @@
             heightBlocks('js-form');
             backTopMenu();
             viewFilter();
-            // backBottomMenu();
+            heightText();
         };
 
         backTopMenu();
-        //   backBottomMenu();
 
         function backTopMenu() {
             var $back = $('.js-dark-menu-back'),
@@ -643,6 +706,7 @@
         }
 
         viewFilter();
+
     });
 
 
