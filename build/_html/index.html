@@ -31,7 +31,7 @@
               <p><span class="title"> Выходные</span><span class="subtitle"> с 10 до 17 ч.</span></p>
             </div>
             <div class="col-md-6 header-top__links col-lg-5 col-lg-push-7 col-xs-12 col-sm-6">
-              <div class="header-top__link-3d"><a href="javascript:void(0)"> Заказать 3D проект</a></div>
+              <div class="header-top__link-3d"><a href="javascript:void(0)" data-type="3d" class="js-popup-link"> Заказать 3D проект</a></div>
               <div class="header-top__registration"><a href="javascript:void(0)" class="enter"> Войти</a><a href="javascript:void(0)" class="registration"> Зарегистрироваться</a></div>
               <div class="header-top__cart hidden-lg"><a href="javascript:void(0)">
                   <svg class="cart js-arrow">
@@ -57,7 +57,7 @@
                   <li><a href="javascript:void(0)">Статьи</a></li>
                   <li><a href="javascript:void(0)">Скачать прайс</a></li>
                   <li><a href="javascript:void(0)">Контакты</a></li>
-                </nav><a href="javascript:void(0)" class="hidden-lg"> Заказать 3D проект</a>
+                </nav><a href="javascript:void(0)" data-type="3d" class="hidden-lg js-popup-link"> Заказать 3D проект</a>
               </div>
             </div>
           </div>
@@ -1149,6 +1149,37 @@
         </div>
       </div>
     </footer>
+    <div class="overlay js-overlay"></div>
+    <div class="popup popup-3d js-popup">
+      <div class="popup__header">
+        <p class="title"> Заказать 3d проект</p>
+        <div class="close-popup js-close-popup">
+          <svg class="delete-cart js-arrow">
+            <use xlink:href="#delete-cart"></use>
+          </svg>
+        </div>
+      </div>
+      <div class="popup__content">
+        <form>
+          <div class="row">
+            <div class="col-md-6">
+              <label>Ваше имя</label>
+              <input type="text" placeholder="Маша Иванова"/>
+            </div>
+            <div class="col-md-6">
+              <label>Телефон</label>
+              <input type="tel" placeholder="+7 (800) -123-45-67"/>
+            </div>
+            <div class="col-md-12">
+              <div class="form-submit">
+                <input type="submit" value="Отправить"/>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="popup js-popup"></div>
     <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script type="text/javascript">  window.jQuery || document.write('<script src="../js/jquery-2.1.4.min.js"><\/script>');</script>
     <script src="../js/libs/bootstrap/bootstrap.min.js"></script>

@@ -1,0 +1,120 @@
+.overlay {
+	position: fixed;
+	z-index: 9;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: fade(@black, 50%);
+	opacity: 0;
+	visibility: hidden;
+	transition-property: opacity, visibility;
+	transition-duration: 300ms;
+	transition-timing-function: linear;
+
+	&.visible {
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+.popup {
+	position: fixed;
+	z-index: 10;
+	padding: 27px 15px 55px 15px;
+	max-width: 650px;
+	width: 100%;
+	background-color: @white;
+	box-shadow: 0 0 7px 0 rgba(0, 0, 0, .51);
+	opacity: 0;
+	visibility: hidden;
+	transition-property: opacity, visibility;
+	transition-duration: 300ms;
+	transition-timing-function: linear;
+
+	@media (max-width: 767px) {
+
+		& {
+			padding-bottom: 25px;
+		}
+	}
+
+	&.visible {
+		opacity: 1;
+		visibility: visible;
+	}
+
+	&__header {
+		position: relative;
+		border-bottom: 3px @yellow solid;
+	}
+
+	.delete-cart {
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 23px;
+		height: 23px;
+		cursor: pointer;
+	}
+
+	.title {
+		font: 24px/24px @regular;
+		color: @utpTitle;
+		text-transform: uppercase;
+	}
+
+	&__content {
+		padding-top: 55px;
+
+		@media (max-width: 767px) {
+
+			& {
+				padding-top: 15px;
+			}
+		}
+
+		label {
+			padding-left: 15px;
+			display: block;
+			font: 14px/24px @regular;
+			color: @param;
+		}
+
+		.form-submit {
+			padding-top: 55px;
+			text-align: center;
+		}
+
+		input {
+
+			&[type=text],
+			&[type=tel] {
+				padding-left: 14px;
+				width: 100%;
+				height: 30px;
+				font: 14px/26px @semibold;
+				color: @titleManuf;
+				border-radius: 14.5px;
+				border: 1px @calc-input solid;
+				box-sizing: border-box;
+			}
+
+			@media (max-width: 767px) {
+
+				&[type=text] {
+					margin-bottom: 30px;
+				}
+			}
+
+			&[type=submit] {
+				padding: 11px 45px;
+				font: 18px/normal @bold;
+				text-transform: uppercase;
+				background-color: @green;
+				border: none;
+				border-radius: 7px;
+			}
+		}
+	}
+}

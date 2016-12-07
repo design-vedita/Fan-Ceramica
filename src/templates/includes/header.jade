@@ -18,7 +18,7 @@ mixin header(type)
                      span.subtitle  с 10 до 17 ч.
                .col-md-6.header-top__links.col-lg-5.col-lg-push-7.col-xs-12.col-sm-6
                   .header-top__link-3d
-                     a(href="javascript:void(0)")  Заказать 3D проект
+                     a(href="javascript:void(0)" data-type="3d").js-popup-link  Заказать 3D проект
                   .header-top__registration
                      a(href="javascript:void(0)").enter  Войти
                      a(href="javascript:void(0)").registration  Зарегистрироваться
@@ -41,7 +41,7 @@ mixin header(type)
                         each item  in topmenu
                            li
                               a(href="javascript:void(0)") #{item}
-                     a(href="javascript:void(0)").hidden-lg  Заказать 3D проект
+                     a(href="javascript:void(0)" data-type="3d").hidden-lg.js-popup-link  Заказать 3D проект
       .header-bottom
          .dark-menu-back-two.js-dark-menu-back-two
          .container

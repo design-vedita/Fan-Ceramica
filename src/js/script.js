@@ -337,6 +337,66 @@
 
         tabs();
 
+        // popup
+
+        function popup() {
+            var $links = $('.js-popup-link'),
+                $popups = $('.js-popup'),
+                $overlay = $('.js-overlay'),
+                $close = $('.js-close-popup');
+
+            $links.on('click', function(){
+
+                var $attr = $(this).attr('data-type');
+
+                    $popups.each(function(){
+                        if ($(this).hasClass('popup-' + $attr)) {
+
+                            var $width = $(this).outerWidth(),
+                                $height = $(this).outerHeight();
+
+                            $(this)
+                                .css({
+                                    'left': 'calc(50% - '+ ($width / 2) + 'px)',
+                                    'top': 'calc(50% - '+ ($height / 2) + 'px)'
+                                })
+                                .addClass('visible');
+
+                            $overlay.addClass('visible');
+                        }
+                    });
+            });
+
+            $popups.each(function(){
+
+                if($(this).hasClass('visible')) {
+                    var $width = $(this).outerWidth(),
+                        $height = $(this).outerHeight();
+
+                    $(this)
+                        .css({
+                            'left': 'calc(50% - '+ ($width / 2) + 'px)',
+                            'top': 'calc(50% - '+ ($height / 2) + 'px)'
+                        })
+                }
+            });
+
+            $close.on('click', function(){
+                var $parent = $(this).parents('.js-popup');
+
+                $parent
+                    .css({
+                        'left': '',
+                        'top': ''
+                    })
+                    .removeClass('visible');
+
+                $overlay.removeClass('visible');
+            });
+        }
+
+        popup();
+
         // lazy load
 
         $("img.js-lazy, div.js-lazy").lazyload({
@@ -611,6 +671,7 @@
             backTopMenu();
             viewFilter();
             heightText();
+            popup();
         };
 
         backTopMenu();

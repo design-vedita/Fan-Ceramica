@@ -1,0 +1,20 @@
+mixin popup-3d()
+   .overlay.js-overlay
+   .popup.popup-3d.js-popup
+      .popup__header
+         p.title  Заказать 3d проект
+         .close-popup.js-close-popup
+            +svg('delete-cart')
+      .popup__content
+         form
+            .row
+               .col-md-6
+                  label Ваше имя
+                  input(type="text" placeholder="Маша Иванова")
+               .col-md-6
+                  label Телефон
+                  input(type="tel" placeholder="+7 (800) -123-45-67")
+               .col-md-12
+                  .form-submit
+                     input(type="submit" value="Отправить")
+   .popup.js-popup
