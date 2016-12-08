@@ -21,7 +21,7 @@
 .popup {
 	position: fixed;
 	z-index: 10;
-	padding: 27px 15px 55px 15px;
+	padding: 22px 15px 55px 15px;
 	max-width: 650px;
 	width: 100%;
 	background-color: @white;
@@ -45,6 +45,7 @@
 	}
 
 	&__header {
+		padding-bottom: 5px;
 		position: relative;
 		border-bottom: 3px @yellow solid;
 	}
@@ -54,7 +55,7 @@
 		right: 0;
 		top: 0;
 		width: 23px;
-		height: 23px;
+		height: 22px;
 		cursor: pointer;
 	}
 
@@ -65,7 +66,7 @@
 	}
 
 	&__content {
-		padding-top: 55px;
+		padding-top: 48px;
 
 		@media (max-width: 767px) {
 
@@ -114,6 +115,14 @@
 				background-color: @green;
 				border: none;
 				border-radius: 7px;
+				transition-property: background-color, color;
+				transition-duration: 300ms, 300ms;
+				transition-timing-function: linear;
+
+				&:hover {
+					color: @white;
+					background-color: @greenDark;
+				}
 			}
 		}
 	}
