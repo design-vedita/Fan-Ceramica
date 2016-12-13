@@ -477,9 +477,9 @@
 
 
                     if($block_data.hasClass('no--visible')) {
-                        $block_data.fadeOut('100');
+                        $block_data.hide('300');
                     } else {
-                        $block_data.fadeIn('100');
+                        $block_data.show('300');
                     }
 
                 }
@@ -762,13 +762,21 @@
                 $dataBlock = $fieldset.find('.js-data'),
                 clientWidth = document.documentElement.clientWidth;
 
-            (clientWidth <= 1199) ?  $fieldset.addClass('close--field') : $fieldset.removeClass('close--field');
-            (clientWidth <= 1199) ?  $dataBlock.addClass('no--visible').fadeOut() : $dataBlock.removeClass('no--visible').fadeIn();
+            (clientWidth <= 1199)
+                ?  $fieldset.addClass('close--field')
+                : $fieldset.removeClass('close--field');
+            (clientWidth <= 1199)
+                ?  $dataBlock.addClass('no--visible').hide()
+                : $dataBlock.removeClass('no--visible').show();
         }
 
         viewFilter();
 
     });
 
+    $(document).ready(function(){
+        var el = new Inputmask("+7 (999) - 99 - 99", {'placeholder': '.'});
+        el.mask($('[name="form_text_2"]'));
+    });
 
 }());

@@ -240,7 +240,9 @@
 						box-shadow: 0 0 13px 0 fade(@dark, 24%);
 
 						img {
-							height: 193px;
+							width: 100%;
+							//height: 193px;
+							height: auto;
 						}
 					}
 
@@ -252,6 +254,16 @@
 							&.manufacturer {
 								margin-top: 0;
 							}
+						}
+					}
+				}
+
+
+				@media (max-width: 460px) {
+
+					& {
+						.col-xs-6 {
+							width: 100% !important;
 						}
 					}
 				}
@@ -359,6 +371,13 @@
 				text-align: center;
 				background-color: @green;
 				border-radius: 20px;
+				transition-property: background-color, color;
+				transition-duration: 300ms, 300ms;
+
+				&:hover {
+					background-color: @greenDark;
+					color: @white;
+				}
 			}
 
 			&::after {
