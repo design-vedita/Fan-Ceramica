@@ -727,7 +727,7 @@
                 openBottomMenu: function() {
                     arrows.on('click', function(){
 
-                        var $parent  = $(this).context.parentNode.parentNode;
+                        var $parent  = $(this).context.parentNode;
                         $($parent)
                             .toggleClass('active')
                             .find(' > ul')
