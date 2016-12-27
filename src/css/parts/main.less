@@ -1924,6 +1924,24 @@ main {
 				}
 		}
 
+		&__one-click {
+			padding-bottom: 10px;
+			text-align: center;
+
+			a {
+				font: 15px/24px @semibold;
+				color: @fildset-label;
+				border-bottom: 1px @fildset-label dashed;
+				transition-property: color, border;
+				transition-duration: 300ms, 300ms;
+
+				&:hover {
+					color: @lightyellow;
+					border-bottom-color: @lightyellow;
+				}
+			}
+		}
+
 	}
 
 	div.manufacturer {
