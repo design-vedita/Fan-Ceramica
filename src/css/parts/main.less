@@ -1196,6 +1196,7 @@ main {
 		position: relative;
 		width: 100%;
 		height: 534px;
+		overflow: hidden;
 
 			&__arrows {
 				position: absolute;
@@ -1774,6 +1775,159 @@ main {
 			& {
 				margin-bottom: 30px;
 			}
+		}
+
+		&__title {
+
+			.collection-p {
+				margin-bottom: 0;
+				font-size: 13px;
+				line-height: normal;
+				font-family: @semibold;
+				color: @yellow;
+			}
+
+			.title {
+				margin-bottom: 8px;
+				font: 20px/24px @regular;
+				text-transform: uppercase;
+
+				a {
+					color: @titleLink;
+				}
+			}
+		}
+
+		&.collection {
+			padding: 8px 15px;
+
+			.item-card__text {
+				padding: 0;
+				padding-top: 2px;
+			}
+
+			.type {
+				padding-left: 0;
+			}
+
+			.price {
+				margin-top: 16px;
+				padding-top: 0;
+			}
+		}
+
+		&.tale {
+			padding-bottom: 5px;
+
+			.collection-type {
+				font: 13px/24px @semibold;
+				color: @collection-p;
+			}
+
+			.sizes {
+				margin-top: 4px;
+
+				svg {
+					display: inline-block;
+					width: 13px;
+					height: 13px;
+					fill: @yellow;
+				}
+
+				p {
+					margin-left: 2%;
+					display: inline-block;
+					font: 14px/24px @regular;
+					color: @fildset-label;
+
+					span {
+						line-height: 26px;
+						color: @titleManuf;
+					}
+				}
+			}
+
+			.price {
+				margin-top: 11px;
+				font-size: 16px;
+
+				span {
+					font-size: 24px;
+				}
+			}
+
+			.item-card__button {
+				margin-top: 11px;
+				margin-bottom: 6px;
+
+				button {
+					float: left;
+					border: 1px @input-count solid;
+					width: 37px;
+					height: 29px;
+					box-sizing: border-box;
+					font: 18px @semibold;
+					color: @price;
+					background-color: transparent;
+					transition: background 300ms linear, color 300ms linear;
+
+					&:hover {
+						background-color: @lightyellow;
+						color: @white;
+					}
+
+					&.minus {
+						border-radius: 20px 0 0 20px;
+					}
+
+					&.plus {
+						border-radius: 0 20px 20px 0;
+					}
+				}
+
+				input[type=text] {
+					float: left;
+					width: 34px;
+					height: 29px;
+					border: 1px @input-count solid;
+					border-left: none;
+					border-right: none;
+					box-sizing: border-box;
+					text-align: center;
+					font: 18px @semibold;
+				}
+
+				&::after {
+					display: block;
+					width: 100%;
+					clear: both;
+					content: '';
+				}
+
+				input[type=button] {
+					margin-left: 7px;
+					padding: 3px 13px;
+					font: 16px/normal @semibold;
+					color: @more;
+					border: none;
+					background-color: @green;
+					border-radius: 14px;
+					transition-property: background-color, color;
+					transition-duration: 300ms;
+
+					&:hover {
+						background-color: @greenDark;
+						color: @white;
+					}
+				}
+			}
+
+			.item-card__left-button,
+			.item-card__left-button {
+				width: 50%;
+				float: left;
+			}
+
 		}
 
 		&__img {

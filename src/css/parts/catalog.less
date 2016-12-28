@@ -123,6 +123,14 @@ h1 {
 					&:hover {
 						color: @green;
 					}
+
+					&.ui-checkboxradio-disabled {
+						color: @searchback;
+
+						.ui-checkboxradio-icon {
+							border-color: @searchback;
+						}
+					}
 			}
 
 			input {
@@ -300,6 +308,12 @@ h1 {
 
 		.item-card {
 			margin-bottom: 35px;
+			box-shadow: none;
+			border: 1px @item-tale solid;
+
+			.title {
+				text-transform: none;
+			}
 		}
 	}
 

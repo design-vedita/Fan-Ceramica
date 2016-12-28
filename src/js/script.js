@@ -570,11 +570,14 @@
         collectionTab();
 
 
-        function heightText() {
+        var blocks = document.getElementsByClassName('js-text'),
+            clientWidth = document.documentElement.clientWidth;
 
-            var blocks = document.getElementsByClassName('js-text'),
-                anchor = document.getElementsByClassName('js-anchor'),
-                clientWidth = document.documentElement.clientWidth;
+        heightText(blocks,  clientWidth);
+
+        function heightText(blocks, clientWidth) {
+
+            var anchor = document.getElementsByClassName('js-anchor');
 
             var max = 0,
                 maxIndex = '';
@@ -619,7 +622,6 @@
             }
         }
 
-        heightText();
 
         function heightBlocks(el) {
             var blocks = document.getElementsByClassName(el),
@@ -670,7 +672,7 @@
             heightBlocks('js-form');
             backTopMenu();
             viewFilter();
-            heightText();
+            heightText(blocks, clientWidth);
             popup();
         };
 

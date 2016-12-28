@@ -1,0 +1,18 @@
+mixin window()
+    .popup.popup-window.js-popup
+        .popup__header
+            p.title  Ваш товар добавлен в корзину
+            .close-popup.js-close-popup
+                +svg('delete-cart')
+        .popup__content
+            .popup__good
+                .popup__img
+                    img(src="")
+                .popup__params
+                    p.title Mesina Beige Pav
+                    p.price Цена:
+                        = ''
+                        span    250 руб/.м2
+            .popup__links
+                a(href="javascript:void(0)").in-cart    Перейти в корзину
+                a(href="javascript:void(0)").continue   Продолжить покупки

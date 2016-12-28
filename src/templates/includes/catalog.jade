@@ -12,7 +12,7 @@ mixin catalog()
                     .catalog__list
                         .row
                             .col-md-4.col-sm-6
-                                .item-card
+                                .item-card.tale
                                     .item-card__img
                                         .wrap-recommended
                                             .recommended-banner.new
@@ -20,15 +20,30 @@ mixin catalog()
                                         a(href="javascript:void(0)"): span  Подробнее
                                         img(data-original="../img/item-wallpaper.jpg").js-lazy
                                     .item-card__text.js-text
-                                        p.manufacturer Испания. Atlantic Tiles
-                                        p.type   Флизилиновые, 110 см
+                                        p.title: a(href="javascript:void(0)")  Империал
+                                        p.collection-type   Коллекция Империал
+                                        .sizes
+                                            +svg('size')
+                                            p  Размер плитки:
+                                                span  20x40 см
                                         p.price
                                             span
                                                 |  2 300
                                             = ' '
                                             | р./рулон
+                                        .item-card__button
+                                            form
+                                                .item-card__left-button
+                                                    button.minus   -
+                                                    input(type="text" value="1")
+                                                    button.plus +
+                                                .item-card__right-button
+                                                    input(type="button" value="В корзину")
+                                        .item-card__one-click
+                                            a(href="javascript:void(0)")    Купить в 1 клик
+
                             .col-md-4.col-sm-6
-                                .item-card
+                                .item-card.tale
                                     .item-card__img
                                         .wrap-recommended
                                             .recommended-banner.hit
@@ -45,7 +60,7 @@ mixin catalog()
                                             = ' '
                                             | р./рулон
                             .col-md-4.col-sm-6
-                                .item-card
+                                .item-card.tale
                                     .item-card__img
                                         .wrap-recommended
                                             .recommended-banner.recom
@@ -62,7 +77,7 @@ mixin catalog()
                                             = ' '
                                             | р./рулон
                             .col-md-4.col-sm-6
-                                .item-card
+                                .item-card.tale
                                     .item-card__img
                                         a(href="javascript:void(0)"): span  Подробнее
                                         img(data-original="../img/item-wallpaper.jpg").js-lazy
@@ -76,7 +91,7 @@ mixin catalog()
                                             = ' '
                                             | р./рулон
                             .col-md-4.col-sm-6
-                                .item-card
+                                .item-card.tale
                                     .item-card__img
                                         a(href="javascript:void(0)"): span  Подробнее
                                         img(data-original="../img/item-wallpaper.jpg").js-lazy
@@ -90,7 +105,7 @@ mixin catalog()
                                             = ' '
                                             | р./рулон
                             .col-md-4.col-sm-6
-                                .item-card
+                                .item-card.tale
                                     .item-card__img
                                         a(href="javascript:void(0)"): span  Подробнее
                                         img(data-original="../img/item-wallpaper.jpg").js-lazy
@@ -104,7 +119,7 @@ mixin catalog()
                                             = ' '
                                             | р./рулон
                             .col-md-4.col-sm-6
-                                .item-card
+                                .item-card.tale
                                     .item-card__img
                                         a(href="javascript:void(0)"): span  Подробнее
                                         img(data-original="../img/item-wallpaper.jpg").js-lazy
@@ -118,7 +133,7 @@ mixin catalog()
                                             = ' '
                                             | р./рулон
                             .col-md-4.col-sm-6
-                                .item-card
+                                .item-card.tale
                                     .item-card__img
                                         a(href="javascript:void(0)"): span  Подробнее
                                         img(data-original="../img/item-wallpaper.jpg").js-lazy
@@ -132,7 +147,7 @@ mixin catalog()
                                             = ' '
                                             | р./рулон
                             .col-md-4.col-sm-6
-                                .item-card
+                                .item-card.tale
                                     .item-card__img
                                         a(href="javascript:void(0)"): span  Подробнее
                                         img(data-original="../img/item-wallpaper.jpg").js-lazy
@@ -146,7 +161,7 @@ mixin catalog()
                                             = ' '
                                             | р./рулон
                             .col-md-4.col-sm-6
-                                .item-card
+                                .item-card.tale
                                     .item-card__img
                                         a(href="javascript:void(0)"): span  Подробнее
                                         img(data-original="../img/item-wallpaper.jpg").js-lazy
@@ -160,7 +175,7 @@ mixin catalog()
                                             = ' '
                                             | р./рулон
                             .col-md-4.col-sm-6
-                                .item-card
+                                .item-card.tale
                                     .item-card__img
                                         a(href="javascript:void(0)"): span  Подробнее
                                         img(data-original="../img/item-wallpaper.jpg").js-lazy
@@ -174,7 +189,7 @@ mixin catalog()
                                             = ' '
                                             | р./рулон
                             .col-md-4.col-sm-6
-                                .item-card
+                                .item-card.tale
                                     .item-card__img
                                         a(href="javascript:void(0)"): span  Подробнее
                                         img(data-original="../img/item-wallpaper.jpg").js-lazy
@@ -188,7 +203,7 @@ mixin catalog()
                                             = ' '
                                             | р./рулон
                             .col-md-4.col-sm-6
-                                .item-card
+                                .item-card.tale
                                     .item-card__img
                                         a(href="javascript:void(0)"): span  Подробнее
                                         img(data-original="../img/item-wallpaper.jpg").js-lazy
@@ -202,7 +217,7 @@ mixin catalog()
                                             = ' '
                                             | р./рулон
                             .col-md-4.col-sm-6
-                                .item-card
+                                .item-card.tale
                                     .item-card__img
                                         a(href="javascript:void(0)"): span  Подробнее
                                         img(data-original="../img/item-wallpaper.jpg").js-lazy
@@ -216,7 +231,7 @@ mixin catalog()
                                             = ' '
                                             | р./рулон
                             .col-md-4.col-sm-6
-                                .item-card
+                                .item-card.tale
                                     .item-card__img
                                         a(href="javascript:void(0)"): span  Подробнее
                                         img(data-original="../img/item-wallpaper.jpg").js-lazy
@@ -230,7 +245,7 @@ mixin catalog()
                                             = ' '
                                             | р./рулон
                             .col-md-4.col-sm-6
-                                .item-card
+                                .item-card.tale
                                     .item-card__img
                                         a(href="javascript:void(0)"): span  Подробнее
                                         img(data-original="../img/item-wallpaper.jpg").js-lazy
@@ -244,7 +259,7 @@ mixin catalog()
                                             = ' '
                                             | р./рулон
                             .col-md-4.col-sm-6
-                                .item-card
+                                .item-card.tale
                                     .item-card__img
                                         a(href="javascript:void(0)"): span  Подробнее
                                         img(data-original="../img/item-wallpaper.jpg").js-lazy
@@ -258,7 +273,7 @@ mixin catalog()
                                             = ' '
                                             | р./рулон
                             .col-md-4.col-sm-6
-                                .item-card
+                                .item-card.tale
                                     .item-card__img
                                         a(href="javascript:void(0)"): span  Подробнее
                                         img(data-original="../img/item-wallpaper.jpg").js-lazy

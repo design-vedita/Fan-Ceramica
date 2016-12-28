@@ -32,6 +32,7 @@
 	transition-duration: 300ms;
 	transition-timing-function: linear;
 
+
 	@media (max-width: 767px) {
 
 		& {
@@ -124,6 +125,149 @@
 					background-color: @greenDark;
 				}
 			}
+		}
+	}
+
+	&__good {
+
+		&::after {
+			content: '';
+			display: block;
+			clear: both;
+		}
+	}
+
+	&__img {
+		margin-right: 14px;
+		float: left;
+		width: 150px;
+
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+
+	&__params {
+		float: left;
+		width: calc(~'100% - 164px');
+
+		.title {
+			margin-bottom: 0;
+			font-size: 20px;
+			line-height: 24px;
+			text-transform: uppercase;
+			color: @ui-slider-handle;
+		}
+
+		.price {
+			font-size: 14px;
+			line-height: 26px;
+			color: @price-popup;
+
+			span {
+				font-family: @semibold;
+				font-size: 14px;
+				line-height: 26px;
+				color: @titleManuf;
+			}
+		}
+	}
+
+	&__links {
+		margin-top: 48px;
+		padding-left: 5px;
+
+		.in-cart {
+			padding: 12px 50px 12px 45px;
+			font: 16px @bold;
+			text-transform: uppercase;
+			letter-spacing: 1.2px;
+			text-decoration: none;
+			color: @green-text;
+			border-radius: 7px;
+			background-color: @green;
+			transition-property: background-color, color;
+			transition-duration: 300ms, 300ms;
+
+			&:hover {
+				background-color: @greenDark;
+				color: @white;
+			}
+		}
+
+		.continue {
+			margin-left: 33px;
+			padding: 12px 35px 12px 23px;
+			font: 16px @bold;
+			text-transform: uppercase;
+			letter-spacing: 1.3px;
+			text-decoration: none;
+			color: @green-text;
+			border-radius: 7px;
+			background-color: @input-count;
+			transition-property: background-color, color;
+			transition-duration: 300ms, 300ms;
+
+			&:hover {
+				background-color: @continue;
+				color: @white;
+			}
+		}
+	}
+
+	&-window {
+
+		.popup__content {
+			padding-top: 31px;
+
+			@media (max-width: 767px) {
+
+				& {
+					padding-top: 19px;
+				}
+			}
+		}
+
+
+		@media (max-width: 767px) {
+
+			& {
+				padding-bottom: 63px;
+				max-width: 310px;
+			}
+
+			.popup__header {
+
+				.title {
+					font-size: 14px;
+					line-height: 24px;
+				}
+			}
+
+			.popup__params {
+				margin-top: 21px;
+				width: 100%;
+			}
+
+			.popup__links {
+				padding-left: 0;
+				margin-top: 20px;
+
+				a {
+					padding-left: 0;
+					padding-right: 0;
+					display: block;
+					width: 100%;
+					text-align: center;
+				}
+
+				.continue {
+					margin-top: 20px;
+					margin-left: 0;
+				}
+			}
+
 		}
 	}
 }
