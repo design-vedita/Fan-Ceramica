@@ -600,8 +600,11 @@
 
                             max = blocks[i].offsetHeight;
                             maxIndex = i;
-                            blocks[maxIndex].classList.add('js-anchor')
                         }
+                    }
+
+                    if (maxIndex) {
+                        blocks[maxIndex].classList.add('js-anchor');
                     }
 
                     for (j = 0; j < blocks.length; j++ ) {
@@ -774,6 +777,18 @@
 
         viewFilter();
 
+        function viewCountFilter() {
+
+            var $parent = $('.js-data'),
+                $label = $parent.find('label');
+
+            $label.on('click', function(){
+
+               
+            });
+        }
+
+        viewCountFilter();
     });
 
     $(document).ready(function(){

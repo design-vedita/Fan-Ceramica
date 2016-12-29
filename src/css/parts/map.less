@@ -1,6 +1,24 @@
 .map {
 	margin-top: 30px;
 
+	&__one-click {
+		margin-top: 17px;
+		text-align: right;
+
+		a {
+			padding: 5px 14px;
+			font: 15px/24px @semibold;
+			color: @white;
+			background-color: @ui-slider-handle;
+			border-radius: 14.5px;
+			transition: color 300ms linear;
+
+			&:hover {
+				color: @more;
+			}
+		}
+	}
+
 	&__img {
 		padding-right: 0;
 
@@ -198,7 +216,7 @@
 		}
 
 		&__border {
-			padding: 14px 15px 22px 20px;
+			padding: 14px 13px 22px 20px;
 			border: 1px @linehr solid;
 
 			p {
@@ -248,9 +266,9 @@
 				}
 
 				&.web-money {
-					margin-top: 36px;
+					margin-top: 18px;
 					margin-bottom: 16px;
-					padding-top: 24px;
+					padding-top: 14px;
 					font: 14px/24px @regular;
 					color: @fildset-label;
 					border-top: 1px @linehr solid;
@@ -280,7 +298,6 @@
 
 			&__count {
 				float: left;
-				margin-top: 15px;
 
 				button {
 					float: left;
@@ -330,7 +347,6 @@
 			&__button {
 				position: relative;
 				float: right;
-				margin-top: 15px;
 
 				@media (min-width: 768px) and (max-width: 1199px) {
 
@@ -342,9 +358,9 @@
 
 				input[type="submit"],
 				input[type="button"] {
-					padding-left: 19px;
+					padding-left: 46px;
+					padding-right: 37px;
 					display: block;
-					width: 133px;
 					height: 29px;
 					box-sizing: border-box;
 					font: 18px @semibold;
@@ -391,6 +407,12 @@
 
 		p.category-title {
 			.category-title();
+		}
+
+		.item-card {
+			margin-bottom: 35px;
+			box-shadow: none;
+			border: 1px solid @item-tale;
 		}
 	}
 
