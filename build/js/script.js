@@ -780,11 +780,15 @@
         function viewCountFilter() {
 
             var $parent = $('.js-data'),
-                $label = $parent.find('label');
+                $label = $parent.find('label'),
+                $el = $('.js-filter-result');
 
             $label.on('click', function(){
 
-               
+                var $top = $(this).position().top;
+
+                $el.css({'top': ($top - 9) + 'px'});
+
             });
         }
 
