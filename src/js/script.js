@@ -10,7 +10,7 @@
             closeEffect	: 'none'
         });
 
-        // Слайдер в шапке
+        // ??????? ? ?????
         $('.js-slider-collection').slick({
             slidesToShow: 1,
             slidesToScroll: 1,
@@ -38,14 +38,14 @@
             ]
         });
 
-        // Слайдер страница коллекций
+        // ??????? ???????? ?????????
         $('.js-slider').slick({
             appendArrows: $('.js-arrows'),
             prevArrow: '<button type="button" class="slick-prev"></button>',
             nextArrow: '<button type="button" class="slick-next"></button>'
         });
 
-        // Слайдер тематический
+        // ??????? ????????????
 
         $('.js-style-slider').slick({
             appendArrows: $('.js-arrow-style'),
@@ -53,7 +53,7 @@
             nextArrow: '<button type="button" class="slick-next-style"></button>'
         });
 
-        // Слайдер производители плитка
+        // ??????? ????????????? ??????
 
         $('.js-tile').slick({
             infinite: true,
@@ -94,7 +94,7 @@
         });
 
 
-        //  слайдер производители обои
+        //  ??????? ????????????? ????
 
         $('.js-wallpaper').slick({
             infinite: true,
@@ -134,7 +134,7 @@
             ]
         });
 
-        // слайдер каталог дизайн-проектов плитка
+        // ??????? ??????? ??????-???????? ??????
 
         $('.js-tdesign').slick({
             appendArrows: $('.js-tdesign-arrow'),
@@ -175,7 +175,7 @@
             ]
         });
 
-        // слайдер каталог дизайн-проектов обои
+        // ??????? ??????? ??????-???????? ????
 
         $('.js-wdesign').slick({
             appendArrows: $('.js-wdesign-arrow'),
@@ -215,7 +215,7 @@
             ]
         });
 
-        // слайдер интерьеров плитка
+        // ??????? ?????????? ??????
 
         $('.js-interior-tale').slick({
             appendArrows: $('.js-intale-arrow'),
@@ -255,7 +255,7 @@
             ]
         });
 
-        // слайдер интерьеров обои
+        // ??????? ?????????? ????
 
         $('.js-interior-wall').slick({
             appendArrows: $('.js-walltale-arrow'),
@@ -274,7 +274,7 @@
             ]
         });
 
-        // слайдер отзывов
+        // ??????? ???????
 
         $('.js-reviews-slider').slick({
             infinite: true,
@@ -403,7 +403,7 @@
             effect : "fadeIn",
             threshold : 200
         });
-        // lazy load на табы
+        // lazy load ?? ????
 
         $('.js-tab-link').click(function() {
 
@@ -412,8 +412,8 @@
                 $images = $parents.find('img.js-lazy-tab'),
                 $tabblocks = $parents.find('.js-tab-block');
 
-            // ставим активному блоку класс, чтобы при последующих кликах
-            // не перезагружать изображения
+            // ?????? ????????? ????? ?????, ????? ??? ??????????? ??????
+            // ?? ????????????? ???????????
 
             if(!$tabblocks.hasClass('lazy-visible')) {
                 $($images).lazyload({
@@ -489,7 +489,7 @@
 
         viewParams();
 
-        // Показываем поиск
+        // ?????????? ?????
         function openSearch() {
             var searchLink = document.getElementsByClassName('js-open-search')[0],
                 searchBlock = document.getElementsByClassName('js-search-form')[0];
@@ -499,7 +499,7 @@
                 searchBlock.classList.toggle('visible--search');
             };
 
-            // клик не по элементу поиска или иконки поиска скрывает строку поиска
+            // ???? ?? ?? ???????? ?????? ??? ?????? ?????? ???????? ?????? ??????
             $(document).on('click', function(e) {
 
                 if($(e.target).closest(searchBlock).length) return;
@@ -516,7 +516,7 @@
 
         openSearch();
 
-        // Табы в коллекции
+        // ???? ? ?????????
         function collectionTab() {
             var links = document.getElementsByClassName('js-coll'),
                 blocks = document.getElementsByClassName('js-content');
@@ -577,51 +577,42 @@
 
         function heightText(blocks, clientWidth) {
 
-            var anchor = document.getElementsByClassName('js-anchor');
-
-            var max = 0,
-                maxIndex = '';
-
-            var i, k, j, n;
+            var $anchor = $('.js-anchor');
 
             if (clientWidth > 767) {
 
-                if (blocks) {
+                var max = 0,
+                    maxIndex = '';
 
-                    for (n = 0; n < anchor.length; n++) {
-                        anchor[n].classList.remove('js-anchor');
+                $anchor.each(function(){
+                    $(this).removeClass('js-anchor');
+                });
+
+                $(blocks).each(function(i){
+
+                    $(this).css({'height': ''});
+
+                    if (max < $(this).outerHeight()) {
+                        max = $(this).outerHeight();
+                        maxIndex = i;
                     }
 
-                    for (i = 0; i < blocks.length; i++) {
+                });
 
-                        blocks[i].style.height = ''; //очищаем высоту у всех блоков, чтобы на ресайзе выставлять высоту
+                $(blocks).eq(maxIndex).addClass('js-anchor');
 
-                        if( max < blocks[i].offsetHeight ) {
+                $(blocks).each(function(){
+                    (!$(this).hasClass('js-anchor'))
+                        ? $(this).css({'height': max + 'px'})
+                        : '';
+                });
 
-                            max = blocks[i].offsetHeight;
-                            maxIndex = i;
-                        }
-                    }
-
-                    if (maxIndex) {
-                        blocks[maxIndex].classList.add('js-anchor');
-                    }
-
-                    for (j = 0; j < blocks.length; j++ ) {
-
-                        if( !blocks[j].classList.contains('js-anchor') ) {
-                            blocks[j].style.height = max + 'px';
-                        }
-                    }
-                }
-
-            } else {
-                for (k = 0; k < blocks.length; k++) {
-
-                    blocks[k].classList.remove('js-anchor');
-                    blocks[k].style.height = '';
-
-                }
+            } else if (clientWidth < 767) {
+                $(blocks).each(function(){
+                    $(this)
+                        .removeClass('.js-anchor')
+                        .css({'height': ''});
+                });
             }
         }
 
@@ -743,7 +734,7 @@
             }
         }
 
-        // Авторасширение textarea
+        // ?????????????? textarea
         var commentArea = document.getElementsByTagName('textarea');
 
         function autosize() {
@@ -759,7 +750,7 @@
             commentArea[i].addEventListener('keydown', autosize);
         }
 
-        // Закрытие фильтра на планшетах и телефонах
+        // ???????? ??????? ?? ????????? ? ?????????
 
         function viewFilter() {
             var $filter = $('#filter'),

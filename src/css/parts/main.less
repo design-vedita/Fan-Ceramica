@@ -948,6 +948,7 @@ header {
 					 left: 0;
 					 display: none;
 					 width: calc(~'100% + 50px');
+					 box-shadow: 0 0 5px 0 rgba(10, 22, 45, .4);
 
 					 @media (max-width: 1199px) {
 
@@ -1032,6 +1033,7 @@ header {
 					 width: 90%;
 					 display: none;
 					 border-left: 1px @white solid;
+					 box-shadow: 0 0 5px 0 rgba(10, 22, 45, .4);
 
 					 	li {
 							padding-right: 40px;
@@ -1072,6 +1074,7 @@ header {
 					 top: 0;
 					 display: none;
 					 border-left: 1px @white solid;
+					 box-shadow: 0 0 5px 0 rgba(10, 22, 45, .4);
 
 					 @media (max-width: 1199px) {
 
@@ -2041,6 +2044,11 @@ main {
 
 		&__text {
 			padding: 14px 15px 5px;
+			height: 240px;
+
+				@media (max-width: 767px) {
+					height: auto;
+				}
 
 				p {
 					margin-bottom: 0;
